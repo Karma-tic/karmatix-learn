@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://learn.karmatix.in/sitemap-index.xml
+

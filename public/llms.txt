@@ -1,0 +1,17 @@
+# Karmatix Learning Catalog
+
+> Engineering education the clear way.
+
+Karmatix Learning is an open engineering catalog publishing practical, rigorous technical courses built on real tested code. All courses are completely free with no account required.
+
+## Live Courses
+
+- Karmatix .NET Academy: Comprehensive .NET 10 LTS and C# 14 engineering course covering clean architecture, ASP.NET Core APIs, Entity Framework Core, Docker containers, automated testing, and interview preparation with 16 tested projects. URL: https://dotnet.karmatix.in
+- Karmatix Flutter Course: Self-paced cross-platform mobile development with Dart 3 and Flutter 3, featuring Android native Kotlin comparisons, timed mock exams, and practical calculation labs. URL: https://karma-tic.github.io/flutter-course/
+
+## Upcoming Courses
+
+- Cloud and DevOps Architecture: Production container orchestration, Terraform infrastructure as code, and CI/CD pipelines.
+- AI and Python for Production: Asynchronous Python, LLM orchestration, evaluation pipelines, and vector databases.
+- Distributed Systems and Microservices: Resilient distributed architectures, event-driven messaging, and observability.
+
