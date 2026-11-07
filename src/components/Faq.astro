@@ -1,0 +1,69 @@
+---
+const faqs = [
+  {
+    q: 'Is Karmatix Learning really completely free?',
+    a: 'Yes. Every module, code repository, interview question bank, and capstone project is 100% free. There are no paywalls, no trial periods, and no locked premium tiers.'
+  },
+  {
+    q: 'Do I need to register or create an account to start?',
+    a: 'No. You can start reading lessons, inspecting code samples, and running projects immediately. We do not require an email address, login credentials, or personal profiles.'
+  },
+  {
+    q: 'Who are these courses designed for?',
+    a: 'The curriculum is built for university students, polytechnic graduates, self-taught developers, and software engineers preparing for technical interviews or company placement exams. We explain fundamentals in simple English before diving into production architecture.'
+  },
+  {
+    q: 'Are the course completion certificates officially accredited?',
+    a: 'No. Our certificates verify that you completed the coursework, passed mock tests, and built the capstone projects according to the grading rubric. They are proof of practical skill, not university degrees or government accredited qualifications.'
+  },
+  {
+    q: 'How is my personal data and learning progress handled?',
+    a: 'All course progress, quiz answers, and custom checklists are stored locally in your browser storage. We run zero third-party trackers, zero advertising pixels, and maintain no central server database of learner activities.'
+  },
+  {
+    q: 'How often is the curriculum updated?',
+    a: 'Courses are updated alongside major Long Term Support framework releases. For example, our flagship .NET Academy is verified against .NET 10 LTS and C# 14. If a newer STS release becomes available, we highlight key differences in dedicated lessons.'
+  },
+  {
+    q: 'Who creates and maintains the courses?',
+    a: 'The curriculum and compilable sample projects are designed, written, and maintained by working software engineers at Karmatix. Every code sample is tested in automated CI builds before publication.'
+  }
+];
+---
+
+<section id="faq" class="py-16 md:py-24 border-b border-[#1e293b]">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    
+    <div class="mb-12 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full border border-[#1e293b] bg-[#111827] px-3 py-1 text-xs font-semibold text-[#60a5fa] mb-3">
+        <span>FREQUENTLY ASKED QUESTIONS</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#f8fafc] tracking-tight">
+        Straightforward answers to common questions.
+      </h2>
+      <p class="mt-2 text-sm sm:text-base text-[#94a3b8]">
+        Everything you need to know about our catalog, policies, and learning model.
+      </p>
+    </div>
+
+    <!-- Plain HTML Details and Summary List -->
+    <div class="flex flex-col gap-4">
+      {faqs.map((item) => (
+        <details class="group rounded-lg border border-[#1e293b] bg-[#111827] p-5 transition-colors open:border-[#334155]">
+          <summary class="flex cursor-pointer items-center justify-between text-base font-semibold text-[#f8fafc] list-none select-none">
+            <span>{item.q}</span>
+            <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#1e293b] bg-[#0b0f19] text-[#60a5fa] transition-transform duration-200 group-open:rotate-180">
+              <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-3 pt-3 border-t border-[#1e293b] text-sm text-[#94a3b8] leading-relaxed">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>

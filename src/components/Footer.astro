@@ -1,0 +1,106 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-[#1e293b] bg-[#0b0f19] pt-16 pb-12 text-[#94a3b8] text-xs">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+      
+      <!-- Brand & Mission -->
+      <div class="md:col-span-5 flex flex-col items-start">
+        <a href="/" class="mb-4 inline-block" aria-label="Karmatix Learning Home">
+          <img src="/brand/wordmark.svg" alt="Karmatix Learning" width="160" height="24" class="h-6 w-auto" />
+        </a>
+        <p class="text-sm text-[#94a3b8] leading-relaxed mb-4 max-w-sm">
+          Engineering education the clear way. Completely free, production-tested software engineering courses for developers across India and worldwide.
+        </p>
+        <p class="text-[11px] text-[#64748b]">
+          Published by Karmatix. Aligned with the principles of India's Digital Personal Data Protection Act: zero personal data collected without explicit notice.
+        </p>
+      </div>
+
+      <!-- Live Courses Links -->
+      <div class="md:col-span-3">
+        <div class="text-xs font-semibold uppercase tracking-wider text-[#f8fafc] mb-3">Live Courses</div>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://dotnet.karmatix.in" class="hover:text-[#f8fafc] transition-colors">
+              Karmatix .NET Academy
+            </a>
+          </li>
+          <li>
+            <a href="https://karma-tic.github.io/flutter-course/" class="hover:text-[#f8fafc] transition-colors">
+              Karmatix Flutter Course
+            </a>
+          </li>
+          <li>
+            <a href="/#roadmap" class="hover:text-[#f8fafc] transition-colors">
+              Upcoming Curriculum
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Navigation & Legal -->
+      <div class="md:col-span-2">
+        <div class="text-xs font-semibold uppercase tracking-wider text-[#f8fafc] mb-3">Company &amp; Legal</div>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://karmatix.in" target="_blank" rel="noopener noreferrer" class="hover:text-[#f8fafc] transition-colors">
+              Karmatix.in
+            </a>
+          </li>
+          <li>
+            <a href="/privacy" class="hover:text-[#f8fafc] transition-colors">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/terms" class="hover:text-[#f8fafc] transition-colors">
+              Terms of Use
+            </a>
+          </li>
+          <li>
+            <a href="/sitemap-index.xml" class="hover:text-[#f8fafc] transition-colors">
+              Sitemap
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact & Community -->
+      <div class="md:col-span-2">
+        <div class="text-xs font-semibold uppercase tracking-wider text-[#f8fafc] mb-3">Connect</div>
+        <ul class="space-y-2">
+          <li>
+            <a href="mailto:contact@karmatix.in" class="hover:text-[#f8fafc] transition-colors">
+              contact@karmatix.in
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Karma-tic" target="_blank" rel="noopener noreferrer" class="hover:text-[#f8fafc] transition-colors">
+              GitHub Organization
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Trademarks & Legal Disclaimer (Strict verbatim requirement) -->
+    <div class="border-t border-[#1e293b] pt-8 text-[11px] leading-relaxed text-[#64748b]">
+      <p class="mb-3">
+        .NET, C#, ASP.NET and Azure are trademarks of Microsoft Corporation. Flutter and Dart are trademarks of Google LLC. Karmatix Learning is an independent educational resource and is not affiliated with or endorsed by Microsoft or Google.
+      </p>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <div>
+          &copy; {currentYear} Karmatix. All rights reserved.
+        </div>
+        <div class="text-[#64748b]">
+          Zero third-party trackers &middot; Self-hosted static build
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
