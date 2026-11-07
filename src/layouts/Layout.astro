@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SupportBanner from '../components/SupportBanner.astro';
 
 interface Props {
   title?: string;
@@ -52,8 +53,8 @@ const {
     <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/geist-mono.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- Content Security Policy: Strict self-contained static hosting -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';" />
+    <!-- Content Security Policy: Strict self-contained static hosting with Ko-fi embed support -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://storage.ko-fi.com https://ko-fi.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://storage.ko-fi.com https://ko-fi.com; frame-src 'self' https://ko-fi.com; connect-src 'self' https://ko-fi.com; frame-ancestors 'none';" />
 
     <!-- Structured Data -->
     {jsonLd.map((schema) => (
@@ -64,11 +65,42 @@ const {
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded">
       Skip to content
     </a>
+    <SupportBanner />
     <slot name="header" />
     <main id="main-content" class="flex-1">
       <slot />
     </main>
     <slot name="footer" />
+
+    <!-- Official Ko-fi Floating Overlay Widget (Non-blocking async load) -->
+    <script is:inline>
+      (function () {
+        function initKofiOverlay() {
+          if (window._kofiWidgetInitialized) return;
+          window._kofiWidgetInitialized = true;
+          var script = document.createElement('script');
+          script.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+          script.async = true;
+          script.onload = function () {
+            if (typeof kofiWidgetOverlay !== 'undefined') {
+              kofiWidgetOverlay.draw('karmatix', {
+                'type': 'floating-chat',
+                'floating-chat.donateButton.text': 'Support Karmatix ☕',
+                'floating-chat.donateButton.background-color': '#2563eb',
+                'floating-chat.donateButton.text-color': '#ffffff'
+              });
+            }
+          };
+          document.body.appendChild(script);
+        }
+
+        if (document.readyState === 'complete') {
+          initKofiOverlay();
+        } else {
+          window.addEventListener('load', initKofiOverlay);
+        }
+      })();
+    </script>
   </body>
 </html>
 

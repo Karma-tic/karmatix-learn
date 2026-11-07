@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const supportJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    'name': 'Support Karmatix Learning',
+    'url': 'https://learn.karmatix.in/support',
+    'description': 'Support free software engineering education. Donations fund hosting, tools, and continuous curriculum updates.',
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Karmatix',
+      'url': 'https://karmatix.in'
+    }
+  }
+];
+---
+
+<Layout
+  title="Support Karmatix Learning | Help Keep Our Courses Free"
+  description="Karmatix Learning is 100% free with no paywalls or ads. Your Ko-fi donations fund cloud hosting, test runners, and ongoing engineering course development."
+  canonical="https://learn.karmatix.in/support"
+  jsonLd={supportJsonLd}
+>
+  <Header slot="header" />
+
+  <article class="py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+
+      <!-- Breadcrumb / Back link -->
+      <div class="mb-8">
+        <a href="/" class="inline-flex items-center gap-1.5 text-xs text-[#94a3b8] hover:text-[#f8fafc] transition-colors">
+          <span>&larr; Back to Course Catalog</span>
+        </a>
+      </div>
+
+      <!-- Hero Header -->
+      <div class="mb-10 text-center sm:text-left">
+        <div class="inline-flex items-center gap-2 rounded-full border border-[#2563eb]/30 bg-[#2563eb]/10 px-3 py-1 text-xs font-semibold text-[#60a5fa] mb-4">
+          <span>COMMUNITY SUPPORT</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#f8fafc] tracking-tight mb-4">
+          Help us keep engineering education free for everyone.
+        </h1>
+        <p class="text-base sm:text-lg text-[#94a3b8] leading-relaxed">
+          Karmatix Learning has no paywalls, no sponsored promotions, no mandatory logins, and no hidden upsells. If our courses helped your career, consider buying us a chai.
+        </p>
+      </div>
+
+      <!-- Main Donation Card -->
+      <div class="rounded-2xl border border-[#334155] bg-[#111827] p-6 sm:p-8 mb-12 shadow-xl text-center">
+        <div class="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#2563eb]/20 text-3xl mb-4" aria-hidden="true">
+          ☕
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold text-[#f8fafc] mb-2">
+          Support Karmatix on Ko-fi
+        </h2>
+        <p class="text-sm text-[#94a3b8] max-w-lg mx-auto mb-6 leading-relaxed">
+          Every contribution directly supports server hosting, domain renewals, CI test pipelines, and the hours invested in writing clear, battle-tested software engineering guides.
+        </p>
+
+        <!-- Official Ko-fi Button Embed Container (kofiwidget2) -->
+        <div class="flex flex-col items-center justify-center gap-4">
+          <div id="kofi-embed-target" class="min-h-[46px] flex items-center justify-center">
+            <!-- Fallback Anchor Link rendered immediately for zero layout shift and ad-block resilience -->
+            <a
+              href="https://ko-fi.com/karmatix"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-[#2563eb] px-8 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] hover:bg-[#1d4ed8] focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:ring-offset-2 focus:ring-offset-[#111827]"
+              aria-label="Support Karmatix on Ko-fi (opens in new tab)"
+            >
+              <span class="text-base" aria-hidden="true">☕</span>
+              <span>Support Karmatix on Ko-fi</span>
+              <svg class="h-4 w-4 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14L21 3"></path>
+              </svg>
+            </a>
+          </div>
+
+          <p class="text-xs text-[#64748b]">
+            Secure checkout via Ko-fi (supports UPI, Card, PayPal, and Apple Pay).
+          </p>
+        </div>
+      </div>
+
+      <!-- Why We Built This Model -->
+      <div class="space-y-8 mb-12">
+        <h3 class="text-xl font-bold text-[#f8fafc] border-b border-[#1e293b] pb-3">
+          Where your donation goes
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-5">
+            <div class="h-8 w-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold mb-3 text-sm">
+              01
+            </div>
+            <h4 class="text-sm font-bold text-[#f8fafc] mb-1">Hosting &amp; Domains</h4>
+            <p class="text-xs text-[#94a3b8] leading-relaxed">
+              Domain registration fees, CDN traffic, and reliable static infrastructure that stays fast around the world.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-5">
+            <div class="h-8 w-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-bold mb-3 text-sm">
+              02
+            </div>
+            <h4 class="text-sm font-bold text-[#f8fafc] mb-1">CI &amp; Test Runners</h4>
+            <p class="text-xs text-[#94a3b8] leading-relaxed">
+              Automated compilation gates and GitHub Actions runners that build and verify all sample solutions on every commit.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-5">
+            <div class="h-8 w-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold mb-3 text-sm">
+              03
+            </div>
+            <h4 class="text-sm font-bold text-[#f8fafc] mb-1">Fresh Curricula</h4>
+            <p class="text-xs text-[#94a3b8] leading-relaxed">
+              Researching, authoring, and keeping all code examples up to date with the latest LTS releases (.NET 10, C# 14, Flutter).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Strict Privacy & Payment Guarantee -->
+      <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-6 text-xs text-[#94a3b8] space-y-3">
+        <h4 class="text-sm font-bold text-[#f8fafc] flex items-center gap-2">
+          <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Payment Security and Privacy Notice</span>
+        </h4>
+        <p>
+          We do not collect, process, or store credit card details, banking credentials, or personal payment data on our servers. All donations are handled entirely through Ko-fi and their certified payment gateways (Stripe and PayPal).
+        </p>
+        <p>
+          You are never required to donate to access any lesson, project, cheat sheet, or code repository. Everything we publish is free and remains free forever.
+        </p>
+      </div>
+
+      <!-- Alternative Ways to Support -->
+      <div class="mt-12 text-center sm:text-left">
+        <h4 class="text-sm font-bold text-[#f8fafc] mb-2">Can not donate right now?</h4>
+        <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
+          You can also support us for free by starring our repositories on GitHub, submitting corrections to typos or broken links, or sharing our courses with your college peers and colleagues.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="https://github.com/Karma-tic"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-[#1e293b] bg-[#111827] px-3 py-1.5 text-xs font-medium text-[#f8fafc] hover:bg-[#1e293b] transition-colors"
+          >
+            <span>Star on GitHub</span>
+            <svg class="h-3.5 w-3.5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </a>
+          <a
+            href="mailto:contact@karmatix.in"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-[#1e293b] bg-[#111827] px-3 py-1.5 text-xs font-medium text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1e293b] transition-colors"
+          >
+            <span>Send Feedback</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</Layout>
+
+<!-- Optional Ko-fi widget script for inline enhancements (async load) -->
+<script is:inline>
+  window.addEventListener('load', function () {
+    try {
+      var script = document.createElement('script');
+      script.src = 'https://storage.ko-fi.com/cdn/scripts/v2/kofiwidget2.js';
+      script.async = true;
+      document.body.appendChild(script);
+    } catch (e) {}
+  });
+</script>
