@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Page Not Found | Karmatix Learning"
+  description="The requested page could not be found on Karmatix Learning."
+>
+  <Header slot="header" />
+
+  <section class="py-24 md:py-36 text-center">
+    <div class="mx-auto max-w-xl px-4 sm:px-6">
+      <div class="inline-flex items-center gap-2 rounded-full border border-[#1e293b] bg-[#111827] px-3 py-1 text-xs font-semibold text-[#60a5fa] mb-4">
+        <span>STATUS 404</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#f8fafc] tracking-tight mb-4">
+        Page not found.
+      </h1>
+      <p id="redirect-notice" class="text-sm sm:text-base text-[#94a3b8] mb-8 leading-relaxed">
+        Looking for a .NET Academy lesson? If you followed a legacy bookmark, you will be redirected to the .NET Academy subdomain automatically.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/#courses"
+          class="inline-flex h-11 items-center justify-center rounded-full bg-[#2563eb] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#1d4ed8]"
+        >
+          View courses catalog
+        </a>
+        <a
+          href="https://dotnet.karmatix.in"
+          class="inline-flex h-11 items-center justify-center rounded-full border border-[#334155] bg-[#111827] px-6 text-sm font-semibold text-[#f8fafc] transition-colors hover:border-[#60a5fa]"
+        >
+          Go to .NET Academy
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Link Forwarding Script for Legacy .NET URLs -->
+  <script is:inline>
+    (function () {
+      var path = window.location.pathname;
+      var dotnetPatterns = [
+        /^\/module-/,
+        /^\/career/,
+        /^\/cheatsheets/,
+        /^\/certifications/,
+        /^\/resources/,
+        /^\/glossary/,
+        /^\/practice-lab/,
+        /^\/curriculum/,
+        /^\/exam/
+      ];
+
+      var isDotNetRoute = dotnetPatterns.some(function (regex) {
+        return regex.test(path);
+      });
+
+      if (isDotNetRoute) {
+        var notice = document.getElementById('redirect-notice');
+        if (notice) {
+          notice.textContent = 'Redirecting you to the .NET Academy course at dotnet.karmatix.in...';
+        }
+        var target = 'https://dotnet.karmatix.in' + path + window.location.search + window.location.hash;
+        window.location.replace(target);
+      }
+    })();
+  </script>
+
+  <Footer slot="footer" />
+</Layout>

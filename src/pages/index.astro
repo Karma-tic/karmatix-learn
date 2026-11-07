@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import CourseCatalog from '../components/CourseCatalog.astro';
+import KarmatixStandard from '../components/KarmatixStandard.astro';
+import SharedTools from '../components/SharedTools.astro';
+import Roadmap from '../components/Roadmap.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import coursesData from '../data/courses.json';
+
+const liveCourses = coursesData.filter((c) => c.status === 'live');
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Karmatix',
+    'url': 'https://karmatix.in',
+    'logo': 'https://learn.karmatix.in/favicon.svg',
+    'sameAs': ['https://github.com/Karma-tic']
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Karmatix Learning',
+    'url': 'https://learn.karmatix.in',
+    'description': 'Free software engineering courses built on real tested code.'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'itemListElement': liveCourses.map((c, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'item': {
+        '@type': 'Course',
+        'name': c.title,
+        'description': c.summary,
+        'provider': {
+          '@type': 'Organization',
+          'name': 'Karmatix',
+          'sameAs': 'https://karmatix.in'
+        },
+        'url': c.url,
+        'isAccessibleForFree': true,
+        'educationalLevel': c.level,
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'INR'
+        }
+      }
+    }))
+  }
+];
+---
+
+<Layout
+  title="Karmatix Learning | Free Software Engineering Courses"
+  description="Free software engineering courses built on real tested code. Learn .NET 10, C# 14, Flutter, and cloud systems with zero ads or accounts."
+  jsonLd={jsonLd}
+>
+  <Header slot="header" />
+  
+  <Hero />
+  <CourseCatalog />
+  <KarmatixStandard />
+  <SharedTools />
+  <Roadmap />
+  <Faq />
+
+  <Footer slot="footer" />
+</Layout>
