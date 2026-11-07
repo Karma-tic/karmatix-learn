@@ -92,3 +92,4 @@ if (errors.length > 0) {
 }
 
 console.log('[A11y & Budget Checker] Passed! 100% WCAG AA checks and JS budget compliant.');
+

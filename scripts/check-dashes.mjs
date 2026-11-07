@@ -53,3 +53,4 @@ if (violations.length > 0) {
 }
 
 console.log('[Dash Checker] Passed! Zero em-dashes or en-dashes found across all scanned files.');
+

@@ -39,3 +39,4 @@ Audited: November 7, 2026
 
 12. Legacy Route & Deep Link Protection: PASS
     Smart `404.html` client redirect forwards legacy `/module-*`, `/career`, `/cheatsheets`, and other bookmarked .NET paths directly to `https://dotnet.karmatix.in`.
+

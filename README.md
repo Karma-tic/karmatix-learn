@@ -104,3 +104,4 @@ All pull requests and commits to `main` must pass the continuous integration gat
 
 ## ⚖️ Legal & Trademarks
 .NET, C#, ASP.NET, Azure, and Visual Studio are trademarks of Microsoft Corporation. Flutter and Dart are trademarks of Google LLC. Karmatix Learning is an independent educational publisher and is not affiliated with or endorsed by Microsoft or Google.
+
