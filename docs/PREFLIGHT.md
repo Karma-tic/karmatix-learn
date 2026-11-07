@@ -38,5 +38,5 @@ Audited: November 7, 2026
     Zero third-party trackers, zero cookies, and zero external analytics scripts. Privacy Policy drafted under India's DPDP Act principles. Full Microsoft Corporation and Google LLC trademark disclaimers included.
 
 12. Legacy Route & Deep Link Protection: PASS
-    Smart `404.html` client redirect forwards legacy `/module-*`, `/career`, `/cheatsheets`, and other bookmarked .NET paths directly to `https://dotnet.karmatix.in`.
+    Smart `404.html` client redirect forwards legacy `/module-*`, `/career`, `/cheatsheets`, and other bookmarked .NET paths directly to `https://karma-tic.github.io/dotnet-academy/`.
 

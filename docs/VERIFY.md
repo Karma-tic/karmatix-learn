@@ -9,6 +9,7 @@ All statistics and metadata rendered on the Karmatix Learning landing page were 
   - Tested Projects: 16 (verified in `dotnet-academy/samples/` including Capstones and Labs)
   - Interview Questions: 200+ (verified in `dotnet-academy/site/src/content/career/interviewQuestions.ts`)
   - CI Status: Every C# sample compiled with `-warnaserror` in GitHub Actions CI workflow
+  - Live Endpoint: https://karma-tic.github.io/dotnet-academy/
 
 - **Karmatix Flutter Course**:
   - Curriculum Modules: 10 (verified in `flutter-course/content/` and `src/data/curriculum/`)

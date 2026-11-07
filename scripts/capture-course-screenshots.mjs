@@ -167,7 +167,7 @@ async function capture() {
       <text x="64" y="40" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">FLAGSHIP</text>
       <text x="24" y="84" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Karmatix .NET Academy</text>
       <text x="24" y="114" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="15">12 Modules · .NET 10 LTS · 16 Tested Projects</text>
-      <text x="24" y="144" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="15" font-weight="500">dotnet.karmatix.in →</text>
+      <text x="24" y="144" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="15" font-weight="500">karma-tic.github.io/dotnet-academy/ →</text>
     </g>
     <g transform="translate(600, 360)">
       <rect width="480" height="180" rx="12" fill="#111827" stroke="#1E293B" stroke-width="2"/>

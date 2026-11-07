@@ -19,7 +19,7 @@ import Footer from '../components/Footer.astro';
         Page not found.
       </h1>
       <p id="redirect-notice" class="text-sm sm:text-base text-[#94a3b8] mb-8 leading-relaxed">
-        Looking for a .NET Academy lesson? If you followed a legacy bookmark, you will be redirected to the .NET Academy subdomain automatically.
+        Looking for a .NET Academy lesson? If you followed a legacy bookmark, you will be forwarded to the .NET Academy course automatically.
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-4">
@@ -30,7 +30,7 @@ import Footer from '../components/Footer.astro';
           View courses catalog
         </a>
         <a
-          href="https://dotnet.karmatix.in"
+          href="https://karma-tic.github.io/dotnet-academy/"
           class="inline-flex h-11 items-center justify-center rounded-full border border-[#334155] bg-[#111827] px-6 text-sm font-semibold text-[#f8fafc] transition-colors hover:border-[#60a5fa]"
         >
           Go to .NET Academy
@@ -62,9 +62,9 @@ import Footer from '../components/Footer.astro';
       if (isDotNetRoute) {
         var notice = document.getElementById('redirect-notice');
         if (notice) {
-          notice.textContent = 'Redirecting you to the .NET Academy course at dotnet.karmatix.in...';
+          notice.textContent = 'Redirecting you to the .NET Academy course...';
         }
-        var target = 'https://dotnet.karmatix.in' + path + window.location.search + window.location.hash;
+        var target = 'https://karma-tic.github.io/dotnet-academy' + (path.startsWith('/') ? path : '/' + path) + window.location.search + window.location.hash;
         window.location.replace(target);
       }
     })();
@@ -72,4 +72,3 @@ import Footer from '../components/Footer.astro';
 
   <Footer slot="footer" />
 </Layout>
-
