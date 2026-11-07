@@ -1,0 +1,261 @@
+[
+  {
+    "id": "dotnet-academy",
+    "title": "Karmatix .NET Academy",
+    "shortTitle": ".NET Academy",
+    "flagship": true,
+    "status": "live",
+    "tagline": "Learn .NET the clear way.",
+    "summary": "Comprehensive .NET 10 and C# 14 engineering curriculum with 16 tested projects, clean architecture, Docker, and interview preparation.",
+    "audience": "Beginners to job-seeking backend engineers",
+    "level": "Beginner to Advanced",
+    "topics": [
+      "C# 14",
+      ".NET 10 LTS",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "Docker",
+      "xUnit",
+      "REST APIs",
+      "Clean Architecture"
+    ],
+    "url": "https://dotnet.karmatix.in",
+    "repoUrl": "https://github.com/Karma-tic/dotnet-academy",
+    "stats": [
+      {
+        "label": "Modules",
+        "value": "12",
+        "source": "dotnet-academy repo /content/lessons"
+      },
+      {
+        "label": "SDK Version",
+        "value": ".NET 10 LTS",
+        "source": "dotnet-academy global.json SDK 10.0.100"
+      },
+      {
+        "label": "Tested Projects",
+        "value": "16",
+        "source": "dotnet-academy /samples Capstones and Labs"
+      },
+      {
+        "label": "Interview Q&A",
+        "value": "200+",
+        "source": "dotnet-academy Career Hub interview questions"
+      }
+    ],
+    "versions": {
+      "sdk": ".NET 10.0.100",
+      "csharp": "C# 14"
+    },
+    "lastVerified": "2026-11-07",
+    "badges": ["Flagship", "100% Free", "CI Verified"],
+    "ciVerified": true,
+    "image": {
+      "desktop": "/images/courses/dotnet-desktop.webp",
+      "desktopAvif": "/images/courses/dotnet-desktop.avif",
+      "mobile": "/images/courses/dotnet-mobile.webp",
+      "mobileAvif": "/images/courses/dotnet-mobile.avif",
+      "alt": "Screenshot of Karmatix .NET Academy dashboard displaying course curriculum and code samples"
+    },
+    "codeSnippet": {
+      "title": "Minimal API with Typed Results (Module 3)",
+      "language": "csharp",
+      "code": "app.MapGet(\"/api/v1/students\", async (AppDbContext db) =>\n    Results.Ok(await db.Students.AsNoTracking().ToListAsync()))\n   .WithName(\"GetStudents\");"
+    }
+  },
+  {
+    "id": "flutter-course",
+    "title": "Karmatix Flutter Course",
+    "shortTitle": "Flutter Course",
+    "flagship": false,
+    "status": "live",
+    "tagline": "Zero to job-ready and company exam prep.",
+    "summary": "Hands-on Flutter and Dart guide with side-by-side Android Kotlin comparisons, timed mock tests, and practical calculation labs.",
+    "audience": "Beginners to mobile developers and exam candidates",
+    "level": "Beginner to Intermediate",
+    "topics": [
+      "Dart 3",
+      "Flutter 3",
+      "Android Core",
+      "State Management",
+      "REST APIs",
+      "Mock Exams"
+    ],
+    "url": "https://karma-tic.github.io/flutter-course/",
+    "repoUrl": "https://github.com/Karma-tic/flutter-course",
+    "stats": [
+      {
+        "label": "Curriculum Modules",
+        "value": "10",
+        "source": "flutter-course README and curriculum index"
+      },
+      {
+        "label": "Timed Mock Exams",
+        "value": "5",
+        "source": "flutter-course mock test suite with 100 questions"
+      },
+      {
+        "label": "Calculation Problems",
+        "value": "20+",
+        "source": "flutter-course commercial exam problems"
+      },
+      {
+        "label": "Platform Scope",
+        "value": "Dart 3 & Flutter",
+        "source": "flutter-course pubspec and tooling configs"
+      }
+    ],
+    "versions": {
+      "sdk": "Flutter 3.x",
+      "dart": "Dart 3.x"
+    },
+    "lastVerified": "2026-11-07",
+    "badges": ["Live", "100% Free", "Exam Prep"],
+    "ciVerified": false,
+    "image": {
+      "desktop": "/images/courses/flutter-desktop.webp",
+      "desktopAvif": "/images/courses/flutter-desktop.avif",
+      "mobile": "/images/courses/flutter-mobile.webp",
+      "mobileAvif": "/images/courses/flutter-mobile.avif",
+      "alt": "Screenshot of Karmatix Flutter Course interface showing Android comparison modules"
+    },
+    "codeSnippet": {
+      "title": "Stateful Form Validation (Module 3)",
+      "language": "dart",
+      "code": "TextFormField(\n  controller: _couponController,\n  decoration: const InputDecoration(labelText: 'Coupon Code'),\n  validator: (val) => val == null || val.isEmpty ? 'Required' : null,\n);"
+    }
+  },
+  {
+    "id": "cloud-devops",
+    "title": "Cloud and DevOps Architecture",
+    "shortTitle": "Cloud & DevOps",
+    "flagship": false,
+    "status": "planned",
+    "tagline": "Production container orchestration and infrastructure automation.",
+    "summary": "Hands-on cloud engineering with Docker, Kubernetes, Terraform, and automated deployment pipelines for reliable production infrastructure.",
+    "audience": "Backend developers and systems engineers",
+    "level": "Intermediate to Advanced",
+    "topics": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD",
+      "Linux",
+      "Cloud Networking"
+    ],
+    "url": "",
+    "repoUrl": "https://github.com/Karma-tic",
+    "stats": [
+      {
+        "label": "Status",
+        "value": "In planning",
+        "source": "Karmatix internal curriculum roadmap"
+      }
+    ],
+    "versions": {},
+    "lastVerified": "2026-11-07",
+    "badges": ["Planned"],
+    "ciVerified": false,
+    "image": {
+      "desktop": "",
+      "desktopAvif": "",
+      "mobile": "",
+      "mobileAvif": "",
+      "alt": "Cloud and DevOps Architecture course preview"
+    },
+    "codeSnippet": {
+      "title": "Terraform Cluster Definition",
+      "language": "hcl",
+      "code": "resource \"google_container_cluster\" \"primary\" {\n  name     = \"karmatix-prod\"\n  location = \"asia-south1-a\"\n  initial_node_count = 3\n}"
+    }
+  },
+  {
+    "id": "ai-python",
+    "title": "AI and Python for Production",
+    "shortTitle": "AI & Python",
+    "flagship": false,
+    "status": "planned",
+    "tagline": "Engineering real AI applications beyond simple wrappers.",
+    "summary": "Production Python engineering covering asynchronous workflows, LLM orchestration, evaluation pipelines, and vector database architectures.",
+    "audience": "Software engineers integrating machine intelligence",
+    "level": "Intermediate",
+    "topics": [
+      "Python 3.12",
+      "FastAPI",
+      "AsyncIO",
+      "Vector DBs",
+      "RAG Systems",
+      "Evaluation"
+    ],
+    "url": "",
+    "repoUrl": "https://github.com/Karma-tic",
+    "stats": [
+      {
+        "label": "Status",
+        "value": "In planning",
+        "source": "Karmatix internal curriculum roadmap"
+      }
+    ],
+    "versions": {},
+    "lastVerified": "2026-11-07",
+    "badges": ["Planned"],
+    "ciVerified": false,
+    "image": {
+      "desktop": "",
+      "desktopAvif": "",
+      "mobile": "",
+      "mobileAvif": "",
+      "alt": "AI and Python for Production course preview"
+    },
+    "codeSnippet": {
+      "title": "Asynchronous Retrieval Query",
+      "language": "python",
+      "code": "async def retrieve_context(query_vector: list[float], top_k: int = 5):\n    async with db_pool.acquire() as conn:\n        return await conn.fetch_cosine_similarity(query_vector, limit=top_k)"
+    }
+  },
+  {
+    "id": "distributed-systems",
+    "title": "Distributed Systems and Microservices",
+    "shortTitle": "Distributed Systems",
+    "flagship": false,
+    "status": "planned",
+    "tagline": "Resilient systems, event streaming, and consistency at scale.",
+    "summary": "Deep dive into messaging queues, eventual consistency, distributed tracing, observability, and high-throughput microservices architecture.",
+    "audience": "Senior engineers and systems architects",
+    "level": "Advanced",
+    "topics": [
+      "Kafka",
+      "gRPC",
+      "Event Sourcing",
+      "Saga Pattern",
+      "OpenTelemetry",
+      "CQRS"
+    ],
+    "url": "",
+    "repoUrl": "https://github.com/Karma-tic",
+    "stats": [
+      {
+        "label": "Status",
+        "value": "In planning",
+        "source": "Karmatix internal curriculum roadmap"
+      }
+    ],
+    "versions": {},
+    "lastVerified": "2026-11-07",
+    "badges": ["Planned"],
+    "ciVerified": false,
+    "image": {
+      "desktop": "",
+      "desktopAvif": "",
+      "mobile": "",
+      "mobileAvif": "",
+      "alt": "Distributed Systems course preview"
+    },
+    "codeSnippet": {
+      "title": "Outbox Pattern Batch Publisher",
+      "language": "csharp",
+      "code": "public async Task PublishPendingEventsAsync(CancellationToken ct)\n{\n    var messages = await _outbox.GetUnpublishedBatchAsync(100, ct);\n    await _bus.PublishBatchAsync(messages, ct);\n}"
+    }
+  }
+]
+
