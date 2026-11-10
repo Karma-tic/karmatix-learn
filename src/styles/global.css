@@ -129,17 +129,31 @@ body {
   }
 }
 
-/* Ko-fi overlay widget isolation - ensures injected widget elements never expand document.body or push the footer */
-#kofi-overlay-mount,
-div[id^="kofi-widget-overlay"],
-.floatingchat-container-wrap,
-.floatingchat-container-wrap-mobi {
-  position: fixed !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* Ko-fi floating overlay widget sizing & layout isolation:
+   - Ensures wrapper div never adds height to document.body flex layout (eliminates extra footer space)
+   - Expands widget width to 250px so 'Support Karmatix ☕' is never truncated
+   - Hides iframe scrollbars so the button is smooth, crisp, and non-scrollable */
+div[id^="kofi-widget-overlay"] {
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  overflow: visible !important;
 }
 
-#kofi-overlay-mount * {
-  pointer-events: auto;
+.floatingchat-container-wrap,
+.floatingchat-container-wrap-mobi {
+  width: 250px !important;
+  max-width: calc(100vw - 32px) !important;
+  height: 65px !important;
+  overflow: visible !important;
+}
+
+.floatingchat-container,
+.floatingchat-container-mobi {
+  width: 250px !important;
+  max-width: 100% !important;
+  height: 65px !important;
+  border: none !important;
+  overflow: hidden !important;
 }
 

@@ -72,9 +72,6 @@ const {
     </main>
     <slot name="footer" />
 
-    <!-- Dedicated container for Ko-fi Floating Overlay Widget to isolate it from body flex layout -->
-    <div id="kofi-overlay-mount" style="position: fixed; bottom: 0; left: 0; width: 0; height: 0; margin: 0; padding: 0; overflow: visible; z-index: 99999999; pointer-events: none;"></div>
-
     <!-- Official Ko-fi Floating Overlay Widget (Non-blocking async load) -->
     <script is:inline>
       (function () {
@@ -91,7 +88,7 @@ const {
                 'floating-chat.donateButton.text': 'Support Karmatix ☕',
                 'floating-chat.donateButton.background-color': '#2563eb',
                 'floating-chat.donateButton.text-color': '#ffffff'
-              }, 'kofi-overlay-mount');
+              });
             }
           };
           document.body.appendChild(script);
