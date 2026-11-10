@@ -129,3 +129,17 @@ body {
   }
 }
 
+/* Ko-fi overlay widget isolation - ensures injected widget elements never expand document.body or push the footer */
+#kofi-overlay-mount,
+div[id^="kofi-widget-overlay"],
+.floatingchat-container-wrap,
+.floatingchat-container-wrap-mobi {
+  position: fixed !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#kofi-overlay-mount * {
+  pointer-events: auto;
+}
+
