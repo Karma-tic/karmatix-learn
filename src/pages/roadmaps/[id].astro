@@ -1,0 +1,228 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import { roadmaps, paths, res, cert, VERDICT, LAST_CHECKED } from '../../lib/data';
+
+export function getStaticPaths() {
+  return roadmaps.map((k) => ({ params: { id: k.id }, props: { k } }));
+}
+const { k } = Astro.props;
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
+const total = k.stages.reduce((n, s) => n + s.topics.length, 0);
+const related = paths.find((p) => p.id === k.related);
+const siblings = roadmaps.filter((r) => r.related === k.related && r.id !== k.id);
+const courseName = k.id === 'flutter' ? 'Karmatix Flutter Course' : k.id === 'dotnet' ? 'Karmatix .NET Academy' : '';
+
+const url = `https://learn.karmatix.in/roadmaps/${k.id}/`;
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'HowTo', name: `${k.name} roadmap: how to become a ${k.role}`, description: k.tagline,
+  step: k.stages.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title, text: `${s.goal} Skills: ${s.topics.join('; ')}. Build: ${s.build}` })),
+}, {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Roadmaps', item: 'https://learn.karmatix.in/roadmaps/' },
+    { '@type': 'ListItem', position: 2, name: k.name, item: url },
+  ],
+}];
+---
+<Layout title={`${k.name} roadmap: every skill, resource and project | Karmatix Learn`} description={`The complete ${k.name} roadmap: ${total} skills across ${k.stages.length} stages, with the best free resources, projects to build, interview topics and how to prove each stage.`} canonical={url} jsonLd={jsonLd} current="roadmaps">
+  <section class="kx-glow border-b border-line">
+    <div class="mx-auto max-w-6xl px-4 pb-12 pt-10 sm:px-6 sm:pt-14">
+      <nav aria-label="Breadcrumb" class="text-sm text-dim"><a href="/roadmaps/" class="inline-flex min-h-9 items-center hover:text-text">Roadmaps</a> <span aria-hidden="true">/</span> <span class="text-muted">{k.name}</span></nav>
+      <div class="mt-4 flex items-start gap-4">
+        <span class="hidden size-14 shrink-0 items-center justify-center rounded-2xl border border-line bg-surface text-ember sm:inline-flex"><Icon name={k.icon} class="size-7" /></span>
+        <div>
+          <h1 class="text-4xl font-semibold tracking-[-0.03em] text-text sm:text-5xl">{k.name} roadmap</h1>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed text-muted">{k.tagline}</p>
+        </div>
+      </div>
+      <dl class="mt-8 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Become a</dt><dd class="mt-1 text-sm font-medium text-text">{k.role}</dd></div>
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Time, part time</dt><dd class="mt-1 text-sm font-medium text-text"><span class="num">{k.months}</span> months</dd></div>
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Start with</dt><dd class="mt-1 text-sm font-medium text-text">{k.start}</dd></div>
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Skills to learn</dt><dd class="mt-1 text-sm font-medium text-text"><span class="num">{total}</span></dd></div>
+      </dl>
+      <p class="mt-6 flex max-w-3xl gap-2 text-sm leading-relaxed text-muted"><Icon name="briefcase" class="mt-0.5 size-4 shrink-0 text-ember" />{k.why}</p>
+      <nav aria-label="Stages" class="mt-6">
+        <ol class="kx-scroll-row">
+          {k.stages.map((s, i) => <li class="snap-start"><a href={`#stage-${i + 1}`} class="kx-chip"><span class="num text-ember">{i + 1}</span>{s.title}</a></li>)}
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <div class="mx-auto grid max-w-6xl gap-12 px-4 pt-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px]" data-roadmap={k.id} data-total={total}>
+    <div class="kx-route relative">
+      <div class="pointer-events-none absolute bottom-4 left-[17px] top-4 w-[2px] rounded-full bg-line-strong" aria-hidden="true"><div class="kx-route-fill h-full w-full origin-top rounded-full bg-ember"></div></div>
+      <ol class="relative" aria-label={`${k.name} stages`}>
+        {k.stages.map((s, i) => (
+          <li id={`stage-${i + 1}`} class="relative pb-14 pl-14 last:pb-0" data-stage={i}>
+            <span class="num absolute left-0 top-0 inline-flex size-9 items-center justify-center rounded-full border-2 border-ember bg-ink text-sm font-semibold text-ember" data-stage-badge>{i + 1}</span>
+            <p class="text-sm text-dim"><span class="num">{s.weeks}</span> weeks <span aria-hidden="true">/</span> <span data-stage-count><span class="num">0</span> of <span class="num">{s.topics.length}</span> done</span></p>
+            <h2 class="text-2xl font-semibold tracking-tight text-text sm:text-[1.7rem]">{s.title}</h2>
+            <p class="mt-1.5 text-muted">{s.goal}</p>
+
+            <fieldset class="kx-card mt-6 p-2 sm:p-3">
+              <legend class="sr-only">Skills for {s.title}</legend>
+              <p class="flex items-center gap-2 px-2 pb-1 pt-1.5 text-sm font-semibold text-text" aria-hidden="true"><Icon name="check" class="size-4 text-ember" />What you need to know</p>
+              <ul>
+                {s.topics.map((t) => {
+                  const key = `${i}-${slug(t)}`;
+                  return (
+                    <li>
+                      <label class="group flex min-h-11 cursor-pointer items-start gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-surface-2">
+                        <input type="checkbox" class="kx-check peer mt-0.5 size-[18px] shrink-0 cursor-pointer appearance-none rounded-[5px] border border-line-strong bg-ink transition-colors checked:border-ember checked:bg-ember" data-key={key} />
+                        <span class="text-[0.95rem] leading-snug text-text/90 peer-checked:text-dim peer-checked:line-through peer-checked:decoration-dim/60">{t}</span>
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            </fieldset>
+
+            <h3 class="mt-6 flex items-center gap-2 text-sm font-semibold text-text"><Icon name="book-open" class="size-4 text-ember" />Learn from</h3>
+            <div class="mt-3 grid gap-3 md:grid-cols-2">
+              {s.learn.map((id) => <ResourceCard r={res(id)} variant="compact" headingLevel="h4" />)}
+            </div>
+            {s.hint && <p class="mt-3 flex gap-2 text-sm text-dim"><Icon name="info" class="mt-0.5 size-4 shrink-0 text-ember" />{s.hint}</p>}
+
+            <h3 class="mt-6 flex items-center gap-2 text-sm font-semibold text-text"><Icon name="dumbbell" class="size-4 text-ember" />Practise on</h3>
+            <div class="mt-3 grid gap-3 md:grid-cols-2">
+              {s.practise.map((id) => <ResourceCard r={res(id)} variant="compact" headingLevel="h4" />)}
+            </div>
+
+            <div class="mt-6 grid gap-3 md:grid-cols-2">
+              <div class="rounded-xl border border-ember/40 bg-[color-mix(in_oklab,var(--color-ember)_7%,var(--color-surface))] p-5">
+                <h3 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="wrench" class="size-4 text-ember" />Build this</h3>
+                <p class="mt-2 leading-relaxed text-text/90">{s.build}</p>
+              </div>
+              <div class="rounded-xl border border-line bg-surface p-5">
+                <h3 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="flag" class="size-4 text-ember" />Prove it</h3>
+                <p class="mt-2 leading-relaxed text-muted">{s.prove}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <aside class="space-y-8 lg:sticky lg:top-24 lg:max-h-[calc(100dvh-7rem)] lg:self-start lg:overflow-y-auto lg:pb-6 lg:[scrollbar-width:thin]" aria-label="Roadmap kit">
+      <section class="kx-card p-4" aria-labelledby="prog-h">
+        <h2 id="prog-h" class="text-sm font-semibold text-text">Your progress</h2>
+        <p class="mt-2 text-2xl font-semibold text-text"><span class="num" data-done>0</span><span class="text-base font-normal text-dim"> of <span class="num">{total}</span> skills</span></p>
+        <div class="mt-3 h-2 overflow-hidden rounded-full bg-surface-3" role="progressbar" aria-label="Skills done" aria-valuemin="0" aria-valuemax={total} aria-valuenow="0" data-bar>
+          <div class="h-full w-0 rounded-full bg-ember transition-[width] duration-300" data-fill></div>
+        </div>
+        <p class="mt-3 text-xs text-dim">Saved in this browser only. No account needed.</p>
+        <button type="button" class="mt-2 hidden min-h-11 text-sm text-ember-soft underline-offset-4 hover:underline" data-reset>Reset progress</button>
+      </section>
+
+      {k.course && (
+        <section class="rounded-xl border border-ember/40 bg-[color-mix(in_oklab,var(--color-ember)_7%,var(--color-surface))] p-4">
+          <h2 class="text-sm font-semibold text-text">Practise free with {courseName}</h2>
+          <p class="mt-1.5 text-sm leading-relaxed text-muted">{k.id === 'flutter' ? 'Timed mock tests, labs, exam prep and cheat sheets built for this roadmap.' : 'Tested sample projects, capstones, interview questions and cheat sheets built for this roadmap.'}</p>
+          <a href={k.course} class="kx-btn kx-btn-primary mt-4 w-full">Open {k.id === 'flutter' ? 'Flutter practice' : '.NET practice'}</a>
+        </section>
+      )}
+
+      <section>
+        <h2 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="git-pull-request" class="size-4 text-ember" />Libraries to know</h2>
+        <ul class="mt-2">
+          {k.libs.map((l) => <li class="border-b border-line py-2.5"><p class="text-sm font-medium text-text">{l.name}</p><p class="text-xs text-dim">{l.use}</p></li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="message-circle" class="size-4 text-ember" />Interview topics</h2>
+        <ul class="mt-2 space-y-1.5 text-sm text-muted">
+          {k.interview.map((t) => <li class="flex gap-2"><span class="mt-2 size-1 shrink-0 rounded-full bg-ember/70" aria-hidden="true"></span>{t}</li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="award" class="size-4 text-ember" />Certifications</h2>
+        {k.certs.length ? (
+          <ul class="mt-3 space-y-2">
+            {k.certs.map((id) => { const c = cert(id); return (
+              <li class="kx-card p-3.5">
+                <a href={`/certifications/#${c.id}`} class="text-sm font-medium text-text hover:text-ember-soft">{c.name}</a>
+                <p class="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-dim"><span class="num">{c.fee}</span><span class={`kx-tag ${c.verdict === 'worth' ? 'kx-tag-free' : c.verdict === 'only' ? 'kx-tag-paid' : ''}`}>{VERDICT[c.verdict].label}</span></p>
+              </li>
+            ); })}
+          </ul>
+        ) : null}
+        {k.note && <p class="mt-2 text-sm leading-relaxed text-muted">{k.note}</p>}
+      </section>
+
+      {[
+        { label: 'Tools to install', icon: 'wrench', ids: k.tools },
+        { label: 'Channels to follow', icon: 'circle-play', ids: k.channels },
+        { label: 'Communities to join', icon: 'users', ids: k.communities },
+      ].map((g) => (
+        <section>
+          <h2 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name={g.icon} class="size-4 text-ember" />{g.label}</h2>
+          <ul class="mt-2">
+            {g.ids.map((id) => { const r = res(id); return (
+              <li><a href={r.url} class="group flex min-h-11 items-center justify-between gap-3 border-b border-line text-sm text-muted transition-colors hover:text-text">
+                <span class="min-w-0"><span class="block truncate">{r.name}</span>{r.lang !== 'en' && <span class="block text-xs text-dim">Hindi</span>}</span>
+                <Icon name="arrow-up-right" class="kx-arrow size-4 shrink-0 text-dim group-hover:text-ember" />
+              </a></li>
+            ); })}
+          </ul>
+        </section>
+      ))}
+      <p class="text-xs text-dim">Checked <span class="num">{LAST_CHECKED}</span>.</p>
+    </aside>
+  </div>
+
+  <section class="mx-auto mt-20 max-w-6xl px-4 sm:px-6">
+    <div class="kx-card grid gap-6 p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
+      <div>
+        <h2 class="text-xl font-semibold text-text">Comparing stacks?</h2>
+        <p class="mt-1 text-muted">{related ? `The ${related.name.toLowerCase()} path covers the role, whatever stack you choose.` : ''}</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        {related && <a href={`/paths/${related.id}/`} class="kx-btn kx-btn-primary">{related.name} path</a>}
+        {siblings.map((r) => <a href={`/roadmaps/${r.id}/`} class="kx-btn kx-btn-ghost">{r.name}</a>)}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-roadmap]');
+  if (root) {
+    const KEY = `kx-roadmap:${root.dataset.roadmap}`;
+    const total = Number(root.dataset.total);
+    const boxes = Array.from(root.querySelectorAll<HTMLInputElement>('.kx-check'));
+    let done = new Set<string>();
+    try { done = new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch {}
+    const doneEl = root.querySelector('[data-done]')!, fill = root.querySelector<HTMLElement>('[data-fill]')!;
+    const bar = root.querySelector('[data-bar]')!, reset = root.querySelector<HTMLButtonElement>('[data-reset]')!;
+    const render = () => {
+      const n = boxes.filter((b) => b.checked).length;
+      doneEl.textContent = String(n);
+      fill.style.width = `${(n / total) * 100}%`;
+      bar.setAttribute('aria-valuenow', String(n));
+      reset.classList.toggle('hidden', n === 0);
+      root.querySelectorAll<HTMLElement>('[data-stage]').forEach((st) => {
+        const bs = Array.from(st.querySelectorAll<HTMLInputElement>('.kx-check'));
+        const c = bs.filter((b) => b.checked).length;
+        const cnt = st.querySelector('[data-stage-count]');
+        if (cnt) cnt.innerHTML = `<span class="num">${c}</span> of <span class="num">${bs.length}</span> done`;
+        const badge = st.querySelector<HTMLElement>('[data-stage-badge]');
+        if (badge) { const all = c === bs.length; badge.classList.toggle('!bg-ember', all); badge.classList.toggle('!text-ember-ink', all); }
+      });
+    };
+    boxes.forEach((b) => {
+      b.checked = done.has(b.dataset.key!);
+      b.addEventListener('change', () => {
+        b.checked ? done.add(b.dataset.key!) : done.delete(b.dataset.key!);
+        try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch {}
+        render();
+      });
+    });
+    reset.addEventListener('click', () => { boxes.forEach((b) => (b.checked = false)); done.clear(); try { localStorage.removeItem(KEY); } catch {} render(); });
+    render();
+  }
+</script>

@@ -1,0 +1,1645 @@
+[
+  {
+    "id": "flutter",
+    "name": "Flutter",
+    "icon": "smartphone",
+    "role": "Flutter developer",
+    "tagline": "Build Android and iOS apps from one Dart codebase and ship them to the stores.",
+    "months": "5 to 8",
+    "start": "No coding needed",
+    "why": "Flutter is one of the most used cross-platform frameworks in Indian startups and service companies, and campus drives for mobile roles often test Dart, widgets and Android basics.",
+    "stages": [
+      {
+        "title": "Setup and Dart",
+        "weeks": "2 to 3",
+        "goal": "Install the tools and get fluent in Dart before widgets.",
+        "topics": [
+          "Install Flutter, Android Studio and VS Code, fix everything flutter doctor reports",
+          "Run an app on an emulator and a real phone",
+          "Dart variables, types and sound null safety",
+          "Functions, collections (List, Set, Map) and records",
+          "Classes, constructors, mixins and abstract classes",
+          "Futures, async and await, Streams",
+          "Git basics: commit, branch, push to GitHub"
+        ],
+        "learn": [
+          "flutter-docs",
+          "dart-language",
+          "karmatix-flutter"
+        ],
+        "practise": [
+          "dartpad",
+          "exercism"
+        ],
+        "build": "Ten small Dart console programs: a grade calculator, a discount calculator, a to-do list in memory, and a simple bank account class.",
+        "prove": "A public GitHub repo with all ten programs and a README.",
+        "hint": null
+      },
+      {
+        "title": "Widgets and layout",
+        "weeks": "3 to 4",
+        "goal": "Think in widgets and build any screen from a design.",
+        "topics": [
+          "Stateless vs Stateful widgets and the build method",
+          "Row, Column, Stack, Expanded, Flexible, Wrap",
+          "Container, Padding, SizedBox, Card, ListTile",
+          "Material 3 theming, dark mode and custom fonts",
+          "Scaffold, AppBar, Drawer, BottomNavigationBar",
+          "ListView and GridView builders",
+          "Responsive layouts with LayoutBuilder and MediaQuery"
+        ],
+        "learn": [
+          "flutter-codelabs",
+          "flutter-yt"
+        ],
+        "practise": [
+          "figma",
+          "dartpad"
+        ],
+        "build": "Rebuild three real app screens from Figma community files: a login screen, a product list and a profile page, pixel close on phone and tablet.",
+        "prove": "Screenshots side by side with the designs in your README.",
+        "hint": null
+      },
+      {
+        "title": "Forms, navigation and state",
+        "weeks": "3 to 4",
+        "goal": "Handle user input, move between screens and keep state sane.",
+        "topics": [
+          "TextFormField, Form and validation",
+          "Navigation with Navigator and go_router, passing data between screens",
+          "setState, InheritedWidget and Provider",
+          "Riverpod or Bloc: pick one and learn it well",
+          "Separating UI, state and data",
+          "Local storage with shared_preferences and a database (sqflite, Drift or Hive)"
+        ],
+        "learn": [
+          "riverpod",
+          "bloc"
+        ],
+        "practise": [
+          "karmatix-flutter"
+        ],
+        "build": "A student records app with add, edit, delete, search and validation, data saved locally, state handled with Riverpod or Bloc.",
+        "prove": "A short screen recording of the full CRUD flow in the README.",
+        "hint": "Do not learn both Riverpod and Bloc at first. Check job posts in your city and pick the one they ask for."
+      },
+      {
+        "title": "APIs, Firebase and real data",
+        "weeks": "3 to 4",
+        "goal": "Talk to servers, handle loading and errors, add sign-in.",
+        "topics": [
+          "HTTP with http or dio, JSON parsing and model classes",
+          "Loading, empty and error states",
+          "Pagination and pull to refresh",
+          "Firebase Auth, Cloud Firestore and Storage",
+          "Push notifications with Firebase Cloud Messaging",
+          "Images, caching and offline basics"
+        ],
+        "learn": [
+          "firebase",
+          "pub-dev"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A news or movie app using a public API with search, pagination, favourites saved offline and Google sign-in.",
+        "prove": "A release APK link and a demo video.",
+        "hint": null
+      },
+      {
+        "title": "Quality and release",
+        "weeks": "2 to 3",
+        "goal": "Make it reliable and publish it.",
+        "topics": [
+          "Unit, widget and integration tests",
+          "Flutter DevTools: performance, memory and rebuilds",
+          "Platform channels at a basic level",
+          "App icons, splash screens, signing and build flavours",
+          "CI with GitHub Actions or Codemagic",
+          "Publishing on Google Play (internal testing first) and TestFlight"
+        ],
+        "learn": [
+          "flutter-docs",
+          "github-actions"
+        ],
+        "practise": [
+          "karmatix-flutter"
+        ],
+        "build": "Add tests and a CI pipeline to your best app and publish it on the Play Store.",
+        "prove": "A live Play Store or TestFlight link on your resume.",
+        "hint": null
+      },
+      {
+        "title": "Interview and job ready",
+        "weeks": "2 to 3",
+        "goal": "Prepare for company exams and interviews.",
+        "topics": [
+          "Widget lifecycle, keys and BuildContext",
+          "State management trade-offs explained in your own words",
+          "Android basics: activities, intents, permissions, Gradle",
+          "Dart and logic problems under time limits",
+          "System design for a mobile app: caching, sync, offline",
+          "Portfolio with two published apps"
+        ],
+        "learn": [
+          "tech-interview-handbook"
+        ],
+        "practise": [
+          "karmatix-flutter",
+          "leetcode"
+        ],
+        "build": "Take every timed mock test in the Karmatix Flutter course and redo the ones you fail.",
+        "prove": "Two published apps, a clean GitHub and mock test scores you can talk about.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "go_router",
+        "use": "Navigation and deep links"
+      },
+      {
+        "name": "riverpod or flutter_bloc",
+        "use": "State management"
+      },
+      {
+        "name": "dio",
+        "use": "HTTP with interceptors"
+      },
+      {
+        "name": "freezed and json_serializable",
+        "use": "Immutable models and JSON"
+      },
+      {
+        "name": "drift or hive",
+        "use": "Local database"
+      },
+      {
+        "name": "firebase_core, firebase_auth, cloud_firestore",
+        "use": "Backend as a service"
+      },
+      {
+        "name": "cached_network_image",
+        "use": "Image caching"
+      },
+      {
+        "name": "flutter_test and mocktail",
+        "use": "Testing"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "dartpad",
+      "pub-dev",
+      "firebase",
+      "figma"
+    ],
+    "channels": [
+      "flutter-yt",
+      "fireship"
+    ],
+    "communities": [
+      "r-flutterdev",
+      "gdg",
+      "r-developersindia"
+    ],
+    "certs": [],
+    "interview": [
+      "Widget tree, element tree and render tree",
+      "Stateless vs Stateful and when to use each",
+      "Keys and why lists need them",
+      "Hot reload vs hot restart",
+      "Future vs Stream",
+      "Provider vs Riverpod vs Bloc",
+      "How you would make an app work offline",
+      "How you reduce rebuilds and jank"
+    ],
+    "related": "mobile",
+    "course": "https://karma-tic.github.io/flutter-course/",
+    "note": "There is no Flutter certification worth paying for. A published app is the proof employers look for."
+  },
+  {
+    "id": "dotnet",
+    "name": ".NET and C#",
+    "icon": "server",
+    "role": "Backend developer (.NET)",
+    "tagline": "Build web APIs and services with C#, ASP.NET Core and SQL, the way enterprise teams do.",
+    "months": "6 to 9",
+    "start": "No coding needed",
+    "why": ".NET is one of the most hired backend stacks in Indian service companies and enterprises, with steady demand for ASP.NET Core, SQL Server and Azure skills.",
+    "stages": [
+      {
+        "title": "C# and the toolchain",
+        "weeks": "3 to 4",
+        "goal": "Get fluent in C# and the dotnet CLI.",
+        "topics": [
+          "Install the .NET 10 SDK, VS Code with C# Dev Kit or Visual Studio",
+          "dotnet new, build, run and test from the terminal",
+          "Types, nullable reference types, control flow, methods",
+          "Classes, records, structs, interfaces and inheritance",
+          "Collections and generics",
+          "Exceptions and debugging",
+          "Git and GitHub"
+        ],
+        "learn": [
+          "karmatix-dotnet",
+          "csharp-docs",
+          "dotnet-yt"
+        ],
+        "practise": [
+          "exercism",
+          "learn-git-branching"
+        ],
+        "build": "Five console apps: a bank account with transactions, a student grade report, an inventory manager, a file word counter and a CLI to-do list.",
+        "prove": "A public repo with tests for at least two of them, or the free Foundational C# certification.",
+        "hint": null
+      },
+      {
+        "title": "Modern C# and LINQ",
+        "weeks": "2 to 3",
+        "goal": "Write the C# that real codebases use.",
+        "topics": [
+          "LINQ queries and method syntax",
+          "async and await, Task and cancellation",
+          "Delegates, lambdas and events",
+          "Pattern matching and switch expressions",
+          "Records, init-only properties and immutability",
+          "Dependency injection basics",
+          "Unit tests with xUnit"
+        ],
+        "learn": [
+          "csharp-docs",
+          "nick-chapsas"
+        ],
+        "practise": [
+          "exercism",
+          "karmatix-dotnet"
+        ],
+        "build": "Refactor your console apps with LINQ and async, and add xUnit tests for the core logic.",
+        "prove": "Green tests in a GitHub Actions run.",
+        "hint": null
+      },
+      {
+        "title": "SQL and EF Core",
+        "weeks": "2 to 3",
+        "goal": "Store and query data correctly.",
+        "topics": [
+          "SQL: SELECT, JOINs, GROUP BY, indexes, transactions",
+          "SQL Server or PostgreSQL locally (Docker is fine)",
+          "EF Core: DbContext, migrations, relationships",
+          "Querying efficiently: AsNoTracking, projections, avoiding N+1",
+          "Dapper for raw SQL when you need speed"
+        ],
+        "learn": [
+          "ef-core-docs",
+          "postgres-tutorial"
+        ],
+        "practise": [
+          "sqlbolt",
+          "karmatix-dotnet"
+        ],
+        "build": "A library database with books, members and loans, managed through EF Core migrations, with reports written in LINQ and in raw SQL.",
+        "prove": "A migration history and a README with the schema diagram.",
+        "hint": null
+      },
+      {
+        "title": "ASP.NET Core Web APIs",
+        "weeks": "3 to 4",
+        "goal": "Build secure, documented REST APIs.",
+        "topics": [
+          "Minimal APIs and controllers",
+          "Routing, model binding and validation",
+          "Middleware, logging and configuration",
+          "Auth with JWT and ASP.NET Core Identity",
+          "OpenAPI docs and versioning",
+          "Error handling with ProblemDetails",
+          "Integration tests with WebApplicationFactory"
+        ],
+        "learn": [
+          "aspnet-core-docs",
+          "milan-jovanovic"
+        ],
+        "practise": [
+          "karmatix-dotnet",
+          "bruno"
+        ],
+        "build": "A student or e-commerce API with auth, validation, pagination, OpenAPI docs and integration tests.",
+        "prove": "A live API (Azure App Service free tier or Render) with an OpenAPI page.",
+        "hint": null
+      },
+      {
+        "title": "Architecture and production",
+        "weeks": "3 to 4",
+        "goal": "Structure, ship and run it like a team would.",
+        "topics": [
+          "Clean architecture and vertical slices, and when not to use them",
+          "Caching with IMemoryCache and Redis",
+          "Background jobs with hosted services",
+          "Real-time features with SignalR",
+          "Docker and GitHub Actions CI",
+          "Deploying to Azure, logs and health checks"
+        ],
+        "learn": [
+          "milan-jovanovic",
+          "docker",
+          "github-actions"
+        ],
+        "practise": [
+          "karmatix-dotnet"
+        ],
+        "build": "Take the production API capstone from the Karmatix .NET Academy and extend it with caching, a background job and a deploy pipeline.",
+        "prove": "AZ-204 if your target companies use Azure, plus a live capstone.",
+        "hint": null
+      },
+      {
+        "title": "Interview and job ready",
+        "weeks": "2 to 3",
+        "goal": "Prepare for .NET interview rounds.",
+        "topics": [
+          "CLR, garbage collection, value vs reference types",
+          "async internals and common deadlocks",
+          "DI lifetimes: singleton, scoped, transient",
+          "EF Core performance questions",
+          "REST design and HTTP status codes",
+          "SOLID with examples from your own code"
+        ],
+        "learn": [
+          "tech-interview-handbook"
+        ],
+        "practise": [
+          "karmatix-dotnet",
+          "leetcode"
+        ],
+        "build": "Answer the Karmatix .NET Academy interview questions out loud and record yourself once.",
+        "prove": "Two deployed APIs, tests in CI and confident answers on the common topics.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "ASP.NET Core",
+        "use": "Web APIs and web apps"
+      },
+      {
+        "name": "Entity Framework Core",
+        "use": "ORM and migrations"
+      },
+      {
+        "name": "Dapper",
+        "use": "Fast raw SQL"
+      },
+      {
+        "name": "xUnit with FluentAssertions or Shouldly",
+        "use": "Testing"
+      },
+      {
+        "name": "Serilog",
+        "use": "Structured logging"
+      },
+      {
+        "name": "FluentValidation",
+        "use": "Request validation"
+      },
+      {
+        "name": "MediatR (optional)",
+        "use": "In-process messaging for larger apps"
+      },
+      {
+        "name": "Polly",
+        "use": "Retries and resilience"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "docker",
+      "bruno",
+      "github-actions"
+    ],
+    "channels": [
+      "nick-chapsas",
+      "milan-jovanovic",
+      "dotnet-yt"
+    ],
+    "communities": [
+      "r-developersindia",
+      "stack-overflow",
+      "gdg"
+    ],
+    "certs": [
+      "fcc-csharp",
+      "az-204",
+      "az-900"
+    ],
+    "interview": [
+      "Value vs reference types, boxing",
+      "IEnumerable vs IQueryable",
+      "async/await and ConfigureAwait",
+      "DI lifetimes and captive dependencies",
+      "Middleware pipeline order",
+      "EF Core tracking and N+1 queries",
+      "JWT authentication flow",
+      "Records vs classes"
+    ],
+    "related": "backend",
+    "course": "https://karma-tic.github.io/dotnet-academy/",
+    "note": null
+  },
+  {
+    "id": "react",
+    "name": "React and Next.js",
+    "icon": "layout-template",
+    "role": "Frontend developer (React)",
+    "tagline": "Build fast, accessible web apps with React, TypeScript and Next.js.",
+    "months": "5 to 8",
+    "start": "HTML and CSS basics",
+    "why": "React is the most requested frontend library in Indian job posts, usually with TypeScript and often Next.js.",
+    "stages": [
+      {
+        "title": "HTML, CSS and JavaScript",
+        "weeks": "4 to 6",
+        "goal": "Master the platform before the framework.",
+        "topics": [
+          "Semantic HTML and forms",
+          "Flexbox, Grid and responsive design",
+          "Modern JavaScript: modules, destructuring, array methods",
+          "Promises, async and fetch",
+          "The DOM and events",
+          "Accessibility basics"
+        ],
+        "learn": [
+          "mdn",
+          "javascript-info",
+          "web-dev-learn"
+        ],
+        "practise": [
+          "frontend-mentor"
+        ],
+        "build": "Three Frontend Mentor challenges in plain HTML, CSS and JavaScript.",
+        "prove": "Live links and a Lighthouse score above 90.",
+        "hint": null
+      },
+      {
+        "title": "React core",
+        "weeks": "3 to 4",
+        "goal": "Think in components and state.",
+        "topics": [
+          "Components, props and JSX",
+          "useState, useEffect and when you do not need an effect",
+          "Lists, keys and conditional rendering",
+          "Forms and controlled inputs",
+          "Lifting state and composition",
+          "Custom hooks"
+        ],
+        "learn": [
+          "react-docs",
+          "scrimba"
+        ],
+        "practise": [
+          "frontend-mentor"
+        ],
+        "build": "A notes app with search, filters and local storage.",
+        "prove": "Deployed on Vercel with clean commits.",
+        "hint": null
+      },
+      {
+        "title": "TypeScript and data",
+        "weeks": "3 to 4",
+        "goal": "Type your app and handle server data properly.",
+        "topics": [
+          "TypeScript types, unions, generics and narrowing",
+          "Routing",
+          "Server data with TanStack Query",
+          "Loading, error and empty states",
+          "Forms with validation (React Hook Form and Zod)"
+        ],
+        "learn": [
+          "ts-handbook",
+          "tanstack-query"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A movie or GitHub explorer app using a public API with caching, pagination and routing.",
+        "prove": "A README explaining your data flow.",
+        "hint": null
+      },
+      {
+        "title": "Next.js and production",
+        "weeks": "4 to 5",
+        "goal": "Ship full-stack React.",
+        "topics": [
+          "Next.js App Router, layouts and Server Components",
+          "Data fetching and caching",
+          "Auth and a database",
+          "Testing with Vitest and Testing Library",
+          "Performance: images, bundle size, Core Web Vitals",
+          "Deploying and environment variables"
+        ],
+        "learn": [
+          "nextjs-learn",
+          "vitest",
+          "testing-library"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A full-stack Next.js app with auth, a Postgres database and tests.",
+        "prove": "A live app, CI and a performance before and after write-up.",
+        "hint": null
+      },
+      {
+        "title": "Interview ready",
+        "weeks": "2 to 3",
+        "goal": "Pass frontend rounds.",
+        "topics": [
+          "JavaScript internals: closures, this, event loop",
+          "React rendering and reconciliation",
+          "Machine coding: build a widget in 60 minutes",
+          "Frontend system design basics",
+          "Accessibility questions"
+        ],
+        "learn": [
+          "namaste-js",
+          "tech-interview-handbook"
+        ],
+        "practise": [
+          "leetcode",
+          "frontend-mentor"
+        ],
+        "build": "Do five timed machine coding rounds: autocomplete, modal, tabs, infinite scroll, star rating.",
+        "prove": "Two portfolio projects and recorded machine coding practice.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "React Router or Next.js",
+        "use": "Routing"
+      },
+      {
+        "name": "TanStack Query",
+        "use": "Server state"
+      },
+      {
+        "name": "React Hook Form and Zod",
+        "use": "Forms and validation"
+      },
+      {
+        "name": "Tailwind CSS",
+        "use": "Styling"
+      },
+      {
+        "name": "Vitest and Testing Library",
+        "use": "Testing"
+      },
+      {
+        "name": "Zustand",
+        "use": "Small client state"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "chrome-devtools",
+      "figma",
+      "vercel"
+    ],
+    "channels": [
+      "web-dev-simplified",
+      "kevin-powell",
+      "namaste-js",
+      "fireship"
+    ],
+    "communities": [
+      "reactiflux",
+      "r-developersindia",
+      "gdg"
+    ],
+    "certs": [
+      "fcc-certs"
+    ],
+    "interview": [
+      "Closures and the event loop",
+      "Virtual DOM and reconciliation",
+      "useEffect pitfalls",
+      "Keys in lists",
+      "Memoisation and when it helps",
+      "Controlled vs uncontrolled inputs",
+      "Server vs Client Components",
+      "Web performance metrics"
+    ],
+    "related": "frontend",
+    "course": null,
+    "note": null
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "icon": "server",
+    "role": "Backend developer (Node.js)",
+    "tagline": "Build APIs and services in JavaScript or TypeScript on Node.js.",
+    "months": "5 to 8",
+    "start": "JavaScript basics",
+    "why": "Node.js with TypeScript is common in Indian startups, often with Express or NestJS and PostgreSQL or MongoDB.",
+    "stages": [
+      {
+        "title": "JavaScript and Node basics",
+        "weeks": "3 to 4",
+        "goal": "Understand the runtime.",
+        "topics": [
+          "Modules, npm and package.json",
+          "The event loop and async patterns",
+          "File system, streams and buffers",
+          "HTTP module without a framework",
+          "Environment variables and config"
+        ],
+        "learn": [
+          "javascript-info",
+          "node-learn"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "A CLI tool and a raw HTTP server that serves JSON.",
+        "prove": "Both on GitHub with READMEs.",
+        "hint": null
+      },
+      {
+        "title": "APIs with Express",
+        "weeks": "3 to 4",
+        "goal": "Build a clean REST API.",
+        "topics": [
+          "Routing, middleware and error handling",
+          "Validation with Zod",
+          "REST design and status codes",
+          "Auth with JWT and sessions",
+          "Testing with Vitest and Supertest"
+        ],
+        "learn": [
+          "express",
+          "piyush-garg"
+        ],
+        "practise": [
+          "bruno"
+        ],
+        "build": "A task manager API with users, auth and tests.",
+        "prove": "An OpenAPI page and a Bruno collection.",
+        "hint": null
+      },
+      {
+        "title": "Databases",
+        "weeks": "3 to 4",
+        "goal": "Model and query data well.",
+        "topics": [
+          "SQL with PostgreSQL",
+          "An ORM: Prisma or Drizzle",
+          "MongoDB and when a document store fits",
+          "Indexes and query performance",
+          "Transactions"
+        ],
+        "learn": [
+          "postgres-tutorial",
+          "prisma",
+          "use-the-index-luke"
+        ],
+        "practise": [
+          "sqlbolt"
+        ],
+        "build": "Move the task API to Postgres with Prisma migrations and seed data.",
+        "prove": "A schema diagram and migration history.",
+        "hint": null
+      },
+      {
+        "title": "TypeScript, NestJS and production",
+        "weeks": "4 to 5",
+        "goal": "Structure and ship it.",
+        "topics": [
+          "TypeScript in Node",
+          "NestJS modules and DI",
+          "Caching with Redis and rate limiting",
+          "Queues and background jobs",
+          "Docker, CI and deployment",
+          "Logging and monitoring"
+        ],
+        "learn": [
+          "nestjs",
+          "docker",
+          "github-actions"
+        ],
+        "practise": [
+          "redis-university"
+        ],
+        "build": "Rebuild the API in NestJS with caching, a job queue and Docker, deployed with CI.",
+        "prove": "A live API and a short architecture write-up.",
+        "hint": null
+      },
+      {
+        "title": "Interview ready",
+        "weeks": "2 to 3",
+        "goal": "Pass backend rounds.",
+        "topics": [
+          "Event loop phases",
+          "Streams and backpressure",
+          "Scaling Node: clustering and statelessness",
+          "System design basics",
+          "Security: OWASP top risks in APIs"
+        ],
+        "learn": [
+          "system-design-primer",
+          "owasp-top10",
+          "hussein-nasser"
+        ],
+        "practise": [
+          "leetcode"
+        ],
+        "build": "Design and explain two systems: a URL shortener and a chat service.",
+        "prove": "Two deployed APIs and a design doc.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "Express or Fastify",
+        "use": "HTTP framework"
+      },
+      {
+        "name": "NestJS",
+        "use": "Structured framework"
+      },
+      {
+        "name": "Zod",
+        "use": "Validation"
+      },
+      {
+        "name": "Prisma or Drizzle",
+        "use": "Database access"
+      },
+      {
+        "name": "BullMQ",
+        "use": "Job queues on Redis"
+      },
+      {
+        "name": "Pino",
+        "use": "Logging"
+      },
+      {
+        "name": "Vitest and Supertest",
+        "use": "Testing"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "bruno",
+      "docker",
+      "github-actions"
+    ],
+    "channels": [
+      "piyush-garg",
+      "hussein-nasser",
+      "chai-aur-code"
+    ],
+    "communities": [
+      "r-developersindia",
+      "dev-to",
+      "foss-united"
+    ],
+    "certs": [
+      "aws-saa"
+    ],
+    "interview": [
+      "Event loop and microtasks",
+      "Callbacks, promises, async/await",
+      "Streams",
+      "CommonJS vs ES modules",
+      "JWT vs sessions",
+      "SQL vs NoSQL choices",
+      "Rate limiting",
+      "Horizontal scaling"
+    ],
+    "related": "backend",
+    "course": null,
+    "note": null
+  },
+  {
+    "id": "python",
+    "name": "Python backend",
+    "icon": "server",
+    "role": "Backend developer (Python)",
+    "tagline": "Build APIs and services with Python, Django or FastAPI and PostgreSQL.",
+    "months": "5 to 8",
+    "start": "No coding needed",
+    "why": "Python backends with Django or FastAPI are common in Indian startups and in AI product teams that need to serve models.",
+    "stages": [
+      {
+        "title": "Python fundamentals",
+        "weeks": "3 to 4",
+        "goal": "Write clean, idiomatic Python.",
+        "topics": [
+          "Data types, control flow and functions",
+          "Lists, dicts, sets and comprehensions",
+          "Classes and dataclasses",
+          "Modules, virtual environments and pip or uv",
+          "Files, JSON and error handling",
+          "Type hints"
+        ],
+        "learn": [
+          "python-tutorial",
+          "cs50p",
+          "automate-boring"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "Automate one real task: rename files, clean a spreadsheet or scrape a page.",
+        "prove": "CS50P final project on GitHub.",
+        "hint": null
+      },
+      {
+        "title": "Web basics and Django",
+        "weeks": "3 to 4",
+        "goal": "Build a full web app.",
+        "topics": [
+          "HTTP, HTML forms and REST basics",
+          "Django models, views, templates and admin",
+          "Auth and permissions",
+          "Django REST Framework"
+        ],
+        "learn": [
+          "django-tutorial",
+          "real-python"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A blog or clinic app with users, admin and a REST API.",
+        "prove": "Deployed with a live link.",
+        "hint": null
+      },
+      {
+        "title": "FastAPI and async",
+        "weeks": "2 to 3",
+        "goal": "Build modern typed APIs.",
+        "topics": [
+          "FastAPI routes, Pydantic models and dependency injection",
+          "async and await in Python",
+          "SQLAlchemy and Alembic migrations",
+          "Auth with OAuth2 and JWT"
+        ],
+        "learn": [
+          "fastapi",
+          "postgres-tutorial"
+        ],
+        "practise": [
+          "sqlbolt"
+        ],
+        "build": "An API with auth, Postgres and auto-generated docs.",
+        "prove": "An OpenAPI page and tests.",
+        "hint": null
+      },
+      {
+        "title": "Testing and production",
+        "weeks": "3 to 4",
+        "goal": "Ship and run it properly.",
+        "topics": [
+          "pytest, fixtures and test databases",
+          "Docker and docker compose",
+          "CI with GitHub Actions",
+          "Caching with Redis and background tasks with Celery or RQ",
+          "Logging and monitoring"
+        ],
+        "learn": [
+          "pytest",
+          "docker",
+          "github-actions"
+        ],
+        "practise": [
+          "redis-university"
+        ],
+        "build": "Add tests, Docker, CI and a background job to your FastAPI app and deploy it.",
+        "prove": "A green pipeline and a live URL.",
+        "hint": null
+      },
+      {
+        "title": "Interview ready",
+        "weeks": "2 to 3",
+        "goal": "Pass Python backend rounds.",
+        "topics": [
+          "GIL, threads, processes and async",
+          "Generators and decorators",
+          "Mutable defaults and other gotchas",
+          "ORM N+1 problems",
+          "System design basics"
+        ],
+        "learn": [
+          "system-design-primer",
+          "bytebytego"
+        ],
+        "practise": [
+          "leetcode",
+          "codecrafters"
+        ],
+        "build": "Solve 50 interview problems in Python and do one CodeCrafters challenge.",
+        "prove": "Two deployed APIs and a design write-up.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "Django and Django REST Framework",
+        "use": "Full web framework"
+      },
+      {
+        "name": "FastAPI and Pydantic",
+        "use": "Typed APIs"
+      },
+      {
+        "name": "SQLAlchemy and Alembic",
+        "use": "Database and migrations"
+      },
+      {
+        "name": "pytest",
+        "use": "Testing"
+      },
+      {
+        "name": "Celery or RQ",
+        "use": "Background jobs"
+      },
+      {
+        "name": "uv",
+        "use": "Fast package and environment manager"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "docker",
+      "bruno",
+      "github-actions"
+    ],
+    "channels": [
+      "codewithharry",
+      "piyush-garg",
+      "fireship"
+    ],
+    "communities": [
+      "r-developersindia",
+      "foss-united",
+      "hasgeek"
+    ],
+    "certs": [
+      "aws-saa"
+    ],
+    "interview": [
+      "GIL and concurrency",
+      "Generators and iterators",
+      "Decorators",
+      "List vs tuple vs set",
+      "Django ORM queries and select_related",
+      "WSGI vs ASGI",
+      "Pydantic validation",
+      "Caching strategies"
+    ],
+    "related": "backend",
+    "course": null,
+    "note": null
+  },
+  {
+    "id": "java-spring",
+    "name": "Java and Spring Boot",
+    "icon": "server",
+    "role": "Backend developer (Java)",
+    "tagline": "Build enterprise APIs with modern Java, Spring Boot and SQL.",
+    "months": "6 to 9",
+    "start": "No coding needed",
+    "why": "Java with Spring Boot is the most hired backend stack in Indian service companies, banks and large product companies.",
+    "stages": [
+      {
+        "title": "Modern Java",
+        "weeks": "4 to 5",
+        "goal": "Learn Java as it is written today.",
+        "topics": [
+          "Syntax, types, control flow and methods",
+          "OOP: classes, interfaces, inheritance",
+          "Collections and generics",
+          "Streams and lambdas",
+          "Records, sealed types and pattern matching",
+          "Exceptions",
+          "Maven or Gradle builds"
+        ],
+        "learn": [
+          "dev-java",
+          "mooc-java"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "Finish the Helsinki MOOC exercises for parts 1 to 7.",
+        "prove": "A GitHub repo of your solutions.",
+        "hint": null
+      },
+      {
+        "title": "Spring Boot APIs",
+        "weeks": "3 to 4",
+        "goal": "Build REST APIs the Spring way.",
+        "topics": [
+          "Spring Boot starters and auto-configuration",
+          "Dependency injection and beans",
+          "REST controllers, validation and exception handling",
+          "Configuration and profiles",
+          "Testing with JUnit and MockMvc"
+        ],
+        "learn": [
+          "spring-guides",
+          "spring-boot-docs",
+          "baeldung"
+        ],
+        "practise": [
+          "bruno"
+        ],
+        "build": "An employee or library management API with validation and tests.",
+        "prove": "An OpenAPI page and green tests.",
+        "hint": null
+      },
+      {
+        "title": "Data and security",
+        "weeks": "3 to 4",
+        "goal": "Persist data and secure it.",
+        "topics": [
+          "SQL with PostgreSQL or MySQL",
+          "Spring Data JPA and Hibernate",
+          "Transactions and the N+1 problem",
+          "Flyway or Liquibase migrations",
+          "Spring Security with JWT"
+        ],
+        "learn": [
+          "spring-guides",
+          "postgres-tutorial",
+          "use-the-index-luke"
+        ],
+        "practise": [
+          "sqlbolt"
+        ],
+        "build": "Add a database, migrations and JWT auth to your API.",
+        "prove": "A schema diagram and auth flow write-up.",
+        "hint": null
+      },
+      {
+        "title": "Production and microservices",
+        "weeks": "3 to 4",
+        "goal": "Run Spring apps like teams do.",
+        "topics": [
+          "Actuator, health checks and metrics",
+          "Docker and CI",
+          "Caching with Redis",
+          "Messaging with Kafka or RabbitMQ basics",
+          "Microservices and when not to use them"
+        ],
+        "learn": [
+          "spring-boot-docs",
+          "docker",
+          "github-actions"
+        ],
+        "practise": [
+          "redis-university"
+        ],
+        "build": "Split one feature into a separate service that talks over a queue, all in Docker Compose.",
+        "prove": "A live deployment and an architecture diagram.",
+        "hint": null
+      },
+      {
+        "title": "Interview ready",
+        "weeks": "2 to 3",
+        "goal": "Pass Java rounds.",
+        "topics": [
+          "JVM memory, garbage collection",
+          "HashMap internals and equals/hashCode",
+          "Concurrency: threads, executors, CompletableFuture",
+          "Spring bean lifecycle and scopes",
+          "SOLID and design patterns"
+        ],
+        "learn": [
+          "system-design-primer",
+          "gaurav-sen"
+        ],
+        "practise": [
+          "leetcode",
+          "gfg"
+        ],
+        "build": "Solve 100 problems in Java across the main patterns.",
+        "prove": "Two deployed projects and confident answers on the common topics.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "Spring Boot",
+        "use": "Framework"
+      },
+      {
+        "name": "Spring Data JPA and Hibernate",
+        "use": "Database access"
+      },
+      {
+        "name": "Spring Security",
+        "use": "Auth"
+      },
+      {
+        "name": "Flyway",
+        "use": "Migrations"
+      },
+      {
+        "name": "JUnit and Mockito",
+        "use": "Testing"
+      },
+      {
+        "name": "Lombok (optional)",
+        "use": "Less boilerplate"
+      },
+      {
+        "name": "Testcontainers",
+        "use": "Real databases in tests"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "docker",
+      "bruno",
+      "github-actions"
+    ],
+    "channels": [
+      "gaurav-sen",
+      "bytebytego",
+      "codehelp"
+    ],
+    "communities": [
+      "r-developersindia",
+      "stack-overflow",
+      "gdg"
+    ],
+    "certs": [
+      "oracle-java",
+      "aws-saa"
+    ],
+    "interview": [
+      "JVM, heap and stack",
+      "HashMap internals",
+      "String immutability",
+      "Checked vs unchecked exceptions",
+      "Spring IoC and bean scopes",
+      "@Transactional pitfalls",
+      "JPA lazy loading",
+      "Microservices vs monolith"
+    ],
+    "related": "backend",
+    "course": null,
+    "note": null
+  },
+  {
+    "id": "android",
+    "name": "Android with Kotlin",
+    "icon": "smartphone",
+    "role": "Android developer",
+    "tagline": "Build native Android apps with Kotlin and Jetpack Compose.",
+    "months": "5 to 8",
+    "start": "No coding needed",
+    "why": "India is an Android-first market, so native Android skills stay in steady demand at product companies and fintech.",
+    "stages": [
+      {
+        "title": "Kotlin",
+        "weeks": "2 to 3",
+        "goal": "Get fluent in Kotlin.",
+        "topics": [
+          "Types, null safety and control flow",
+          "Functions, lambdas and higher-order functions",
+          "Classes, data classes and sealed classes",
+          "Collections",
+          "Coroutines basics"
+        ],
+        "learn": [
+          "kotlin-docs"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "Kotlin Koans plus five small console programs.",
+        "prove": "A GitHub repo with your solutions.",
+        "hint": null
+      },
+      {
+        "title": "Compose UI",
+        "weeks": "3 to 4",
+        "goal": "Build screens with Jetpack Compose.",
+        "topics": [
+          "Composables, state and recomposition",
+          "Layouts, lists and theming with Material 3",
+          "Navigation",
+          "ViewModel and state hoisting"
+        ],
+        "learn": [
+          "android-compose",
+          "philipp-lackner"
+        ],
+        "practise": [
+          "figma"
+        ],
+        "build": "Finish Android Basics with Compose and build a multi-screen app.",
+        "prove": "Screenshots and code on GitHub.",
+        "hint": null
+      },
+      {
+        "title": "Data and architecture",
+        "weeks": "3 to 4",
+        "goal": "Structure the app properly.",
+        "topics": [
+          "Recommended architecture: UI, domain and data layers",
+          "Room database",
+          "Retrofit or Ktor for networking",
+          "Coroutines and Flow",
+          "Dependency injection with Hilt"
+        ],
+        "learn": [
+          "android-architecture",
+          "now-in-android"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A news or expense app with Room, an API, offline support and Hilt.",
+        "prove": "An architecture diagram in the README.",
+        "hint": null
+      },
+      {
+        "title": "Quality and release",
+        "weeks": "2 to 3",
+        "goal": "Test and ship to the Play Store.",
+        "topics": [
+          "Unit and UI tests",
+          "Performance and Android Studio profilers",
+          "WorkManager and notifications",
+          "Signing, app bundles and Play Console"
+        ],
+        "learn": [
+          "android-architecture",
+          "github-actions"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "Publish your app on the Play Store with tests and CI.",
+        "prove": "A Play Store link.",
+        "hint": null
+      },
+      {
+        "title": "Interview ready",
+        "weeks": "2 to 3",
+        "goal": "Pass Android rounds.",
+        "topics": [
+          "Activity and fragment lifecycles",
+          "Configuration changes and process death",
+          "Coroutines vs threads",
+          "Memory leaks",
+          "Mobile system design"
+        ],
+        "learn": [
+          "tech-interview-handbook"
+        ],
+        "practise": [
+          "leetcode"
+        ],
+        "build": "Explain your published app's architecture and trade-offs out loud.",
+        "prove": "A published app and interview notes.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "Jetpack Compose",
+        "use": "UI"
+      },
+      {
+        "name": "ViewModel and Navigation",
+        "use": "Architecture components"
+      },
+      {
+        "name": "Room",
+        "use": "Local database"
+      },
+      {
+        "name": "Retrofit or Ktor",
+        "use": "Networking"
+      },
+      {
+        "name": "Hilt",
+        "use": "Dependency injection"
+      },
+      {
+        "name": "Coil",
+        "use": "Image loading"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "figma",
+      "firebase",
+      "github-actions"
+    ],
+    "channels": [
+      "philipp-lackner",
+      "fireship"
+    ],
+    "communities": [
+      "gdg",
+      "r-developersindia"
+    ],
+    "certs": [],
+    "interview": [
+      "Activity lifecycle",
+      "ViewModel survival",
+      "Coroutines and dispatchers",
+      "Flow vs LiveData",
+      "Recomposition",
+      "Room vs SharedPreferences",
+      "Hilt scopes",
+      "App startup performance"
+    ],
+    "related": "mobile",
+    "course": null,
+    "note": "Google retired its Associate Android Developer certification. A Play Store app is the proof that counts."
+  },
+  {
+    "id": "react-native",
+    "name": "React Native",
+    "icon": "smartphone",
+    "role": "Mobile developer (React Native)",
+    "tagline": "Build iOS and Android apps with React and Expo.",
+    "months": "4 to 6",
+    "start": "JavaScript and React basics",
+    "why": "React Native is a natural move for React developers and is used by many Indian startups for their first apps.",
+    "stages": [
+      {
+        "title": "React and JavaScript",
+        "weeks": "3 to 4",
+        "goal": "Have the React basics in place.",
+        "topics": [
+          "Modern JavaScript and TypeScript basics",
+          "React components, props, state and hooks"
+        ],
+        "learn": [
+          "react-docs",
+          "javascript-info"
+        ],
+        "practise": [
+          "frontend-mentor"
+        ],
+        "build": "A small React web app with state and a public API.",
+        "prove": "A live link.",
+        "hint": null
+      },
+      {
+        "title": "Expo and core components",
+        "weeks": "3 to 4",
+        "goal": "Build your first mobile screens.",
+        "topics": [
+          "Expo setup and Expo Go",
+          "View, Text, Image, FlatList and Pressable",
+          "Styling and layout with Flexbox",
+          "Navigation with Expo Router"
+        ],
+        "learn": [
+          "react-native",
+          "reactnative-dev"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A recipe or notes app with three screens and navigation.",
+        "prove": "A demo video.",
+        "hint": null
+      },
+      {
+        "title": "Data, storage and native features",
+        "weeks": "3 to 4",
+        "goal": "Make it a real app.",
+        "topics": [
+          "Fetching with TanStack Query",
+          "Local storage and offline",
+          "Camera, location and notifications with Expo modules",
+          "Auth with Firebase or a backend"
+        ],
+        "learn": [
+          "tanstack-query",
+          "firebase"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "An app with sign-in, cloud data, notifications and offline support.",
+        "prove": "A test account for reviewers.",
+        "hint": null
+      },
+      {
+        "title": "Release",
+        "weeks": "2 to 3",
+        "goal": "Ship to stores.",
+        "topics": [
+          "EAS Build and EAS Submit",
+          "Over-the-air updates",
+          "Performance: lists, images, re-renders",
+          "Testing"
+        ],
+        "learn": [
+          "react-native",
+          "reactnative-dev"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "Publish on Play Store or TestFlight with EAS.",
+        "prove": "A store link.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "Expo and Expo Router",
+        "use": "Tooling and navigation"
+      },
+      {
+        "name": "TanStack Query",
+        "use": "Server data"
+      },
+      {
+        "name": "Zustand",
+        "use": "Client state"
+      },
+      {
+        "name": "React Hook Form",
+        "use": "Forms"
+      },
+      {
+        "name": "Reanimated",
+        "use": "Animations"
+      },
+      {
+        "name": "EAS",
+        "use": "Builds and updates"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "figma",
+      "firebase"
+    ],
+    "channels": [
+      "fireship",
+      "web-dev-simplified"
+    ],
+    "communities": [
+      "reactiflux",
+      "r-developersindia"
+    ],
+    "certs": [],
+    "interview": [
+      "How the React Native bridge and new architecture work",
+      "FlatList performance",
+      "Platform-specific code",
+      "Expo vs bare workflow",
+      "OTA updates",
+      "State management choices"
+    ],
+    "related": "mobile",
+    "course": null,
+    "note": null
+  },
+  {
+    "id": "go",
+    "name": "Go",
+    "icon": "server",
+    "role": "Backend developer (Go)",
+    "tagline": "Build fast, simple services and cloud tooling with Go.",
+    "months": "4 to 6",
+    "start": "One programming language",
+    "why": "Go runs most cloud infrastructure (Docker, Kubernetes, Terraform) and is popular in fintech and high-scale Indian product companies.",
+    "stages": [
+      {
+        "title": "Go basics",
+        "weeks": "2 to 3",
+        "goal": "Learn the language.",
+        "topics": [
+          "Types, structs, slices and maps",
+          "Functions, methods and interfaces",
+          "Errors as values",
+          "Packages and modules",
+          "Goroutines and channels"
+        ],
+        "learn": [
+          "go-tour",
+          "go-by-example"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "Three CLI tools: a file organiser, a word counter and a JSON pretty printer.",
+        "prove": "A GitHub repo with tests.",
+        "hint": null
+      },
+      {
+        "title": "Web services",
+        "weeks": "3 to 4",
+        "goal": "Build HTTP APIs with the standard library.",
+        "topics": [
+          "net/http, routing and middleware",
+          "JSON encoding",
+          "Context and timeouts",
+          "Database access with database/sql or pgx",
+          "Testing with the testing package"
+        ],
+        "learn": [
+          "lets-go",
+          "effective-go",
+          "postgres-tutorial"
+        ],
+        "practise": [
+          "bruno"
+        ],
+        "build": "A REST API with Postgres, middleware and tests, using only the standard library and a router.",
+        "prove": "An OpenAPI page and tests.",
+        "hint": null
+      },
+      {
+        "title": "Concurrency and production",
+        "weeks": "3 to 4",
+        "goal": "Write safe concurrent code and ship it.",
+        "topics": [
+          "Worker pools, select and sync primitives",
+          "Race detector",
+          "Docker multi-stage builds",
+          "Observability: structured logs and metrics",
+          "gRPC basics"
+        ],
+        "learn": [
+          "effective-go",
+          "docker",
+          "github-actions"
+        ],
+        "practise": [
+          "codecrafters"
+        ],
+        "build": "Add a concurrent worker pool and Docker deployment, then do one CodeCrafters challenge in Go.",
+        "prove": "A live service and a completed challenge.",
+        "hint": null
+      }
+    ],
+    "libs": [
+      {
+        "name": "net/http and chi",
+        "use": "HTTP"
+      },
+      {
+        "name": "pgx or sqlc",
+        "use": "Database"
+      },
+      {
+        "name": "slog",
+        "use": "Structured logging"
+      },
+      {
+        "name": "testify (optional)",
+        "use": "Testing helpers"
+      },
+      {
+        "name": "cobra",
+        "use": "CLIs"
+      },
+      {
+        "name": "gRPC",
+        "use": "Service-to-service calls"
+      }
+    ],
+    "tools": [
+      "vscode",
+      "docker",
+      "github-actions"
+    ],
+    "channels": [
+      "fireship",
+      "hussein-nasser"
+    ],
+    "communities": [
+      "k8s-slack",
+      "r-developersindia"
+    ],
+    "certs": [
+      "cka"
+    ],
+    "interview": [
+      "Goroutines vs threads",
+      "Channels and select",
+      "Interfaces and embedding",
+      "Error handling patterns",
+      "Context cancellation",
+      "Data races"
+    ],
+    "related": "backend",
+    "course": null,
+    "note": null
+  }
+]

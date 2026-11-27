@@ -15,6 +15,7 @@ function fail(m) { errors.push(m); }
 const resources = load('resources');
 const paths = load('paths');
 const certs = load('certifications');
+const roadmaps = load('roadmaps');
 
 const TYPES = ['course', 'practice', 'docs', 'video', 'roadmap', 'tool', 'community', 'program', 'newsletter', 'podcast', 'jobs', 'book'];
 const TRACKS = ['core', 'frontend', 'backend', 'mobile', 'cloud', 'ai', 'data', 'dsa', 'security'];
@@ -72,9 +73,29 @@ for (const p of paths) {
   for (const id of p.certs || []) if (!certIds.has(id)) fail(`${at}: unknown certification "${id}"`);
 }
 
+for (const k of roadmaps) {
+  const at = `roadmap "${k.id}"`;
+  if (!/^[a-z0-9-]+$/.test(k.id || '')) fail(`${at}: bad id`);
+  if (!['frontend', 'backend', 'mobile', 'cloud', 'ai', 'data', 'dsa', 'security'].includes(k.related)) fail(`${at}: related must be a path id`);
+  if (!Array.isArray(k.stages) || k.stages.length < 3) fail(`${at}: needs at least 3 stages`);
+  k.stages.forEach((s, i) => {
+    const st = `${at} stage ${i + 1}`;
+    for (const key of ['title', 'goal', 'weeks', 'build', 'prove']) if (!s[key]) fail(`${st}: missing ${key}`);
+    if (!s.topics?.length) fail(`${st}: needs a skills checklist (topics)`);
+    if (new Set(s.topics).size !== s.topics.length) fail(`${st}: duplicate skills`);
+    for (const id of [...(s.learn || []), ...(s.practise || [])]) if (!ids.has(id)) fail(`${st}: unknown resource "${id}"`);
+    const dup = (s.learn || []).filter((id) => (s.practise || []).includes(id));
+    if (dup.length) fail(`${st}: ${dup.join(', ')} listed in both learn and practise`);
+  });
+  for (const key of ['tools', 'channels', 'communities']) for (const id of k[key] || []) if (!ids.has(id)) fail(`${at}: ${key} refers to unknown resource "${id}"`);
+  for (const id of k.certs || []) if (!certIds.has(id)) fail(`${at}: unknown certification "${id}"`);
+  if (!k.libs?.length) fail(`${at}: list the libraries to know`);
+  if (!k.interview?.length) fail(`${at}: list the interview topics`);
+}
+
 if (errors.length) {
   console.error(`[Data] ${errors.length} problem(s):`);
   errors.forEach((e) => console.error(`  - ${e}`));
   process.exit(1);
 }
-console.log(`[Data] Passed: ${resources.length} resources, ${paths.length} paths, ${certs.length} certifications. All references resolve.`);
+console.log(`[Data] Passed: ${resources.length} resources, ${paths.length} paths, ${roadmaps.length} stack roadmaps, ${certs.length} certifications. All references resolve.`);

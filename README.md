@@ -27,6 +27,7 @@ npm run test:external   # needs internet; checks every outbound link
 | Home, with the "I want to become a" picker | `src/pages/index.astro` |
 | 8 paths, each with 4 stages | `src/data/paths.json`, rendered by `src/pages/paths/[id].astro` |
 | Resource directory with filters | `src/data/resources.json`, rendered by `src/pages/resources/index.astro` |
+| Stack roadmaps with skill checklists | `src/data/roadmaps.json`, rendered by `src/pages/roadmaps/[id].astro` |
 | Certifications with fees and verdicts | `src/data/certifications.json` |
 | Connect with developers | `src/pages/connect/index.astro` (lists resource ids) |
 | Karmatix's own courses | `src/data/courses.json` |
@@ -70,6 +71,15 @@ In `src/data/paths.json`, add the id to a stage's `learn` or `practise` list (no
 ### Update certification fees
 
 Edit `fee`, `feeIndia`, `validity` and `note` in `src/data/certifications.json`, then update `LAST_CHECKED` in `src/lib/data.ts`. Use the official exam page as the source.
+
+### Stack roadmaps
+
+`src/data/roadmaps.json` holds one roadmap per tech stack, rendered at `/roadmaps/<id>/`. Each stage has a `topics` checklist (the skills), `learn` and `practise` resource ids, `build`, `prove` and an optional `hint`. The Flutter and .NET course sites show the same roadmap. After editing either one, re-export it:
+
+```bash
+node scripts/export-roadmap.mjs flutter ../flutter-course/src/data/roadmap.generated.ts
+node scripts/export-roadmap.mjs dotnet ../dotnet-academy/site/src/content/roadmap.generated.ts
+```
 
 ### Writing rules
 

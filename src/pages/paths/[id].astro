@@ -2,12 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import ResourceCard from '../../components/ResourceCard.astro';
-import { paths, res, cert, VERDICT, LAST_CHECKED } from '../../lib/data';
+import { paths, res, cert, VERDICT, LAST_CHECKED, roadmapsFor } from '../../lib/data';
 
 export function getStaticPaths() {
   return paths.map((p) => ({ params: { id: p.id }, props: { p } }));
 }
 const { p } = Astro.props;
+const stacks = roadmapsFor(p.id);
 const idx = paths.findIndex((x) => x.id === p.id);
 const next = paths[(idx + 1) % paths.length];
 const totalWeeksLow = p.stages.reduce((n, s) => n + parseInt(s.weeks), 0);
@@ -48,6 +49,12 @@ const jsonLd = [{
         <div class="bg-surface p-4"><dt class="text-xs text-dim">Start with</dt><dd class="mt-1 text-sm font-medium text-text">{p.start}</dd></div>
         <div class="bg-surface p-4"><dt class="text-xs text-dim">Checked</dt><dd class="num mt-1 text-sm font-medium text-text">{LAST_CHECKED}</dd></div>
       </dl>
+      {stacks.length > 0 && (
+        <p class="mt-6 flex flex-wrap items-center gap-2 text-sm text-muted">
+          <span>Already chose a stack? Full roadmap:</span>
+          {stacks.map((r) => <a href={`/roadmaps/${r.id}/`} class="kx-chip">{r.name}</a>)}
+        </p>
+      )}
       <nav aria-label="Stages" class="mt-6">
         <ol class="kx-scroll-row">
           {p.stages.map((s, i) => <li class="snap-start"><a href={`#stage-${i + 1}`} class="kx-chip"><span class="num text-ember">{i + 1}</span>{s.title}</a></li>)}

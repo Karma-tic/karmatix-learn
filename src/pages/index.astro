@@ -3,7 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 import PathCard from '../components/PathCard.astro';
 import ResourceCard from '../components/ResourceCard.astro';
-import { paths, resources, certifications, TYPES, TYPE_ORDER, VERDICT, LAST_CHECKED, res, host } from '../lib/data';
+import { paths, resources, certifications, roadmaps, TYPES, TYPE_ORDER, VERDICT, LAST_CHECKED, res, host } from '../lib/data';
+import RoadmapCard from '../components/RoadmapCard.astro';
 import courses from '../data/courses.json';
 
 const liveCourses = courses.filter((c) => c.status === 'live');
@@ -114,6 +115,20 @@ const jsonLd = [
     </div>
     <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {paths.map((p) => <PathCard p={p} />)}
+    </div>
+  </section>
+
+  <!-- Stack roadmaps -->
+  <section id="roadmaps" class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="roadmaps-h">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <h2 id="roadmaps-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Already picked a tech stack?</h2>
+        <p class="mt-3 text-muted">Full roadmaps for {roadmaps.length} stacks: every skill you need as a checklist, the best place to learn each part, projects to build and interview topics.</p>
+      </div>
+      <a href="/roadmaps/" class="kx-btn kx-btn-ghost">All roadmaps</a>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {roadmaps.map((k) => <RoadmapCard k={k} />)}
     </div>
   </section>
 
@@ -232,8 +247,8 @@ const jsonLd = [
 
   <!-- Karmatix courses (keeps the old #courses anchor working) -->
   <section id="courses" class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="courses-h">
-    <h2 id="courses-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Free courses by Karmatix</h2>
-    <p class="mt-3 max-w-2xl text-muted">Where we could not find a free course good enough, we built one. Both are in the paths above.</p>
+    <h2 id="courses-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Free practice by Karmatix</h2>
+    <p class="mt-3 max-w-2xl text-muted">Our Flutter and .NET roadmaps come with practice we built ourselves: mock tests, labs and tested projects.</p>
     <div class="mt-10 grid gap-4 md:grid-cols-2">
       {liveCourses.map((c) => (
         <article class="kx-card kx-card-link group relative overflow-hidden">

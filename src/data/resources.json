@@ -2960,5 +2960,581 @@
     "india": false,
     "why": "Jobs at Y Combinator startups, including many in India.",
     "tip": "One profile reaches hundreds of funded startups."
+  },
+  {
+    "id": "dart-language",
+    "name": "Dart language tour",
+    "by": "Dart team",
+    "url": "https://dart.dev/language",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official tour of Dart: types, null safety, classes, async and records.",
+    "tip": "Read it with DartPad open and run every snippet."
+  },
+  {
+    "id": "dartpad",
+    "name": "DartPad",
+    "by": "Dart team",
+    "url": "https://dartpad.dev/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Run Dart and Flutter in the browser with nothing installed.",
+    "tip": "Use it to try a widget or a language feature in seconds."
+  },
+  {
+    "id": "pub-dev",
+    "name": "pub.dev",
+    "by": "Dart team",
+    "url": "https://pub.dev/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The package registry for Dart and Flutter, with scores and popularity.",
+    "tip": "Prefer packages with Flutter Favorite badges, recent updates and high pub points."
+  },
+  {
+    "id": "flutter-codelabs",
+    "name": "Flutter codelabs",
+    "by": "Google",
+    "url": "https://docs.flutter.dev/codelabs",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Guided, hands-on Flutter tutorials that end in a working app.",
+    "tip": "Do Your first Flutter app, then the layout and animation codelabs."
+  },
+  {
+    "id": "riverpod",
+    "name": "Riverpod docs",
+    "by": "Remi Rousselet",
+    "url": "https://riverpod.dev/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "A widely used state management and caching library for Flutter.",
+    "tip": "Learn it after setState and Provider make sense. Do not start with it."
+  },
+  {
+    "id": "bloc",
+    "name": "Bloc library docs",
+    "by": "Felix Angelov",
+    "url": "https://bloclibrary.dev/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Event-driven state management that many Indian product companies ask for.",
+    "tip": "Do the counter and weather tutorials. Know when Cubit is enough."
+  },
+  {
+    "id": "r-flutterdev",
+    "name": "r/FlutterDev",
+    "by": "Reddit",
+    "url": "https://www.reddit.com/r/FlutterDev/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The largest Flutter discussion forum: news, packages and help.",
+    "tip": "Search before asking. Share your finished app for feedback."
+  },
+  {
+    "id": "csharp-docs",
+    "name": "C# documentation",
+    "by": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official C# guide from basics to the newest language features.",
+    "tip": "Read the Tour of C#, then look up each feature as you use it."
+  },
+  {
+    "id": "aspnet-core-docs",
+    "name": "ASP.NET Core docs",
+    "by": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/aspnet/core/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Official docs for web APIs, minimal APIs, auth, middleware and hosting.",
+    "tip": "Build the minimal API tutorial, then read Fundamentals end to end."
+  },
+  {
+    "id": "ef-core-docs",
+    "name": "Entity Framework Core docs",
+    "by": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/ef/core/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The official guide to EF Core: modelling, migrations, queries and performance.",
+    "tip": "Read Performance and Querying before your first production app."
+  },
+  {
+    "id": "nick-chapsas",
+    "name": "Nick Chapsas",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@nickchapsas",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Short, sharp videos on modern C# and .NET features and performance.",
+    "tip": "Watch for new language features and benchmark-backed advice."
+  },
+  {
+    "id": "milan-jovanovic",
+    "name": "Milan Jovanovic",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@MilanJovanovicTech",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Clean architecture, EF Core and ASP.NET Core patterns with real code.",
+    "tip": "Use his videos when you structure your capstone API."
+  },
+  {
+    "id": "dotnet-yt",
+    "name": "dotnet (official channel)",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@dotnet",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Official .NET channel with release talks, .NET Conf and beginner series.",
+    "tip": "Watch the beginner series for C# and the .NET Conf keynote each November."
+  },
+  {
+    "id": "tanstack-query",
+    "name": "TanStack Query docs",
+    "by": "TanStack",
+    "url": "https://tanstack.com/query/latest/docs/framework/react/overview",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The standard way to fetch, cache and sync server data in React apps.",
+    "tip": "Replace your useEffect data fetching with it in one project."
+  },
+  {
+    "id": "testing-library",
+    "name": "Testing Library",
+    "by": "Testing Library",
+    "url": "https://testing-library.com/docs/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Test components the way users use them, not by implementation details.",
+    "tip": "Write tests for one form and one list in your React app."
+  },
+  {
+    "id": "vitest",
+    "name": "Vitest",
+    "by": "Vitest",
+    "url": "https://vitest.dev/guide/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Fast unit testing for Vite and modern JavaScript projects.",
+    "tip": "Add it to your project and run tests in CI on every push."
+  },
+  {
+    "id": "express",
+    "name": "Express",
+    "by": "OpenJS Foundation",
+    "url": "https://expressjs.com/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The minimal Node.js web framework most tutorials and older codebases use.",
+    "tip": "Build one API with it so you understand middleware and routing."
+  },
+  {
+    "id": "nestjs",
+    "name": "NestJS docs",
+    "by": "NestJS",
+    "url": "https://docs.nestjs.com/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "A structured Node.js framework with modules and dependency injection, popular in companies.",
+    "tip": "Use it for your second API once Express feels limiting."
+  },
+  {
+    "id": "prisma",
+    "name": "Prisma docs",
+    "by": "Prisma",
+    "url": "https://www.prisma.io/docs",
+    "type": "docs",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "A type-safe ORM for Node.js and TypeScript with migrations.",
+    "tip": "Model your schema, run migrations and read the query performance guide."
+  },
+  {
+    "id": "python-tutorial",
+    "name": "The Python Tutorial",
+    "by": "Python Software Foundation",
+    "url": "https://docs.python.org/3/tutorial/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data",
+      "ai",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official Python tutorial. Short, accurate and always up to date.",
+    "tip": "Read sections 1 to 9 and type every example."
+  },
+  {
+    "id": "cs50p",
+    "name": "CS50P: Programming with Python",
+    "by": "Harvard",
+    "url": "https://cs50.harvard.edu/python/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data",
+      "ai",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A free Python course with tests, libraries and a final project.",
+    "tip": "Do every problem set. Use the final project as a portfolio piece."
+  },
+  {
+    "id": "automate-boring",
+    "name": "Automate the Boring Stuff with Python",
+    "by": "Al Sweigart",
+    "url": "https://automatetheboringstuff.com/",
+    "type": "book",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Practical Python for real tasks: files, spreadsheets, web scraping and email.",
+    "tip": "Automate one real chore from your college or job with it."
+  },
+  {
+    "id": "pytest",
+    "name": "pytest",
+    "by": "pytest",
+    "url": "https://docs.pytest.org/en/stable/getting-started.html",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data",
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The standard testing tool for Python.",
+    "tip": "Write tests for your API and run them in GitHub Actions."
+  },
+  {
+    "id": "real-python",
+    "name": "Real Python",
+    "by": "Real Python",
+    "url": "https://realpython.com/",
+    "type": "docs",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data",
+      "ai"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Well-written tutorials on almost every Python topic.",
+    "tip": "Search it whenever the official docs feel too dry."
+  },
+  {
+    "id": "dev-java",
+    "name": "dev.java: Learn",
+    "by": "Oracle",
+    "url": "https://dev.java/learn/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official modern Java tutorials, covering records, streams and the latest language features.",
+    "tip": "Learn modern Java here, not from old tutorials that stop at Java 8."
+  },
+  {
+    "id": "mooc-java",
+    "name": "Java Programming MOOC",
+    "by": "University of Helsinki",
+    "url": "https://java-programming.mooc.fi/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A free university Java course with hundreds of auto-graded exercises.",
+    "tip": "Finish parts 1 to 7. The exercises build real fluency."
+  },
+  {
+    "id": "spring-boot-docs",
+    "name": "Spring Boot reference",
+    "by": "Spring",
+    "url": "https://docs.spring.io/spring-boot/index.html",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The official reference for configuration, data, security and production features.",
+    "tip": "Read the Actuator and configuration chapters before deploying."
+  },
+  {
+    "id": "baeldung",
+    "name": "Baeldung",
+    "by": "Baeldung",
+    "url": "https://www.baeldung.com/",
+    "type": "docs",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Focused Java and Spring tutorials for almost every task.",
+    "tip": "Search it for specific Spring problems while you build."
+  },
+  {
+    "id": "android-architecture",
+    "name": "Guide to app architecture",
+    "by": "Google",
+    "url": "https://developer.android.com/topic/architecture",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Google's official guidance on layers, state and data flow in Android apps.",
+    "tip": "Read it before your second app and refactor your first one."
+  },
+  {
+    "id": "now-in-android",
+    "name": "Now in Android",
+    "by": "Google",
+    "url": "https://github.com/android/nowinandroid",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "advanced",
+    "lang": "en",
+    "india": false,
+    "why": "Google's reference app showing modern Android architecture, Compose and testing.",
+    "tip": "Clone it and trace one feature from the UI to the data layer."
+  },
+  {
+    "id": "reactnative-dev",
+    "name": "React Native docs",
+    "by": "Meta",
+    "url": "https://reactnative.dev/docs/getting-started",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The core React Native docs: components, platform APIs and performance.",
+    "tip": "Read the Core Components and Performance sections alongside Expo."
+  },
+  {
+    "id": "effective-go",
+    "name": "Effective Go",
+    "by": "Go team",
+    "url": "https://go.dev/doc/effective_go",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "How to write idiomatic Go, straight from the Go team.",
+    "tip": "Read it after the tour, then review your own code against it."
+  },
+  {
+    "id": "lets-go",
+    "name": "Let's Go",
+    "by": "Alex Edwards",
+    "url": "https://lets-go.alexedwards.net/",
+    "type": "book",
+    "cost": "paid",
+    "price": "Book",
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A step-by-step book that builds a full production-style web app in Go.",
+    "tip": "Worth buying if you want a Go backend job. Build along, chapter by chapter."
   }
 ]

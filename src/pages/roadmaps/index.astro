@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RoadmapCard from '../../components/RoadmapCard.astro';
+import { roadmaps, paths } from '../../lib/data';
+const groups = [
+  { key: 'mobile', label: 'Mobile' },
+  { key: 'frontend', label: 'Web frontend' },
+  { key: 'backend', label: 'Backend' },
+].map((g) => ({ ...g, items: roadmaps.filter((r) => r.related === g.key) }));
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'Tech stack roadmaps', itemListElement: roadmaps.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: `${r.name} roadmap`, url: `https://learn.karmatix.in/roadmaps/${r.id}/` })) }];
+---
+<Layout title="Tech stack roadmaps: Flutter, .NET, React, Node, Python, Java, Android, Go | Karmatix Learn" description="Complete, practical roadmaps for each tech stack: every skill you need, where to learn it, what to build and how to prove it. Track your progress as you go." canonical="https://learn.karmatix.in/roadmaps/" jsonLd={jsonLd} current="roadmaps">
+  <section class="mx-auto max-w-6xl px-4 pt-14 sm:px-6 sm:pt-20">
+    <h1 class="max-w-3xl text-4xl font-semibold tracking-[-0.03em] text-text sm:text-5xl">Everything you need to learn a stack, in order</h1>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">Each roadmap lists every skill you need, the best place to learn it, what to build and how to prove it. Tick skills off as you go. Your progress stays in this browser.</p>
+  </section>
+  {groups.map((g) => (
+    <section class="mx-auto max-w-6xl px-4 pt-14 sm:px-6" aria-labelledby={`g-${g.key}`}>
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 id={`g-${g.key}`} class="text-2xl font-semibold tracking-tight text-text">{g.label}</h2>
+        <a href={`/paths/${g.key}/`} class="inline-flex min-h-11 items-center text-sm text-ember-soft underline-offset-4 hover:underline">Not sure which stack? See the {paths.find((p) => p.id === g.key)?.name.toLowerCase()} path</a>
+      </div>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {g.items.map((k) => <RoadmapCard k={k} />)}
+      </div>
+    </section>
+  ))}
+  <section class="mx-auto max-w-6xl px-4 pt-16 sm:px-6">
+    <div class="kx-card flex flex-wrap items-center justify-between gap-6 p-6 sm:p-8">
+      <div>
+        <h2 class="text-xl font-semibold text-text">Want a roadmap for another stack?</h2>
+        <p class="mt-1 text-muted">Tell us which one. We add stacks people ask for most.</p>
+      </div>
+      <a href="https://github.com/Karma-tic/karmatix-learn/issues/new?title=Roadmap%20request" class="kx-btn kx-btn-ghost">Request a roadmap</a>
+    </div>
+  </section>
+</Layout>
