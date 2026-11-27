@@ -4,11 +4,11 @@ import Icon from '../../components/Icon.astro';
 import ResourceCard from '../../components/ResourceCard.astro';
 import { res } from '../../lib/data';
 const groups = [
-  { id: 'meet', title: 'Meet developers in your city', text: 'Free meetups and conferences across India. Go once a month.', icon: 'calendar', ids: ['gdg', 'aws-user-groups', 'foss-united', 'hasgeek', 'commudle', 'meetup'] },
-  { id: 'online', title: 'Ask questions online', text: 'Communities where people answer well-asked questions quickly.', icon: 'message-circle', ids: ['r-developersindia', 'r-learnprogramming', 'reactiflux', 'k8s-slack', 'hf-discord', 'datatalksclub', 'fcc-forum', 'stack-overflow'] },
-  { id: 'oss', title: 'Contribute to open source', text: 'Mentored programmes, some of them paid (GSoC, LFX, Outreachy), that become real experience on your resume.', icon: 'git-pull-request', ids: ['gsoc', 'lfx', 'outreachy', 'gssoc', 'hacktoberfest', 'github-student-pack'] },
-  { id: 'hack', title: 'Build fast at hackathons', text: 'The quickest way to meet people who build. Ship something small and demo it.', icon: 'trophy', ids: ['devfolio', 'mlh', 'unstop', 'ctftime'] },
-  { id: 'show', title: 'Show your work', text: 'Public proof of work gets you noticed more than a certificate.', icon: 'globe', ids: ['peerlist', 'dev-to'] },
+  { id: 'meet', short: 'Meetups', title: 'Meet developers in your city', text: 'Free meetups and conferences across India. Go once a month.', icon: 'calendar', ids: ['gdg', 'aws-user-groups', 'foss-united', 'hasgeek', 'commudle', 'meetup'] },
+  { id: 'online', short: 'Ask online', title: 'Ask questions online', text: 'Communities where people answer well-asked questions quickly.', icon: 'message-circle', ids: ['r-developersindia', 'r-learnprogramming', 'reactiflux', 'k8s-slack', 'hf-discord', 'datatalksclub', 'fcc-forum', 'stack-overflow'] },
+  { id: 'oss', short: 'Open source', title: 'Contribute to open source', text: 'Mentored programmes, some of them paid (GSoC, LFX, Outreachy), that become real experience on your resume.', icon: 'git-pull-request', ids: ['gsoc', 'lfx', 'outreachy', 'gssoc', 'hacktoberfest', 'github-student-pack'] },
+  { id: 'hack', short: 'Hackathons', title: 'Build fast at hackathons', text: 'The quickest way to meet people who build. Ship something small and demo it.', icon: 'trophy', ids: ['devfolio', 'mlh', 'unstop', 'ctftime'] },
+  { id: 'show', short: 'Show your work', title: 'Show your work', text: 'Public proof of work gets you noticed more than a certificate.', icon: 'globe', ids: ['peerlist', 'dev-to'] },
 ];
 const steps = [
   { t: 'Build in public', d: 'Post a short note every time you finish a stage: what you built, one thing that broke, the live link. Peerlist, LinkedIn or DEV all work.' },
@@ -25,8 +25,8 @@ const steps = [
       <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">Communities to join, meetups to attend, open source programmes that pay, and a simple playbook for building a network without being awkward about it.</p>
       <nav aria-label="On this page" class="mt-8">
         <ul class="kx-scroll-row">
-          {groups.map((g) => <li class="snap-start"><a href={`#${g.id}`} class="kx-chip"><Icon name={g.icon} class="size-3.5" />{g.title.split(' ').slice(0, 3).join(' ')}</a></li>)}
-          <li class="snap-start"><a href="#playbook" class="kx-chip"><Icon name="route" class="size-3.5" />Networking playbook</a></li>
+          {groups.map((g) => <li class="snap-start"><a href={`#${g.id}`} class="kx-chip"><Icon name={g.icon} class="size-3.5" />{g.short}</a></li>)}
+          <li class="snap-start"><a href="#playbook" class="kx-chip"><Icon name="route" class="size-3.5" />Playbook</a></li>
         </ul>
       </nav>
     </div>
