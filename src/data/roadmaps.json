@@ -14,13 +14,11 @@
         "weeks": "2 to 3",
         "goal": "Install the tools and get fluent in Dart before widgets.",
         "topics": [
-          "Install Flutter, Android Studio and VS Code, fix everything flutter doctor reports",
-          "Run an app on an emulator and a real phone",
-          "Dart variables, types and sound null safety",
-          "Functions, collections (List, Set, Map) and records",
-          "Classes, constructors, mixins and abstract classes",
-          "Futures, async and await, Streams",
-          "Git basics: commit, branch, push to GitHub"
+          "Install Flutter and run an app on an emulator and a real phone",
+          "Dart types and null safety",
+          "Functions, collections and classes",
+          "Futures, async and await",
+          "Git: commit, branch and push to GitHub"
         ],
         "learn": [
           "flutter-docs",
@@ -40,13 +38,11 @@
         "weeks": "3 to 4",
         "goal": "Think in widgets and build any screen from a design.",
         "topics": [
-          "Stateless vs Stateful widgets and the build method",
-          "Row, Column, Stack, Expanded, Flexible, Wrap",
-          "Container, Padding, SizedBox, Card, ListTile",
-          "Material 3 theming, dark mode and custom fonts",
-          "Scaffold, AppBar, Drawer, BottomNavigationBar",
+          "Stateless vs Stateful widgets",
+          "Row, Column, Stack and Expanded",
+          "Scaffold, AppBar and navigation bars",
           "ListView and GridView builders",
-          "Responsive layouts with LayoutBuilder and MediaQuery"
+          "Material 3 theming and responsive layouts"
         ],
         "learn": [
           "flutter-codelabs",
@@ -65,12 +61,11 @@
         "weeks": "3 to 4",
         "goal": "Handle user input, move between screens and keep state sane.",
         "topics": [
-          "TextFormField, Form and validation",
-          "Navigation with Navigator and go_router, passing data between screens",
-          "setState, InheritedWidget and Provider",
-          "Riverpod or Bloc: pick one and learn it well",
-          "Separating UI, state and data",
-          "Local storage with shared_preferences and a database (sqflite, Drift or Hive)"
+          "Forms and validation",
+          "Navigation with go_router and passing data",
+          "setState and Provider",
+          "Riverpod or Bloc: pick one",
+          "Local storage with shared_preferences and a database"
         ],
         "learn": [
           "riverpod",
@@ -88,12 +83,11 @@
         "weeks": "3 to 4",
         "goal": "Talk to servers, handle loading and errors, add sign-in.",
         "topics": [
-          "HTTP with http or dio, JSON parsing and model classes",
+          "HTTP with dio and JSON model classes",
           "Loading, empty and error states",
           "Pagination and pull to refresh",
-          "Firebase Auth, Cloud Firestore and Storage",
-          "Push notifications with Firebase Cloud Messaging",
-          "Images, caching and offline basics"
+          "Firebase Auth and Cloud Firestore",
+          "Push notifications"
         ],
         "learn": [
           "firebase",
@@ -111,12 +105,11 @@
         "weeks": "2 to 3",
         "goal": "Make it reliable and publish it.",
         "topics": [
-          "Unit, widget and integration tests",
-          "Flutter DevTools: performance, memory and rebuilds",
-          "Platform channels at a basic level",
-          "App icons, splash screens, signing and build flavours",
-          "CI with GitHub Actions or Codemagic",
-          "Publishing on Google Play (internal testing first) and TestFlight"
+          "Unit and widget tests",
+          "Flutter DevTools for performance",
+          "App icons, splash screen and signing",
+          "CI with GitHub Actions",
+          "Publishing on Google Play"
         ],
         "learn": [
           "flutter-docs",
@@ -135,11 +128,10 @@
         "goal": "Prepare for company exams and interviews.",
         "topics": [
           "Widget lifecycle, keys and BuildContext",
-          "State management trade-offs explained in your own words",
-          "Android basics: activities, intents, permissions, Gradle",
-          "Dart and logic problems under time limits",
-          "System design for a mobile app: caching, sync, offline",
-          "Portfolio with two published apps"
+          "State management trade-offs in your own words",
+          "Android basics: activities, permissions, Gradle",
+          "Timed Dart and logic problems",
+          "Two published apps in your portfolio"
         ],
         "learn": [
           "tech-interview-handbook"
@@ -148,7 +140,7 @@
           "karmatix-flutter",
           "leetcode"
         ],
-        "build": "Take every timed mock test in the Karmatix Flutter course and redo the ones you fail.",
+        "build": "Take every Karmatix Flutter mock test and redo the ones you fail.",
         "prove": "Two published apps, a clean GitHub and mock test scores you can talk about.",
         "hint": null
       }
@@ -233,13 +225,11 @@
         "weeks": "3 to 4",
         "goal": "Get fluent in C# and the dotnet CLI.",
         "topics": [
-          "Install the .NET 10 SDK, VS Code with C# Dev Kit or Visual Studio",
-          "dotnet new, build, run and test from the terminal",
-          "Types, nullable reference types, control flow, methods",
-          "Classes, records, structs, interfaces and inheritance",
+          "Install the .NET SDK and use dotnet new, run and test",
+          "Types, nullable references and control flow",
+          "Classes, records and interfaces",
           "Collections and generics",
-          "Exceptions and debugging",
-          "Git and GitHub"
+          "Exceptions, debugging and Git"
         ],
         "learn": [
           "karmatix-dotnet",
@@ -259,11 +249,9 @@
         "weeks": "2 to 3",
         "goal": "Write the C# that real codebases use.",
         "topics": [
-          "LINQ queries and method syntax",
-          "async and await, Task and cancellation",
-          "Delegates, lambdas and events",
-          "Pattern matching and switch expressions",
-          "Records, init-only properties and immutability",
+          "LINQ",
+          "async and await with cancellation",
+          "Lambdas and pattern matching",
           "Dependency injection basics",
           "Unit tests with xUnit"
         ],
@@ -284,11 +272,11 @@
         "weeks": "2 to 3",
         "goal": "Store and query data correctly.",
         "topics": [
-          "SQL: SELECT, JOINs, GROUP BY, indexes, transactions",
-          "SQL Server or PostgreSQL locally (Docker is fine)",
-          "EF Core: DbContext, migrations, relationships",
-          "Querying efficiently: AsNoTracking, projections, avoiding N+1",
-          "Dapper for raw SQL when you need speed"
+          "SQL: joins, grouping and indexes",
+          "A local SQL Server or PostgreSQL",
+          "EF Core: DbContext, migrations and relationships",
+          "Efficient queries: projections and no N+1",
+          "Dapper for raw SQL"
         ],
         "learn": [
           "ef-core-docs",
@@ -308,12 +296,10 @@
         "goal": "Build secure, documented REST APIs.",
         "topics": [
           "Minimal APIs and controllers",
-          "Routing, model binding and validation",
+          "Validation and error handling with ProblemDetails",
           "Middleware, logging and configuration",
-          "Auth with JWT and ASP.NET Core Identity",
-          "OpenAPI docs and versioning",
-          "Error handling with ProblemDetails",
-          "Integration tests with WebApplicationFactory"
+          "Auth with JWT",
+          "Integration tests and OpenAPI docs"
         ],
         "learn": [
           "aspnet-core-docs",
@@ -332,12 +318,11 @@
         "weeks": "3 to 4",
         "goal": "Structure, ship and run it like a team would.",
         "topics": [
-          "Clean architecture and vertical slices, and when not to use them",
-          "Caching with IMemoryCache and Redis",
+          "Clean architecture, and when not to use it",
+          "Caching with Redis",
           "Background jobs with hosted services",
-          "Real-time features with SignalR",
           "Docker and GitHub Actions CI",
-          "Deploying to Azure, logs and health checks"
+          "Deploying to Azure with health checks"
         ],
         "learn": [
           "milan-jovanovic",
@@ -347,7 +332,7 @@
         "practise": [
           "karmatix-dotnet"
         ],
-        "build": "Take the production API capstone from the Karmatix .NET Academy and extend it with caching, a background job and a deploy pipeline.",
+        "build": "Take the Karmatix production API capstone and extend it with caching, a background job and a deploy pipeline.",
         "prove": "AZ-204 if your target companies use Azure, plus a live capstone.",
         "hint": null
       },
@@ -357,10 +342,9 @@
         "goal": "Prepare for .NET interview rounds.",
         "topics": [
           "CLR, garbage collection, value vs reference types",
-          "async internals and common deadlocks",
+          "async internals and deadlocks",
           "DI lifetimes: singleton, scoped, transient",
-          "EF Core performance questions",
-          "REST design and HTTP status codes",
+          "REST design and status codes",
           "SOLID with examples from your own code"
         ],
         "learn": [
@@ -370,7 +354,7 @@
           "karmatix-dotnet",
           "leetcode"
         ],
-        "build": "Answer the Karmatix .NET Academy interview questions out loud and record yourself once.",
+        "build": "Answer the Karmatix .NET interview questions out loud and record yourself once.",
         "prove": "Two deployed APIs, tests in CI and confident answers on the common topics.",
         "hint": null
       }
