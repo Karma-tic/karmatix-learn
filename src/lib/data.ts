@@ -1,10 +1,12 @@
 import resources from '../data/resources.json';
 import paths from '../data/paths.json';
 import certifications from '../data/certifications.json';
+import roadmaps from '../data/roadmaps.json';
 
 export type Resource = (typeof resources)[number];
 export type Path = (typeof paths)[number];
 export type Cert = (typeof certifications)[number];
+export type Roadmap = (typeof roadmaps)[number];
 
 export const LAST_CHECKED = '27 Nov 2026';
 export const LAST_CHECKED_ISO = '2026-11-27';
@@ -63,4 +65,5 @@ export const cert = (id: string) => {
 
 export const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 
-export { resources, paths, certifications };
+export { resources, paths, certifications, roadmaps };
+export const roadmapsFor = (pathId: string) => roadmaps.filter((r) => r.related === pathId);

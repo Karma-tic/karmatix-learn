@@ -5,8 +5,8 @@
     "shortTitle": ".NET Academy",
     "flagship": true,
     "status": "live",
-    "tagline": "Learn .NET the clear way.",
-    "summary": "Comprehensive .NET 10 and C# 14 engineering curriculum with 16 tested projects, clean architecture, Docker, and interview preparation.",
+    "tagline": "The .NET roadmap, with tested projects.",
+    "summary": "The full .NET and C# roadmap with 16 tested sample projects, interview prep, cheat sheets and a skills checklist.",
     "audience": "Beginners to job-seeking backend engineers",
     "level": "Beginner to Advanced",
     "topics": [
@@ -48,7 +48,11 @@
       "csharp": "C# 14"
     },
     "lastVerified": "2026-11-07",
-    "badges": ["Flagship", "100% Free", "CI Verified"],
+    "badges": [
+      "Flagship",
+      "100% Free",
+      "CI Verified"
+    ],
     "ciVerified": true,
     "image": {
       "desktop": "/images/courses/dotnet-desktop.webp",
@@ -69,8 +73,8 @@
     "shortTitle": "Flutter Course",
     "flagship": false,
     "status": "live",
-    "tagline": "Zero to job-ready and company exam prep.",
-    "summary": "Hands-on Flutter and Dart guide with side-by-side Android Kotlin comparisons, timed mock tests, and practical calculation labs.",
+    "tagline": "The Flutter roadmap, with free practice.",
+    "summary": "The full Flutter roadmap with timed mock tests, a CRUD lab, practice labs, cheat sheets and a skills checklist.",
     "audience": "Beginners to mobile developers and exam candidates",
     "level": "Beginner to Intermediate",
     "topics": [
@@ -110,7 +114,11 @@
       "dart": "Dart 3.x"
     },
     "lastVerified": "2026-11-07",
-    "badges": ["Live", "100% Free", "Exam Prep"],
+    "badges": [
+      "Live",
+      "100% Free",
+      "Exam Prep"
+    ],
     "ciVerified": false,
     "image": {
       "desktop": "/images/courses/flutter-desktop.webp",
@@ -154,7 +162,9 @@
     ],
     "versions": {},
     "lastVerified": "2026-11-07",
-    "badges": ["Planned"],
+    "badges": [
+      "Planned"
+    ],
     "ciVerified": false,
     "image": {
       "desktop": "",
@@ -198,7 +208,9 @@
     ],
     "versions": {},
     "lastVerified": "2026-11-07",
-    "badges": ["Planned"],
+    "badges": [
+      "Planned"
+    ],
     "ciVerified": false,
     "image": {
       "desktop": "",
@@ -242,7 +254,9 @@
     ],
     "versions": {},
     "lastVerified": "2026-11-07",
-    "badges": ["Planned"],
+    "badges": [
+      "Planned"
+    ],
     "ciVerified": false,
     "image": {
       "desktop": "",
@@ -258,4 +272,3 @@
     }
   }
 ]
-

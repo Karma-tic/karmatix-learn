@@ -21,10 +21,14 @@ Karmatix Learn does not teach topics itself. It recommends the best existing cou
 - [Certifications compared](https://learn.karmatix.in/certifications/): 15 certifications with exam fees, validity and an honest verdict.
 - [Connect with developers](https://learn.karmatix.in/connect/): meetups, online communities, open source programmes, hackathons and a networking playbook.
 
-## Free courses by Karmatix
+## Stack roadmaps
 
-- [Karmatix .NET Academy](https://karma-tic.github.io/dotnet-academy/): .NET 10 and C# 14 with 16 tested projects.
-- [Karmatix Flutter Course](https://karma-tic.github.io/flutter-course/): Flutter and Dart with Kotlin comparisons and mock tests.
+- [All stack roadmaps](https://learn.karmatix.in/roadmaps/): Flutter, .NET and C#, React and Next.js, Node.js, Python backend, Java and Spring Boot, Android with Kotlin, React Native and Go. Each lists every skill as a checklist, where to learn it, projects to build and interview topics.
+
+## Free practice by Karmatix
+
+- [Karmatix .NET Academy](https://karma-tic.github.io/dotnet-academy/): the .NET roadmap with 16 tested sample projects, interview prep and cheat sheets.
+- [Karmatix Flutter Roadmap](https://karma-tic.github.io/flutter-course/): the Flutter roadmap with mock tests, a CRUD lab and cheat sheets.
 
 ## Data
 

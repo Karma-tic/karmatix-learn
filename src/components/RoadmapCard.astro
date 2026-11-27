@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+import type { Roadmap } from '../lib/data';
+interface Props { k: Roadmap }
+const { k } = Astro.props;
+const skills = k.stages.reduce((n, s) => n + s.topics.length, 0);
+---
+<article class="kx-card kx-card-link group relative flex h-full flex-col p-5">
+  <div class="flex items-start justify-between">
+    <span class="inline-flex size-10 items-center justify-center rounded-xl border border-line bg-surface-2 text-ember transition-colors group-hover:border-ember/50"><Icon name={k.icon} class="size-5" /></span>
+    <Icon name="arrow-up-right" class="kx-arrow size-5 text-dim" />
+  </div>
+  <h3 class="mt-4 text-lg font-semibold text-text"><a href={`/roadmaps/${k.id}/`} class="kx-stretch rounded-sm">{k.name}</a></h3>
+  <p class="mt-1 text-sm leading-relaxed text-muted">{k.tagline}</p>
+  <p class="mt-auto flex flex-wrap gap-1.5 pt-4">
+    <span class="kx-tag"><span class="num">{k.stages.length}</span>&nbsp;stages</span>
+    <span class="kx-tag"><span class="num">{skills}</span>&nbsp;skills</span>
+    <span class="kx-tag"><span class="num">{k.months}</span>&nbsp;months</span>
+    {k.course && <span class="kx-tag kx-tag-ember">Free Karmatix practice</span>}
+  </p>
+</article>

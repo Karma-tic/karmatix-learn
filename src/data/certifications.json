@@ -314,5 +314,69 @@
       "tryhackme"
     ],
     "note": null
+  },
+  {
+    "id": "az-204",
+    "name": "Microsoft Azure Developer Associate",
+    "provider": "Microsoft",
+    "code": "AZ-204",
+    "tracks": [
+      "backend",
+      "cloud"
+    ],
+    "fee": "$165",
+    "feeIndia": "About ₹4,865",
+    "validity": "1 year, free online renewal",
+    "level": "intermediate",
+    "verdict": "good",
+    "why": "The Azure exam for .NET developers: App Service, Functions, storage, Cosmos DB and identity.",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/",
+    "prep": [
+      "ms-learn-azure",
+      "aspnet-core-docs"
+    ],
+    "note": null
+  },
+  {
+    "id": "fcc-csharp",
+    "name": "Foundational C# with Microsoft",
+    "provider": "freeCodeCamp and Microsoft",
+    "code": "Certification",
+    "tracks": [
+      "backend"
+    ],
+    "fee": "Free",
+    "feeIndia": null,
+    "validity": "Does not expire",
+    "level": "beginner",
+    "verdict": "good",
+    "why": "A free C# certification with a proctored-style final exam, made with Microsoft. Good proof for freshers.",
+    "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+    "prep": [
+      "csharp-docs",
+      "ms-learn-dotnet"
+    ],
+    "note": null
+  },
+  {
+    "id": "oracle-java",
+    "name": "Oracle Certified Professional: Java SE Developer",
+    "provider": "Oracle",
+    "code": "1Z0-830",
+    "tracks": [
+      "backend"
+    ],
+    "fee": "About $245",
+    "feeIndia": null,
+    "validity": "Does not expire",
+    "level": "advanced",
+    "verdict": "only",
+    "why": "Hard and respected, but rarely required. Spring projects on GitHub matter more for most jobs.",
+    "url": "https://education.oracle.com/",
+    "prep": [
+      "dev-java",
+      "mooc-java"
+    ],
+    "note": null
   }
 ]
