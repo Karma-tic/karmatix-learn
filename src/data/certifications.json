@@ -1,0 +1,318 @@
+[
+  {
+    "id": "aws-saa",
+    "name": "AWS Certified Solutions Architect Associate",
+    "provider": "Amazon Web Services",
+    "code": "SAA-C03",
+    "tracks": [
+      "cloud",
+      "backend"
+    ],
+    "fee": "$150",
+    "feeIndia": null,
+    "validity": "3 years",
+    "level": "intermediate",
+    "verdict": "worth",
+    "why": "The most recognised first cloud certification. Broad, practical and asked for in many cloud job posts.",
+    "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+    "prep": [
+      "aws-skill-builder",
+      "aws-free-tier",
+      "cloud-resume"
+    ],
+    "note": null
+  },
+  {
+    "id": "aws-ccp",
+    "name": "AWS Certified Cloud Practitioner",
+    "provider": "Amazon Web Services",
+    "code": "CLF-C02",
+    "tracks": [
+      "cloud"
+    ],
+    "fee": "$100",
+    "feeIndia": null,
+    "validity": "3 years",
+    "level": "beginner",
+    "verdict": "good",
+    "why": "A gentle introduction. Skip it and go straight to Solutions Architect if you already build things.",
+    "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "prep": [
+      "aws-skill-builder"
+    ],
+    "note": null
+  },
+  {
+    "id": "aws-aip",
+    "name": "AWS Certified AI Practitioner",
+    "provider": "Amazon Web Services",
+    "code": "AIF-C01",
+    "tracks": [
+      "ai",
+      "cloud"
+    ],
+    "fee": "$100",
+    "feeIndia": null,
+    "validity": "3 years",
+    "level": "beginner",
+    "verdict": "only",
+    "why": "AI vocabulary on AWS. Useful for AI-adjacent roles, not proof that you can build ML systems.",
+    "url": "https://aws.amazon.com/certification/certified-ai-practitioner/",
+    "prep": [
+      "aws-skill-builder",
+      "dlai-short"
+    ],
+    "note": null
+  },
+  {
+    "id": "az-900",
+    "name": "Microsoft Azure Fundamentals",
+    "provider": "Microsoft",
+    "code": "AZ-900",
+    "tracks": [
+      "cloud"
+    ],
+    "fee": "$99",
+    "feeIndia": "₹3,691",
+    "validity": "Does not expire",
+    "level": "beginner",
+    "verdict": "good",
+    "why": "Cheap in India and often discounted through Microsoft Virtual Training Days. Good if your target companies use Azure.",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+    "prep": [
+      "ms-learn-azure"
+    ],
+    "note": null
+  },
+  {
+    "id": "az-104",
+    "name": "Microsoft Azure Administrator",
+    "provider": "Microsoft",
+    "code": "AZ-104",
+    "tracks": [
+      "cloud"
+    ],
+    "fee": "$165",
+    "feeIndia": "About ₹4,865",
+    "validity": "1 year, free online renewal",
+    "level": "intermediate",
+    "verdict": "worth",
+    "why": "The Azure exam that maps to real admin and cloud engineer jobs in Indian service companies.",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/",
+    "prep": [
+      "ms-learn-azure"
+    ],
+    "note": null
+  },
+  {
+    "id": "gcp-ace",
+    "name": "Google Cloud Associate Cloud Engineer",
+    "provider": "Google Cloud",
+    "code": "ACE",
+    "tracks": [
+      "cloud"
+    ],
+    "fee": "$125",
+    "feeIndia": null,
+    "validity": "3 years",
+    "level": "intermediate",
+    "verdict": "good",
+    "why": "Solid hands-on cloud exam. Choose it if your target companies run on Google Cloud.",
+    "url": "https://cloud.google.com/learn/certification/cloud-engineer",
+    "prep": [
+      "gcp-skills-boost"
+    ],
+    "note": null
+  },
+  {
+    "id": "cka",
+    "name": "Certified Kubernetes Administrator",
+    "provider": "CNCF and Linux Foundation",
+    "code": "CKA",
+    "tracks": [
+      "cloud"
+    ],
+    "fee": "$445",
+    "feeIndia": null,
+    "validity": "2 years",
+    "level": "advanced",
+    "verdict": "worth",
+    "why": "A hands-on exam in a live terminal, so it proves real skill. Includes a retake and two killer.sh practice sessions.",
+    "url": "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/",
+    "prep": [
+      "k8s-tutorials",
+      "killercoda",
+      "kodekloud"
+    ],
+    "note": "Big discounts are common during Linux Foundation sales such as Cyber Monday."
+  },
+  {
+    "id": "ckad",
+    "name": "Certified Kubernetes Application Developer",
+    "provider": "CNCF and Linux Foundation",
+    "code": "CKAD",
+    "tracks": [
+      "cloud",
+      "backend"
+    ],
+    "fee": "$445",
+    "feeIndia": null,
+    "validity": "2 years",
+    "level": "intermediate",
+    "verdict": "good",
+    "why": "The developer side of Kubernetes. Pick CKA first if you want DevOps roles.",
+    "url": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/",
+    "prep": [
+      "k8s-tutorials",
+      "killercoda"
+    ],
+    "note": null
+  },
+  {
+    "id": "terraform-associate",
+    "name": "HashiCorp Terraform Associate",
+    "provider": "HashiCorp",
+    "code": "004",
+    "tracks": [
+      "cloud"
+    ],
+    "fee": "$70.50",
+    "feeIndia": null,
+    "validity": "2 years",
+    "level": "intermediate",
+    "verdict": "worth",
+    "why": "Cheap, quick and directly useful. Infrastructure as code is in most DevOps job posts.",
+    "url": "https://developer.hashicorp.com/certifications/infrastructure-automation",
+    "prep": [
+      "terraform-tutorials"
+    ],
+    "note": null
+  },
+  {
+    "id": "security-plus",
+    "name": "CompTIA Security+",
+    "provider": "CompTIA",
+    "code": "SY0-701 / SY0-801",
+    "tracks": [
+      "security"
+    ],
+    "fee": "About $400 to $440",
+    "feeIndia": null,
+    "validity": "3 years",
+    "level": "beginner",
+    "verdict": "worth",
+    "why": "The standard entry-level security certification, often listed as a requirement for SOC and security analyst roles.",
+    "url": "https://www.comptia.org/certifications/security",
+    "prep": [
+      "professor-messer",
+      "tryhackme"
+    ],
+    "note": "SY0-801 launched on 17 Nov 2026. Make sure your study material matches the exam version you book."
+  },
+  {
+    "id": "pl-300",
+    "name": "Microsoft Power BI Data Analyst",
+    "provider": "Microsoft",
+    "code": "PL-300",
+    "tracks": [
+      "data"
+    ],
+    "fee": "$165",
+    "feeIndia": "About ₹4,865",
+    "validity": "1 year, free online renewal",
+    "level": "intermediate",
+    "verdict": "worth",
+    "why": "Power BI is the most requested BI tool in Indian analyst job posts, and this is its official exam.",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/",
+    "prep": [
+      "ms-learn-powerbi"
+    ],
+    "note": null
+  },
+  {
+    "id": "google-da",
+    "name": "Google Data Analytics Professional Certificate",
+    "provider": "Google on Coursera",
+    "code": "Certificate",
+    "tracks": [
+      "data"
+    ],
+    "fee": "Coursera subscription",
+    "feeIndia": null,
+    "validity": "Does not expire",
+    "level": "beginner",
+    "verdict": "good",
+    "why": "A structured start for career switchers. Recruiters value your portfolio more than the certificate.",
+    "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "prep": [
+      "google-data-analytics"
+    ],
+    "note": "Coursera offers financial aid. Apply for it if the subscription is a barrier."
+  },
+  {
+    "id": "nptel",
+    "name": "NPTEL course certificate",
+    "provider": "IITs and IISc",
+    "code": "Proctored exam",
+    "tracks": [
+      "core",
+      "dsa",
+      "ai",
+      "data"
+    ],
+    "fee": "Course free, exam fee about ₹1,000",
+    "feeIndia": null,
+    "validity": "Does not expire",
+    "level": "beginner",
+    "verdict": "good",
+    "why": "Recognised by many Indian colleges for credits and noticed by some campus recruiters.",
+    "url": "https://nptel.ac.in/",
+    "prep": [
+      "nptel"
+    ],
+    "note": null
+  },
+  {
+    "id": "fcc-certs",
+    "name": "freeCodeCamp certifications",
+    "provider": "freeCodeCamp",
+    "code": "Certification projects",
+    "tracks": [
+      "frontend",
+      "backend",
+      "data"
+    ],
+    "fee": "Free",
+    "feeIndia": null,
+    "validity": "Does not expire",
+    "level": "beginner",
+    "verdict": "good",
+    "why": "Free and project based. The projects you build are what actually helps you.",
+    "url": "https://www.freecodecamp.org/learn",
+    "prep": [
+      "freecodecamp"
+    ],
+    "note": null
+  },
+  {
+    "id": "oscp",
+    "name": "OffSec Certified Professional",
+    "provider": "OffSec",
+    "code": "OSCP+",
+    "tracks": [
+      "security"
+    ],
+    "fee": "Expensive, sold with training",
+    "feeIndia": null,
+    "validity": "3 years for OSCP+",
+    "level": "advanced",
+    "verdict": "only",
+    "why": "Highly respected for penetration testing, but costly. Do it after HTB and TryHackMe, and only if pentesting is your goal.",
+    "url": "https://www.offsec.com/courses/pen-200/",
+    "prep": [
+      "hackthebox",
+      "tryhackme"
+    ],
+    "note": null
+  }
+]

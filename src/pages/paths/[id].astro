@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import { paths, res, cert, VERDICT, LAST_CHECKED } from '../../lib/data';
+
+export function getStaticPaths() {
+  return paths.map((p) => ({ params: { id: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const idx = paths.findIndex((x) => x.id === p.id);
+const next = paths[(idx + 1) % paths.length];
+const totalWeeksLow = p.stages.reduce((n, s) => n + parseInt(s.weeks), 0);
+
+const side = [
+  { key: 'tools', label: 'Set up these tools', icon: 'wrench', ids: p.tools },
+  { key: 'channels', label: 'Channels to follow', icon: 'circle-play', ids: p.channels },
+  { key: 'communities', label: 'Communities to join', icon: 'users', ids: p.communities },
+  { key: 'jobs', label: 'Where to apply', icon: 'briefcase', ids: p.jobs },
+];
+
+const url = `https://learn.karmatix.in/paths/${p.id}/`;
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'HowTo', name: `How to become a ${p.role}`, description: p.outcome,
+  totalTime: `P${totalWeeksLow}W`,
+  step: p.stages.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title, text: `${s.goal} Build: ${s.build}` })),
+}, {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Paths', item: 'https://learn.karmatix.in/paths/' },
+    { '@type': 'ListItem', position: 2, name: p.name, item: url },
+  ],
+}];
+---
+<Layout title={`${p.name} path: what to learn, practise and build | Karmatix Learn`} description={`${p.summary} ${p.stages.length} practical stages with the best free courses, practice sites, projects, certifications and communities.`} canonical={url} jsonLd={jsonLd} current="paths">
+  <section class="kx-glow border-b border-line">
+    <div class="mx-auto max-w-6xl px-4 pb-12 pt-10 sm:px-6 sm:pt-14">
+      <nav aria-label="Breadcrumb" class="text-sm text-dim"><a href="/paths/" class="inline-flex min-h-9 items-center hover:text-text">Paths</a> <span aria-hidden="true">/</span> <span class="text-muted">{p.name}</span></nav>
+      <div class="mt-4 flex items-start gap-4">
+        <span class="hidden size-14 shrink-0 items-center justify-center rounded-2xl border border-line bg-surface text-ember sm:inline-flex"><Icon name={p.icon} class="size-7" /></span>
+        <div>
+          <h1 class="text-4xl font-semibold tracking-[-0.03em] text-text sm:text-5xl">{p.name}</h1>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed text-muted">{p.outcome}</p>
+        </div>
+      </div>
+      <dl class="mt-8 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Role</dt><dd class="mt-1 text-sm font-medium text-text">{p.role}</dd></div>
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Time, part time</dt><dd class="mt-1 text-sm font-medium text-text"><span class="num">{p.months}</span> months</dd></div>
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Start with</dt><dd class="mt-1 text-sm font-medium text-text">{p.start}</dd></div>
+        <div class="bg-surface p-4"><dt class="text-xs text-dim">Checked</dt><dd class="num mt-1 text-sm font-medium text-text">{LAST_CHECKED}</dd></div>
+      </dl>
+      <nav aria-label="Stages" class="mt-6">
+        <ol class="kx-scroll-row">
+          {p.stages.map((s, i) => <li class="snap-start"><a href={`#stage-${i + 1}`} class="kx-chip"><span class="num text-ember">{i + 1}</span>{s.title}</a></li>)}
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <div class="mx-auto grid max-w-6xl gap-12 px-4 pt-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+    <!-- The route -->
+    <div class="kx-route relative">
+    <div class="pointer-events-none absolute bottom-4 left-[17px] top-4 w-[2px] rounded-full bg-line-strong" aria-hidden="true"><div class="kx-route-fill h-full w-full origin-top rounded-full bg-ember"></div></div>
+    <ol class="relative" aria-label={`${p.name} stages`}>
+      {p.stages.map((s, i) => (
+        <li id={`stage-${i + 1}`} class="relative pb-14 pl-14 last:pb-0">
+          <span class="num absolute left-0 top-0 inline-flex size-9 items-center justify-center rounded-full border-2 border-ember bg-ink text-sm font-semibold text-ember">{i + 1}</span>
+          <div>
+            <p class="text-sm text-dim"><span class="num">{s.weeks}</span> weeks</p>
+            <h2 class="text-2xl font-semibold tracking-tight text-text sm:text-[1.7rem]">{s.title}</h2>
+            <p class="mt-1.5 text-muted">{s.goal}</p>
+
+            <h3 class="mt-6 flex items-center gap-2 text-sm font-semibold text-text"><Icon name="book-open" class="size-4 text-ember" />Learn from</h3>
+            <div class="mt-3 grid gap-3 md:grid-cols-2">
+              {s.learn.map((id) => <ResourceCard r={res(id)} variant="compact" headingLevel="h4" />)}
+            </div>
+            {s.hint && <p class="mt-3 flex gap-2 text-sm text-dim"><Icon name="info" class="mt-0.5 size-4 shrink-0 text-ember" />{s.hint}</p>}
+
+            <h3 class="mt-6 flex items-center gap-2 text-sm font-semibold text-text"><Icon name="dumbbell" class="size-4 text-ember" />Practise on</h3>
+            <div class="mt-3 grid gap-3 md:grid-cols-2">
+              {s.practise.map((id) => <ResourceCard r={res(id)} variant="compact" headingLevel="h4" />)}
+            </div>
+
+            <div class="mt-6 grid gap-3 md:grid-cols-2">
+              <div class="rounded-xl border border-ember/40 bg-[color-mix(in_oklab,var(--color-ember)_7%,var(--color-surface))] p-5">
+                <h3 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="wrench" class="size-4 text-ember" />Build this</h3>
+                <p class="mt-2 leading-relaxed text-text/90">{s.build}</p>
+              </div>
+              <div class="rounded-xl border border-line bg-surface p-5">
+                <h3 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="flag" class="size-4 text-ember" />Prove it</h3>
+                <p class="mt-2 leading-relaxed text-muted">{s.prove}</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+    </div>
+
+    <!-- Kit sidebar -->
+    <aside class="space-y-8 lg:sticky lg:top-24 lg:max-h-[calc(100dvh-7rem)] lg:self-start lg:overflow-y-auto lg:pb-6 lg:[scrollbar-width:thin]" aria-label="Path kit">
+      {p.certs.length > 0 && (
+        <section>
+          <h2 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="award" class="size-4 text-ember" />Certifications</h2>
+          <ul class="mt-3 space-y-2">
+            {p.certs.map((id) => { const c = cert(id); return (
+              <li class="kx-card p-3.5">
+                <a href="/certifications/" class="text-sm font-medium text-text hover:text-ember-soft">{c.name}</a>
+                <p class="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-dim"><span class="num">{c.fee}</span><span class={`kx-tag ${c.verdict === 'worth' ? 'kx-tag-free' : c.verdict === 'only' ? 'kx-tag-paid' : ''}`}>{VERDICT[c.verdict].label}</span></p>
+              </li>
+            ); })}
+          </ul>
+        </section>
+      )}
+      {side.map((g) => (
+        <section>
+          <h2 class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name={g.icon} class="size-4 text-ember" />{g.label}</h2>
+          <ul class="mt-2">
+            {g.ids.map((id) => { const r = res(id); return (
+              <li><a href={r.url} class="group flex min-h-11 items-center justify-between gap-3 border-b border-line text-sm text-muted transition-colors hover:text-text">
+                <span class="min-w-0"><span class="block truncate">{r.name}</span>{r.lang !== 'en' && <span class="block text-xs text-dim">Hindi</span>}</span>
+                <Icon name="arrow-up-right" class="kx-arrow size-4 shrink-0 text-dim group-hover:text-ember" />
+              </a></li>
+            ); })}
+          </ul>
+        </section>
+      ))}
+      <a href={`/resources/?track=${p.id}`} class="kx-btn kx-btn-ghost w-full">All {p.name.toLowerCase()} picks</a>
+    </aside>
+  </div>
+
+  <section class="mx-auto mt-20 max-w-6xl px-4 sm:px-6">
+    <div class="kx-card flex flex-wrap items-center justify-between gap-6 p-6 sm:p-8">
+      <div>
+        <h2 class="text-xl font-semibold text-text">Finished stage one?</h2>
+        <p class="mt-1 text-muted">Find developers to learn with, and share what you built.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="/connect/" class="kx-btn kx-btn-primary">Connect with developers</a>
+        <a href={`/paths/${next.id}/`} class="kx-btn kx-btn-ghost max-w-full !whitespace-normal py-2 text-center">Next path: {next.name}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import { res } from '../../lib/data';
+const groups = [
+  { id: 'meet', title: 'Meet developers in your city', text: 'Free meetups and conferences across India. Go once a month.', icon: 'calendar', ids: ['gdg', 'aws-user-groups', 'foss-united', 'hasgeek', 'commudle', 'meetup'] },
+  { id: 'online', title: 'Ask questions online', text: 'Communities where people answer well-asked questions quickly.', icon: 'message-circle', ids: ['r-developersindia', 'r-learnprogramming', 'reactiflux', 'k8s-slack', 'hf-discord', 'datatalksclub', 'fcc-forum', 'stack-overflow'] },
+  { id: 'oss', title: 'Contribute to open source', text: 'Mentored programmes, some of them paid (GSoC, LFX, Outreachy), that become real experience on your resume.', icon: 'git-pull-request', ids: ['gsoc', 'lfx', 'outreachy', 'gssoc', 'hacktoberfest', 'github-student-pack'] },
+  { id: 'hack', title: 'Build fast at hackathons', text: 'The quickest way to meet people who build. Ship something small and demo it.', icon: 'trophy', ids: ['devfolio', 'mlh', 'unstop', 'ctftime'] },
+  { id: 'show', title: 'Show your work', text: 'Public proof of work gets you noticed more than a certificate.', icon: 'globe', ids: ['peerlist', 'dev-to'] },
+];
+const steps = [
+  { t: 'Build in public', d: 'Post a short note every time you finish a stage: what you built, one thing that broke, the live link. Peerlist, LinkedIn or DEV all work.' },
+  { t: 'Show up once a month', d: 'Pick one local meetup and keep going. Talk to two people each time. Organisers remember regulars and often refer them.' },
+  { t: 'Help one person a week', d: 'Answer a question in a community you use. Explaining is the fastest way to learn, and people remember who helped.' },
+  { t: 'Contribute to a tool you use', d: 'Start with docs or a good first issue. One merged pull request in a real project is worth more than ten tutorials.' },
+  { t: 'Ask for referrals properly', d: 'Message people whose work you know, link your project, and ask about the team, not just for a referral. Keep it to four lines.' },
+];
+---
+<Layout title="Connect with developers: communities, meetups, open source, hackathons | Karmatix Learn" description="Where Indian developers meet, ask questions and find work: meetups, online communities, paid open source programmes, hackathons and a practical networking playbook." canonical="https://learn.karmatix.in/connect/" current="connect">
+  <section class="kx-glow border-b border-line">
+    <div class="mx-auto max-w-6xl px-4 pb-14 pt-14 sm:px-6 sm:pt-20">
+      <h1 class="max-w-3xl text-4xl font-semibold tracking-[-0.03em] text-text sm:text-5xl">Most opportunities come through people</h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">Communities to join, meetups to attend, open source programmes that pay, and a simple playbook for building a network without being awkward about it.</p>
+      <nav aria-label="On this page" class="mt-8">
+        <ul class="kx-scroll-row">
+          {groups.map((g) => <li class="snap-start"><a href={`#${g.id}`} class="kx-chip"><Icon name={g.icon} class="size-3.5" />{g.title.split(' ').slice(0, 3).join(' ')}</a></li>)}
+          <li class="snap-start"><a href="#playbook" class="kx-chip"><Icon name="route" class="size-3.5" />Networking playbook</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  {groups.map((g) => (
+    <section id={g.id} class="mx-auto max-w-6xl px-4 pt-16 sm:px-6" aria-labelledby={`${g.id}-h`}>
+      <div class="flex items-start gap-3">
+        <span class="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-surface-2 text-ember"><Icon name={g.icon} class="size-[18px]" /></span>
+        <div>
+          <h2 id={`${g.id}-h`} class="text-2xl font-semibold tracking-tight text-text">{g.title}</h2>
+          <p class="mt-1 text-muted">{g.text}</p>
+        </div>
+      </div>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {g.ids.map((id) => <ResourceCard r={res(id)} />)}
+      </div>
+    </section>
+  ))}
+
+  <section id="playbook" class="mx-auto max-w-6xl px-4 pt-20 sm:px-6" aria-labelledby="playbook-h">
+    <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <h2 id="playbook-h" class="text-3xl font-semibold tracking-tight text-text">A networking playbook for people who hate networking</h2>
+        <p class="mt-3 text-muted">Five habits, in the order that works. None of them need you to be loud.</p>
+      </div>
+      <ol class="space-y-3">
+        {steps.map((s, i) => (
+          <li class="kx-card flex gap-4 p-5">
+            <span class="num inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-ember/60 text-sm text-ember">{i + 1}</span>
+            <div>
+              <h3 class="font-semibold text-text">{s.t}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-muted">{s.d}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pt-16 sm:px-6">
+    <div class="kx-card flex flex-wrap items-center justify-between gap-6 p-6 sm:p-8">
+      <div>
+        <h2 class="text-xl font-semibold text-text">Run a community we should list?</h2>
+        <p class="mt-1 text-muted">Active, welcoming and free to join? Tell us on GitHub.</p>
+      </div>
+      <a href="https://github.com/Karma-tic/karmatix-learn/issues/new?title=Suggest%20a%20community" class="kx-btn kx-btn-ghost">Suggest a community<Icon name="arrow-up-right" class="size-4" /></a>
+    </div>
+  </section>
+</Layout>

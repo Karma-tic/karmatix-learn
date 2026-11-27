@@ -75,7 +75,7 @@ for (const file of htmlFiles) {
         errors.push(`${relFile}: Missing anchor target "#${anchor}"`);
       }
     } else if (href.startsWith('/') && !href.startsWith('//')) {
-      const [route] = href.split('#');
+      const [route] = href.split('#')[0].split('?');
       let targetFile;
       if (route === '/' || route === '') {
         targetFile = path.join(distDir, 'index.html');

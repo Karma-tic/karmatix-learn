@@ -1,0 +1,2964 @@
+[
+  {
+    "id": "roadmap-sh",
+    "name": "roadmap.sh",
+    "by": "Community",
+    "url": "https://roadmap.sh/",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "frontend",
+      "backend",
+      "mobile",
+      "cloud",
+      "ai",
+      "data",
+      "security"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Community-maintained skill maps for almost every developer role, with links per topic.",
+    "tip": "Use it as a checklist, not a syllabus. Tick off topics only after you have used them in a project."
+  },
+  {
+    "id": "cs50x",
+    "name": "CS50x: Introduction to Computer Science",
+    "by": "Harvard",
+    "url": "https://cs50.harvard.edu/x/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The best free first course in programming: C, Python, SQL and the web, with real problem sets.",
+    "tip": "Do every problem set yourself before watching the walkthroughs. The final project is your first portfolio piece."
+  },
+  {
+    "id": "missing-semester",
+    "name": "The Missing Semester",
+    "by": "MIT",
+    "url": "https://missing.csail.mit.edu/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "backend",
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Shell, Git, editors, debugging and scripting: the tools colleges skip and jobs assume.",
+    "tip": "Spend one evening per lecture and redo each exercise in your own terminal."
+  },
+  {
+    "id": "pro-git",
+    "name": "Pro Git",
+    "by": "git-scm.com",
+    "url": "https://git-scm.com/book/en/v2",
+    "type": "book",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official, free Git book. Chapters 2 and 3 cover what you need every day.",
+    "tip": "Read chapters 2 and 3, then practise branching on Learn Git Branching."
+  },
+  {
+    "id": "learn-git-branching",
+    "name": "Learn Git Branching",
+    "by": "Peter Cottle",
+    "url": "https://learngitbranching.js.org/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A visual sandbox that makes rebase, merge and cherry-pick finally make sense.",
+    "tip": "Finish the Main and Remote levels. You will stop fearing merge conflicts."
+  },
+  {
+    "id": "odin-project",
+    "name": "The Odin Project",
+    "by": "Community",
+    "url": "https://www.theodinproject.com/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A full, project-based web curriculum that makes you set up real tools from day one.",
+    "tip": "Follow the Full Stack JavaScript path and actually build every project. Ask for help in their Discord."
+  },
+  {
+    "id": "freecodecamp",
+    "name": "freeCodeCamp",
+    "by": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend",
+      "data",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Thousands of hours of free interactive lessons with free certifications built around projects.",
+    "tip": "Use it for structured practice. The certification projects matter more than the certificates."
+  },
+  {
+    "id": "build-your-own-x",
+    "name": "Build your own X",
+    "by": "CodeCrafters",
+    "url": "https://github.com/codecrafters-io/build-your-own-x",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "core",
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Step-by-step guides to rebuild real tools: Git, Redis, a database, a shell, an interpreter.",
+    "tip": "Pick one tool you use daily and rebuild it. Few things teach more or look better on a CV."
+  },
+  {
+    "id": "exercism",
+    "name": "Exercism",
+    "by": "Exercism",
+    "url": "https://exercism.org/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free coding exercises in 70+ languages with optional human mentoring.",
+    "tip": "Use it to pick up a second language fast. Request a mentor review on your solutions."
+  },
+  {
+    "id": "github-student-pack",
+    "name": "GitHub Student Developer Pack",
+    "by": "GitHub",
+    "url": "https://education.github.com/pack",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free credits and pro plans for dozens of developer tools if you are a student.",
+    "tip": "Claim it on day one with your college email or ID. It includes domains, cloud credits and Copilot."
+  },
+  {
+    "id": "mdn",
+    "name": "MDN Web Docs",
+    "by": "Mozilla",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The reference for HTML, CSS and JavaScript. Accurate, current and free.",
+    "tip": "Search MDN before Stack Overflow. Its Learn section is a solid beginner course on its own."
+  },
+  {
+    "id": "javascript-info",
+    "name": "The Modern JavaScript Tutorial",
+    "by": "javascript.info",
+    "url": "https://javascript.info/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The clearest free explanation of JavaScript from basics to closures, promises and the event loop.",
+    "tip": "Read part 1 in order and do the tasks at the end of each chapter."
+  },
+  {
+    "id": "web-dev-learn",
+    "name": "Learn CSS, HTML and more",
+    "by": "web.dev (Google)",
+    "url": "https://web.dev/learn",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Short, current courses on CSS, accessibility, forms, images and performance.",
+    "tip": "Do Learn CSS and Learn Accessibility. They fix most beginner layout and a11y mistakes."
+  },
+  {
+    "id": "react-docs",
+    "name": "React docs: Learn",
+    "by": "Meta",
+    "url": "https://react.dev/learn",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official React course with interactive sandboxes. Better than most paid courses.",
+    "tip": "Read Thinking in React and Escape Hatches twice. Build the tic-tac-toe tutorial without copying."
+  },
+  {
+    "id": "nextjs-learn",
+    "name": "Learn Next.js",
+    "by": "Vercel",
+    "url": "https://nextjs.org/learn",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Official hands-on course that builds a full dashboard app with routing, data and auth.",
+    "tip": "Finish it, then rebuild the same app with your own design and data."
+  },
+  {
+    "id": "ts-handbook",
+    "name": "TypeScript Handbook",
+    "by": "Microsoft",
+    "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The official guide to TypeScript. Short enough to read in a weekend.",
+    "tip": "Read Everyday Types and Narrowing, then turn on strict mode in your next project."
+  },
+  {
+    "id": "css-for-js",
+    "name": "CSS for JavaScript Developers",
+    "by": "Josh W. Comeau",
+    "url": "https://css-for-js.dev/",
+    "type": "course",
+    "cost": "paid",
+    "price": "Paid course, regional pricing",
+    "tracks": [
+      "frontend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The course that finally explains how CSS layout really works. Worth paying for.",
+    "tip": "Buy it only after you have built two or three sites and keep fighting CSS."
+  },
+  {
+    "id": "frontend-masters",
+    "name": "Frontend Masters",
+    "by": "Frontend Masters",
+    "url": "https://frontendmasters.com/",
+    "type": "course",
+    "cost": "paid",
+    "price": "Subscription",
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Deep workshops by working engineers on JavaScript, React, performance and more.",
+    "tip": "One month is enough to binge the two or three workshops you need. Check for student pricing."
+  },
+  {
+    "id": "scrimba",
+    "name": "Scrimba",
+    "by": "Scrimba",
+    "url": "https://scrimba.com/",
+    "type": "course",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Interactive screencasts where you pause the video and edit the code in place.",
+    "tip": "Start with the free Learn JavaScript and Learn React courses."
+  },
+  {
+    "id": "frontend-mentor",
+    "name": "Frontend Mentor",
+    "by": "Frontend Mentor",
+    "url": "https://www.frontendmentor.io/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Real design files to turn into working pages, with community code reviews.",
+    "tip": "Do one challenge a week. Pick ones with mobile and desktop designs and match them closely."
+  },
+  {
+    "id": "devchallenges",
+    "name": "devChallenges",
+    "by": "devChallenges",
+    "url": "https://devchallenges.io/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Project briefs for frontend, backend and full-stack apps with designs included.",
+    "tip": "Use the full-stack challenges as portfolio projects once you know a framework."
+  },
+  {
+    "id": "vscode",
+    "name": "Visual Studio Code",
+    "by": "Microsoft",
+    "url": "https://code.visualstudio.com/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The default editor. Free, fast and has an extension for everything.",
+    "tip": "Learn ten shortcuts (multi-cursor, go to definition, rename symbol). It saves hours every week."
+  },
+  {
+    "id": "chrome-devtools",
+    "name": "Chrome DevTools docs",
+    "by": "Google",
+    "url": "https://developer.chrome.com/docs/devtools",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "How to debug layout, network and performance problems like a professional.",
+    "tip": "Learn the Performance and Network panels. Interviewers love candidates who can profile."
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "by": "Figma",
+    "url": "https://www.figma.com/",
+    "type": "tool",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Where designs live. Developers need to read it even if they never design.",
+    "tip": "Learn to inspect spacing, export assets and use Dev Mode. The free plan is enough."
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "by": "Vercel",
+    "url": "https://vercel.com/",
+    "type": "tool",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Deploy a frontend from GitHub in a minute with a free hobby plan.",
+    "tip": "Every project you build should have a live link. Put it at the top of your README."
+  },
+  {
+    "id": "kevin-powell",
+    "name": "Kevin Powell",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@KevinPowell",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The friendliest CSS teacher online. Short, practical videos on layout and modern CSS.",
+    "tip": "Watch his grid and flexbox videos when a layout fights you."
+  },
+  {
+    "id": "web-dev-simplified",
+    "name": "Web Dev Simplified",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@WebDevSimplified",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Clear, short explanations of JavaScript and React concepts.",
+    "tip": "Search his channel for the exact concept you are stuck on."
+  },
+  {
+    "id": "fireship",
+    "name": "Fireship",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@Fireship",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend",
+      "ai",
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Fast, accurate overviews of tools and tech news in a few minutes.",
+    "tip": "Use it to decide what to learn next, not to learn it. Follow up with the official docs."
+  },
+  {
+    "id": "namaste-js",
+    "name": "Akshay Saini (Namaste JavaScript)",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@akshaymarch7",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "intermediate",
+    "lang": "hi-en",
+    "india": true,
+    "why": "Deep JavaScript internals explained in a way Indian interview panels love.",
+    "tip": "Watch the Namaste JavaScript playlist before frontend interviews."
+  },
+  {
+    "id": "chai-aur-code",
+    "name": "Chai aur Code (Hitesh Choudhary)",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@chaiaurcode",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "hi",
+    "india": true,
+    "why": "Full projects and stacks taught in Hindi by a long-time industry engineer.",
+    "tip": "Pick one full-stack project series and build it along with him, then change it."
+  },
+  {
+    "id": "reactiflux",
+    "name": "Reactiflux",
+    "by": "Discord",
+    "url": "https://www.reactiflux.com/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The largest React community on Discord, with help channels and job boards.",
+    "tip": "Ask in the help channels with a minimal code example. You will get answers fast."
+  },
+  {
+    "id": "javascript-weekly",
+    "name": "JavaScript Weekly",
+    "by": "Cooper Press",
+    "url": "https://javascriptweekly.com/",
+    "type": "newsletter",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "One email a week with the JavaScript news and articles worth reading.",
+    "tip": "Skim the headlines, open two links. That is enough to stay current."
+  },
+  {
+    "id": "bytes",
+    "name": "Bytes",
+    "by": "ui.dev",
+    "url": "https://bytes.dev/",
+    "type": "newsletter",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "A funny, short JavaScript newsletter twice a week.",
+    "tip": "Good for staying aware of the ecosystem without doom-scrolling."
+  },
+  {
+    "id": "syntax",
+    "name": "Syntax",
+    "by": "Wes Bos and Scott Tolinski",
+    "url": "https://syntax.fm/",
+    "type": "podcast",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Practical web development podcast with tasty tips you can use the same day.",
+    "tip": "Listen on commutes. Note one thing to try per episode."
+  },
+  {
+    "id": "node-learn",
+    "name": "Node.js Learn",
+    "by": "OpenJS Foundation",
+    "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Official guides to Node.js: modules, async code, files, HTTP and testing.",
+    "tip": "Build a tiny HTTP server without a framework first. Then frameworks make sense."
+  },
+  {
+    "id": "django-tutorial",
+    "name": "Django tutorial",
+    "by": "Django",
+    "url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official step-by-step tutorial for Python's most complete web framework.",
+    "tip": "Finish all eight parts, then build your own app with users and an admin."
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI tutorial",
+    "by": "FastAPI",
+    "url": "https://fastapi.tiangolo.com/tutorial/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Modern Python APIs with type hints and automatic docs. Popular with AI teams.",
+    "tip": "Use it to serve your ML models and LLM apps behind a real API."
+  },
+  {
+    "id": "spring-guides",
+    "name": "Spring guides",
+    "by": "Spring",
+    "url": "https://spring.io/guides",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": true,
+    "why": "Short official guides for Spring Boot, still the most hired Java stack in India.",
+    "tip": "Do Building a RESTful Web Service and Accessing Data with JPA first."
+  },
+  {
+    "id": "karmatix-dotnet",
+    "name": "Karmatix .NET Academy",
+    "by": "Karmatix",
+    "url": "https://karma-tic.github.io/dotnet-academy/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Our own free .NET 10 and C# 14 course with 16 tested projects and interview prep.",
+    "tip": "Follow the modules in order and push every lab to your GitHub."
+  },
+  {
+    "id": "ms-learn-dotnet",
+    "name": "Microsoft Learn: .NET",
+    "by": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/training/dotnet/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Official free .NET learning paths with in-browser sandboxes.",
+    "tip": "Use it alongside a project. The ASP.NET Core paths are the most useful."
+  },
+  {
+    "id": "go-tour",
+    "name": "A Tour of Go",
+    "by": "Go team",
+    "url": "https://go.dev/tour/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Learn Go interactively in a few evenings. Go runs most cloud tooling.",
+    "tip": "Finish the tour, then read Go by Example as your daily reference."
+  },
+  {
+    "id": "go-by-example",
+    "name": "Go by Example",
+    "by": "Mark McGranaghan",
+    "url": "https://gobyexample.com/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Annotated, runnable examples of every common Go task.",
+    "tip": "Keep it open while you build your first CLI tool in Go."
+  },
+  {
+    "id": "postgres-tutorial",
+    "name": "PostgreSQL tutorial",
+    "by": "PostgreSQL",
+    "url": "https://www.postgresql.org/docs/current/tutorial.html",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official introduction to the database most new projects choose.",
+    "tip": "Install Postgres locally and do every query yourself."
+  },
+  {
+    "id": "sqlbolt",
+    "name": "SQLBolt",
+    "by": "SQLBolt",
+    "url": "https://sqlbolt.com/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Interactive SQL lessons that take an afternoon and stick.",
+    "tip": "Do all lessons in one sitting, then move to DataLemur for interview problems."
+  },
+  {
+    "id": "use-the-index-luke",
+    "name": "Use The Index, Luke",
+    "by": "Markus Winand",
+    "url": "https://use-the-index-luke.com/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "data"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Why queries are slow and how indexes fix them. Rare, practical knowledge.",
+    "tip": "Read it when your first app gets slow. It pays off in system design rounds."
+  },
+  {
+    "id": "system-design-primer",
+    "name": "System Design Primer",
+    "by": "Donne Martin",
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "dsa",
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The classic free guide to scaling, caching, queues and databases.",
+    "tip": "Read it alongside ByteByteGo videos. Practise by designing apps you use daily."
+  },
+  {
+    "id": "bytebytego",
+    "name": "ByteByteGo",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@ByteByteGo",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "dsa",
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Animated system design explainers that are easy to remember in interviews.",
+    "tip": "Watch one video a day for a month before system design rounds."
+  },
+  {
+    "id": "hussein-nasser",
+    "name": "Hussein Nasser",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@hnasr",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Backend fundamentals explained deeply: databases, proxies, protocols.",
+    "tip": "Pick topics you use at work or in projects and go deep."
+  },
+  {
+    "id": "gaurav-sen",
+    "name": "Gaurav Sen",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@gkcs",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "dsa"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": true,
+    "why": "System design taught by an Indian engineer who popularised it for interviews.",
+    "tip": "Watch his design walkthroughs, then try the same problem on paper first."
+  },
+  {
+    "id": "piyush-garg",
+    "name": "Piyush Garg",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@piyushgargdev",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "hi",
+    "india": true,
+    "why": "Node.js, system design and GenAI projects in Hindi with real deployments.",
+    "tip": "Build his projects end to end, including the deployment parts."
+  },
+  {
+    "id": "ddia",
+    "name": "Designing Data-Intensive Applications",
+    "by": "Martin Kleppmann",
+    "url": "https://dataintensive.net/",
+    "type": "book",
+    "cost": "paid",
+    "price": "Book",
+    "tracks": [
+      "backend",
+      "data",
+      "cloud"
+    ],
+    "level": "advanced",
+    "lang": "en",
+    "india": false,
+    "why": "The most respected book on how real systems store and move data.",
+    "tip": "Read it after your first year of building. One chapter a week is plenty."
+  },
+  {
+    "id": "codecrafters",
+    "name": "CodeCrafters",
+    "by": "CodeCrafters",
+    "url": "https://codecrafters.io/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "backend",
+      "core"
+    ],
+    "level": "advanced",
+    "lang": "en",
+    "india": false,
+    "why": "Build your own Redis, Git, HTTP server or SQLite with automated tests checking each stage.",
+    "tip": "Do one challenge in the language you want a job in. Mention it in interviews."
+  },
+  {
+    "id": "boot-dev",
+    "name": "Boot.dev",
+    "by": "Boot.dev",
+    "url": "https://www.boot.dev/",
+    "type": "course",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A gamified backend path in Python, Go and SQL with lots of coding.",
+    "tip": "Content is free to read. Pay only if the interactive mode keeps you consistent."
+  },
+  {
+    "id": "bruno",
+    "name": "Bruno",
+    "by": "Bruno",
+    "url": "https://www.usebruno.com/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "An open source API client that saves requests as files in your repo.",
+    "tip": "Commit your API collection next to the code so reviewers can try your API."
+  },
+  {
+    "id": "docker",
+    "name": "Docker: Get started",
+    "by": "Docker",
+    "url": "https://docs.docker.com/get-started/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend",
+      "cloud",
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Containers are expected in almost every backend and DevOps job now.",
+    "tip": "Add a Dockerfile and a compose file to every backend project you build."
+  },
+  {
+    "id": "redis-university",
+    "name": "Redis University",
+    "by": "Redis",
+    "url": "https://university.redis.io/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Free official courses on caching, data structures and queues with Redis.",
+    "tip": "Add caching to one of your APIs and measure the speedup."
+  },
+  {
+    "id": "flutter-docs",
+    "name": "Flutter docs",
+    "by": "Google",
+    "url": "https://docs.flutter.dev/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Official Flutter documentation with a great getting-started path and cookbook.",
+    "tip": "Do the first app codelab, then use the Cookbook for every feature you need."
+  },
+  {
+    "id": "karmatix-flutter",
+    "name": "Karmatix Flutter Course",
+    "by": "Karmatix",
+    "url": "https://karma-tic.github.io/flutter-course/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Our own free Flutter and Dart course with Kotlin comparisons and timed mock tests.",
+    "tip": "Use the mock tests if you are preparing for company exams."
+  },
+  {
+    "id": "android-compose",
+    "name": "Android Basics with Compose",
+    "by": "Google",
+    "url": "https://developer.android.com/courses/android-basics-compose/course",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Google's free official course for native Android with Kotlin and Jetpack Compose.",
+    "tip": "Finish all units and publish one app on the Play Store, even a small one."
+  },
+  {
+    "id": "kotlin-docs",
+    "name": "Kotlin docs",
+    "by": "JetBrains",
+    "url": "https://kotlinlang.org/docs/home.html",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Official Kotlin guide with a free Koans practice set.",
+    "tip": "Do the Kotlin Koans before Android so the language is not in your way."
+  },
+  {
+    "id": "hws-100-swiftui",
+    "name": "100 Days of SwiftUI",
+    "by": "Hacking with Swift",
+    "url": "https://www.hackingwithswift.com/100/swiftui",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The best free route into iOS development: one small lesson a day.",
+    "tip": "Follow the days strictly. Consistency is the whole point of this course."
+  },
+  {
+    "id": "react-native",
+    "name": "React Native and Expo docs",
+    "by": "Meta and Expo",
+    "url": "https://docs.expo.dev/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile",
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Build iOS and Android apps with React. Expo makes setup painless.",
+    "tip": "If you already know React, this is the fastest way to ship a mobile app."
+  },
+  {
+    "id": "firebase",
+    "name": "Firebase docs",
+    "by": "Google",
+    "url": "https://firebase.google.com/docs",
+    "type": "docs",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "mobile",
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Auth, database, storage and notifications without running a server.",
+    "tip": "Use it for your first apps, then learn a real backend so you are not locked in."
+  },
+  {
+    "id": "philipp-lackner",
+    "name": "Philipp Lackner",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@PhilippLackner",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Practical Android and Kotlin videos on architecture, Compose and clean code.",
+    "tip": "Watch his architecture series after your first working app."
+  },
+  {
+    "id": "flutter-yt",
+    "name": "Flutter (official channel)",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@flutterdev",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "mobile"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Widget of the Week and official talks from the Flutter team.",
+    "tip": "Watch Widget of the Week to learn widgets you did not know existed."
+  },
+  {
+    "id": "aws-skill-builder",
+    "name": "AWS Skill Builder",
+    "by": "Amazon",
+    "url": "https://skillbuilder.aws/",
+    "type": "course",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Official AWS training with free courses and exam prep, plus paid labs.",
+    "tip": "Take the free Cloud Practitioner Essentials before any paid AWS course."
+  },
+  {
+    "id": "aws-free-tier",
+    "name": "AWS Free Tier",
+    "by": "Amazon",
+    "url": "https://aws.amazon.com/free/",
+    "type": "tool",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free usage of many AWS services to practise on a real account.",
+    "tip": "Set a billing alarm at ₹100 on day one. Delete resources after every lab."
+  },
+  {
+    "id": "ms-learn-azure",
+    "name": "Microsoft Learn: Azure",
+    "by": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/training/azure/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free official Azure paths with sandboxes, mapped to every Azure exam.",
+    "tip": "Join a Microsoft Virtual Training Day for a chance at a discounted or free exam voucher."
+  },
+  {
+    "id": "gcp-skills-boost",
+    "name": "Google Cloud Skills Boost",
+    "by": "Google",
+    "url": "https://www.cloudskillsboost.google/",
+    "type": "course",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "ai",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Hands-on Google Cloud labs in real temporary projects.",
+    "tip": "Watch for free credit campaigns and do the skill badges, which show on your profile."
+  },
+  {
+    "id": "k8s-tutorials",
+    "name": "Kubernetes tutorials",
+    "by": "Kubernetes",
+    "url": "https://kubernetes.io/docs/tutorials/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Official tutorials that take you from a first deployment to stateful apps.",
+    "tip": "Run them on a local cluster with kind or minikube, not just in your head."
+  },
+  {
+    "id": "killercoda",
+    "name": "Killercoda",
+    "by": "Killercoda",
+    "url": "https://killercoda.com/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "security"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Free browser-based Linux and Kubernetes playgrounds, including CKA practice scenarios.",
+    "tip": "Use it daily before the CKA. It is the closest free thing to the real exam."
+  },
+  {
+    "id": "iximiuz-labs",
+    "name": "iximiuz Labs",
+    "by": "Ivan Velichko",
+    "url": "https://labs.iximiuz.com/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Hands-on challenges for containers, Kubernetes and networking that explain how things work inside.",
+    "tip": "Do the container challenges after Docker basics. You will understand what Docker really does."
+  },
+  {
+    "id": "kodekloud",
+    "name": "KodeKloud",
+    "by": "KodeKloud",
+    "url": "https://kodekloud.com/",
+    "type": "course",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "DevOps courses with built-in labs. Very popular for CKA and Terraform prep.",
+    "tip": "The CKA course plus its mock exams is a common, proven combination."
+  },
+  {
+    "id": "terraform-tutorials",
+    "name": "Terraform tutorials",
+    "by": "HashiCorp",
+    "url": "https://developer.hashicorp.com/terraform/tutorials",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Official step-by-step tutorials for infrastructure as code.",
+    "tip": "Rebuild your cloud resume project's infrastructure with Terraform."
+  },
+  {
+    "id": "linux-upskill",
+    "name": "Linux Upskill Challenge",
+    "by": "Community",
+    "url": "https://linuxupskillchallenge.org/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "security",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A free month-long course where you run a real Linux server.",
+    "tip": "Do it on a cheap or free cloud VM. Day by day, without skipping."
+  },
+  {
+    "id": "overthewire",
+    "name": "OverTheWire: Bandit",
+    "by": "OverTheWire",
+    "url": "https://overthewire.org/wargames/bandit/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security",
+      "core",
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A game that teaches Linux commands by making you hack your way through levels.",
+    "tip": "Do it before any security course. Write down how you solved each level."
+  },
+  {
+    "id": "90-days-devops",
+    "name": "90DaysOfDevOps",
+    "by": "Michael Cade",
+    "url": "https://github.com/MichaelCade/90DaysOfDevOps",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A free, day-by-day DevOps learning plan written in public.",
+    "tip": "Use it as a schedule and post your daily progress publicly."
+  },
+  {
+    "id": "cloud-resume",
+    "name": "The Cloud Resume Challenge",
+    "by": "Forrest Brazeal",
+    "url": "https://cloudresumechallenge.dev/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "One project that touches DNS, storage, serverless, a database, CI/CD and IaC.",
+    "tip": "The best single cloud portfolio project. Write a blog post about what broke."
+  },
+  {
+    "id": "devops-exercises",
+    "name": "DevOps Exercises",
+    "by": "Arie Bregman",
+    "url": "https://github.com/bregman-arie/devops-exercises",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Hundreds of DevOps interview questions and exercises with answers.",
+    "tip": "Use it in the last two weeks before interviews."
+  },
+  {
+    "id": "github-actions",
+    "name": "GitHub Actions docs",
+    "by": "GitHub",
+    "url": "https://docs.github.com/en/actions",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "backend",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free CI/CD built into GitHub. Every project should have a pipeline.",
+    "tip": "Add tests and a deploy workflow to one project. Show the green badge in your README."
+  },
+  {
+    "id": "techworld-nana",
+    "name": "TechWorld with Nana",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@TechWorldwithNana",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The clearest Docker, Kubernetes and DevOps tutorials on YouTube.",
+    "tip": "Watch the full Kubernetes crash course, then do Killercoda scenarios."
+  },
+  {
+    "id": "abhishek-veeramalla",
+    "name": "Abhishek Veeramalla",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@AbhishekVeeramalla",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Free DevOps zero to hero series by an Indian engineer, with real projects.",
+    "tip": "Follow the series and push every project to GitHub."
+  },
+  {
+    "id": "k8s-slack",
+    "name": "Kubernetes Slack",
+    "by": "CNCF",
+    "url": "https://slack.k8s.io/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Where Kubernetes maintainers and users talk. Great for contributing to open source.",
+    "tip": "Join the SIG channels that interest you and start with good first issues."
+  },
+  {
+    "id": "fastai",
+    "name": "Practical Deep Learning",
+    "by": "fast.ai",
+    "url": "https://course.fast.ai/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Top-down deep learning: train real models in lesson one, theory later.",
+    "tip": "Run every notebook yourself on Kaggle or Colab and change the dataset."
+  },
+  {
+    "id": "ml-specialization",
+    "name": "Machine Learning Specialization",
+    "by": "DeepLearning.AI and Stanford",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "type": "course",
+    "cost": "freemium",
+    "price": "Coursera subscription or financial aid",
+    "tracks": [
+      "ai",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Andrew Ng's updated classic. The best foundation in ML ideas.",
+    "tip": "Audit or apply for Coursera financial aid. Do the labs, not just the videos."
+  },
+  {
+    "id": "dlai-short",
+    "name": "DeepLearning.AI short courses",
+    "by": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "One to two hour free courses on LLM apps, agents, RAG and fine-tuning, often with the tool makers.",
+    "tip": "Do one per week and turn each into a tiny project on GitHub."
+  },
+  {
+    "id": "hf-learn",
+    "name": "Hugging Face Learn",
+    "by": "Hugging Face",
+    "url": "https://huggingface.co/learn",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Free courses on LLMs, agents, diffusion and more using open models.",
+    "tip": "Do the LLM course and push a model or Space to your Hugging Face profile."
+  },
+  {
+    "id": "karpathy-zero-to-hero",
+    "name": "Neural Networks: Zero to Hero",
+    "by": "Andrej Karpathy",
+    "url": "https://karpathy.ai/zero-to-hero.html",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Build a GPT from scratch with one of the best teachers in the field.",
+    "tip": "Type the code yourself, do not copy it. This is how you understand LLMs."
+  },
+  {
+    "id": "3b1b-nn",
+    "name": "3Blue1Brown: Neural networks",
+    "by": "3Blue1Brown",
+    "url": "https://www.3blue1brown.com/topics/neural-networks",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Beautiful visual intuition for how neural networks and transformers work.",
+    "tip": "Watch it before any deep learning course."
+  },
+  {
+    "id": "kaggle",
+    "name": "Kaggle Learn and competitions",
+    "by": "Kaggle",
+    "url": "https://www.kaggle.com/learn",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free micro-courses, datasets, free GPU notebooks and real competitions.",
+    "tip": "Finish Intro to ML, then join a Getting Started competition and publish your notebook."
+  },
+  {
+    "id": "google-mlcc",
+    "name": "Machine Learning Crash Course",
+    "by": "Google",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Google's fast-paced free ML introduction with interactive exercises.",
+    "tip": "A good refresher before ML interviews."
+  },
+  {
+    "id": "openai-cookbook",
+    "name": "OpenAI Cookbook",
+    "by": "OpenAI",
+    "url": "https://cookbook.openai.com/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Working examples for building with LLM APIs: RAG, evals, tools and agents.",
+    "tip": "Copy patterns, not code. Rebuild one example with a provider of your choice."
+  },
+  {
+    "id": "anthropic-courses",
+    "name": "Anthropic courses",
+    "by": "Anthropic",
+    "url": "https://github.com/anthropics/courses",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free notebooks on prompt engineering, tool use and evaluations.",
+    "tip": "Do the prompt engineering tutorial before you build your first LLM feature."
+  },
+  {
+    "id": "made-with-ml",
+    "name": "Made With ML",
+    "by": "Goku Mohandas",
+    "url": "https://madewithml.com/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "How to take ML from a notebook to production: testing, serving and monitoring.",
+    "tip": "Use it after you can train a model. This is what ML engineering jobs ask for."
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "by": "Ollama",
+    "url": "https://ollama.com/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Run open models on your own laptop with one command.",
+    "tip": "Build a small local RAG app with it. No API bill while you learn."
+  },
+  {
+    "id": "colab",
+    "name": "Google Colab",
+    "by": "Google",
+    "url": "https://colab.research.google.com/",
+    "type": "tool",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "ai",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free Jupyter notebooks in the browser with GPU access.",
+    "tip": "Use it for fast.ai and Kaggle work if your laptop has no GPU."
+  },
+  {
+    "id": "ai-engineering",
+    "name": "AI Engineering",
+    "by": "Chip Huyen",
+    "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
+    "type": "book",
+    "cost": "paid",
+    "price": "Book",
+    "tracks": [
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The most practical book on building products with foundation models.",
+    "tip": "Read the chapters on evaluation and RAG first."
+  },
+  {
+    "id": "krish-naik",
+    "name": "Krish Naik",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@krishnaik06",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "hi-en",
+    "india": true,
+    "why": "Free ML, deep learning and GenAI playlists from an Indian data scientist.",
+    "tip": "Follow one complete playlist rather than random videos."
+  },
+  {
+    "id": "campusx",
+    "name": "CampusX",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@campusx-official",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai",
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "hi",
+    "india": true,
+    "why": "Deep, structured ML and data science lessons in Hindi.",
+    "tip": "The 100 Days of Machine Learning playlist is a complete course."
+  },
+  {
+    "id": "latent-space",
+    "name": "Latent Space",
+    "by": "swyx and Alessio",
+    "url": "https://www.latent.space/podcast",
+    "type": "podcast",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The podcast for AI engineers, with builders explaining what works in production.",
+    "tip": "Listen to episodes on evals and agents before AI interviews."
+  },
+  {
+    "id": "the-batch",
+    "name": "The Batch",
+    "by": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/the-batch/",
+    "type": "newsletter",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "A weekly AI news letter from Andrew Ng's team, calm and accurate.",
+    "tip": "Skim weekly to keep up without the hype."
+  },
+  {
+    "id": "hf-discord",
+    "name": "Hugging Face Discord",
+    "by": "Hugging Face",
+    "url": "https://huggingface.co/join/discord",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "ai"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Active community around open models, courses and study groups.",
+    "tip": "Join the course channels while you take the Hugging Face courses."
+  },
+  {
+    "id": "google-data-analytics",
+    "name": "Google Data Analytics Certificate",
+    "by": "Google on Coursera",
+    "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "type": "course",
+    "cost": "paid",
+    "price": "Coursera subscription or financial aid",
+    "tracks": [
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A structured beginner programme in spreadsheets, SQL, Tableau and R.",
+    "tip": "Apply for Coursera financial aid if cost is a problem. Do the capstone on your own dataset."
+  },
+  {
+    "id": "datalemur",
+    "name": "DataLemur",
+    "by": "Nick Singh",
+    "url": "https://datalemur.com/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "data",
+      "dsa"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Real SQL interview questions from tech companies, with a free tier.",
+    "tip": "Do the free SQL questions in the two weeks before analyst interviews."
+  },
+  {
+    "id": "stratascratch",
+    "name": "StrataScratch",
+    "by": "StrataScratch",
+    "url": "https://www.stratascratch.com/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "data"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "SQL and Python interview questions taken from real company rounds.",
+    "tip": "Filter by company to practise for a specific interview."
+  },
+  {
+    "id": "sqlzoo",
+    "name": "SQLZoo",
+    "by": "SQLZoo",
+    "url": "https://sqlzoo.net/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data",
+      "backend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free interactive SQL tutorials and quizzes.",
+    "tip": "Do the SELECT, JOIN and aggregate sections until they feel boring."
+  },
+  {
+    "id": "ms-learn-powerbi",
+    "name": "Microsoft Learn: Power BI",
+    "by": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Free official Power BI paths. Power BI is the most asked BI tool in Indian job posts.",
+    "tip": "Build one dashboard on public data and publish screenshots and a write-up."
+  },
+  {
+    "id": "tableau-public",
+    "name": "Tableau Public",
+    "by": "Tableau",
+    "url": "https://public.tableau.com/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free Tableau with a public profile that works as a portfolio.",
+    "tip": "Publish three dashboards that each answer one clear question."
+  },
+  {
+    "id": "pandas",
+    "name": "pandas: getting started",
+    "by": "pandas",
+    "url": "https://pandas.pydata.org/docs/getting_started/index.html",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data",
+      "ai"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The official introduction to the library every analyst uses.",
+    "tip": "Clean one messy public dataset end to end. That is the real skill."
+  },
+  {
+    "id": "alex-the-analyst",
+    "name": "Alex The Analyst",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@AlexTheAnalyst",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A free data analyst bootcamp on YouTube with SQL, Excel, Tableau and portfolio projects.",
+    "tip": "Follow his portfolio project videos and build your own versions."
+  },
+  {
+    "id": "luke-barousse",
+    "name": "Luke Barousse",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@LukeBarousse",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Data analyst skills backed by real job posting data.",
+    "tip": "Use his videos to decide which tools to learn first."
+  },
+  {
+    "id": "datatalksclub",
+    "name": "DataTalks.Club",
+    "by": "DataTalks.Club",
+    "url": "https://datatalks.club/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data",
+      "ai"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Free cohort-based zoomcamps for data engineering, ML and LLMs, plus a big Slack.",
+    "tip": "Join the next free zoomcamp cohort. Deadlines keep you going."
+  },
+  {
+    "id": "dbt-learn",
+    "name": "dbt Learn",
+    "by": "dbt Labs",
+    "url": "https://learn.getdbt.com/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "data"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Free official courses for analytics engineering with SQL.",
+    "tip": "Take dbt Fundamentals if you want analytics engineer roles."
+  },
+  {
+    "id": "nptel",
+    "name": "NPTEL",
+    "by": "IITs and IISc",
+    "url": "https://nptel.ac.in/",
+    "type": "course",
+    "cost": "freemium",
+    "price": "Course free, exam fee applies",
+    "tracks": [
+      "data",
+      "ai",
+      "dsa",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Free IIT and IISc courses. The optional proctored exam gives a certificate many Indian employers recognise.",
+    "tip": "Pick courses that match your path and take the exam for credit if your college accepts it."
+  },
+  {
+    "id": "leetcode",
+    "name": "LeetCode",
+    "by": "LeetCode",
+    "url": "https://leetcode.com/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The standard platform for coding interview practice.",
+    "tip": "Do problems by pattern, not at random. Use the NeetCode list to stay focused."
+  },
+  {
+    "id": "neetcode",
+    "name": "NeetCode",
+    "by": "NeetCode",
+    "url": "https://neetcode.io/",
+    "type": "roadmap",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A curated list of interview problems grouped by pattern, each with a video solution.",
+    "tip": "Do NeetCode 150 in order. Try for 25 minutes before watching the solution."
+  },
+  {
+    "id": "striver-a2z",
+    "name": "Striver's A2Z DSA sheet",
+    "by": "takeUforward",
+    "url": "https://takeuforward.org/",
+    "type": "roadmap",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "hi-en",
+    "india": true,
+    "why": "A complete DSA sheet from basics to advanced, built for Indian placements.",
+    "tip": "Pick either this or NeetCode and finish it. Switching sheets is the common trap."
+  },
+  {
+    "id": "gfg",
+    "name": "GeeksforGeeks",
+    "by": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "dsa",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Articles, practice problems and company-wise interview experiences.",
+    "tip": "Read company interview experiences before every on-campus test."
+  },
+  {
+    "id": "codeforces",
+    "name": "Codeforces",
+    "by": "Codeforces",
+    "url": "https://codeforces.com/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The main competitive programming platform with live contests.",
+    "tip": "Join Div 3 and Div 2 contests every week. Upsolve one problem after each."
+  },
+  {
+    "id": "codechef",
+    "name": "CodeChef",
+    "by": "CodeChef",
+    "url": "https://www.codechef.com/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Indian competitive programming platform with weekly Starters contests.",
+    "tip": "Good for beginners: start with Starters contests and the practice section."
+  },
+  {
+    "id": "cses",
+    "name": "CSES Problem Set",
+    "by": "CSES",
+    "url": "https://cses.fi/problemset/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "300 classic problems that cover every core algorithm topic.",
+    "tip": "Solve the sorting, DP and graph sections. They come up again and again."
+  },
+  {
+    "id": "visualgo",
+    "name": "VisuAlgo",
+    "by": "NUS",
+    "url": "https://visualgo.net/",
+    "type": "tool",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Animations of data structures and algorithms step by step.",
+    "tip": "Watch an algorithm here before you code it."
+  },
+  {
+    "id": "tech-interview-handbook",
+    "name": "Tech Interview Handbook",
+    "by": "Yangshun Tay",
+    "url": "https://www.techinterviewhandbook.org/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa",
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Free guide to the full interview process: resume, coding, behavioural and negotiation.",
+    "tip": "Read the resume and behavioural sections. Most candidates skip them."
+  },
+  {
+    "id": "apna-college",
+    "name": "Apna College",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@ApnaCollegeOfficial",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa",
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "hi",
+    "india": true,
+    "why": "Popular beginner DSA and web courses in Hindi.",
+    "tip": "Good first exposure in Hindi. Pair it with real practice on LeetCode or CodeChef."
+  },
+  {
+    "id": "codewithharry",
+    "name": "CodeWithHarry",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@CodeWithHarry",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "backend",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "hi",
+    "india": true,
+    "why": "Long beginner courses in Hindi for Python, web development and more.",
+    "tip": "Use one full course to start, then switch to building your own projects quickly."
+  },
+  {
+    "id": "abdul-bari",
+    "name": "Abdul Bari",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@abdul_bari",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "Classic algorithms lectures that make the theory easy to follow.",
+    "tip": "Watch his lectures for topics you keep getting wrong."
+  },
+  {
+    "id": "codehelp",
+    "name": "CodeHelp by Babbar",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@CodeHelp",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa"
+    ],
+    "level": "beginner",
+    "lang": "hi",
+    "india": true,
+    "why": "Full DSA course in C++ in Hindi, widely used for placements.",
+    "tip": "Follow the DSA playlist with the matching sheet."
+  },
+  {
+    "id": "ambitionbox",
+    "name": "AmbitionBox",
+    "by": "AmbitionBox",
+    "url": "https://www.ambitionbox.com/",
+    "type": "jobs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "dsa",
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Salaries, reviews and interview questions for Indian companies.",
+    "tip": "Read the interview section for each company before you apply."
+  },
+  {
+    "id": "portswigger",
+    "name": "Web Security Academy",
+    "by": "PortSwigger",
+    "url": "https://portswigger.net/web-security",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security",
+      "backend"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The best free web security training, with hundreds of hands-on labs.",
+    "tip": "Do the apprentice labs for every topic. Every backend developer should do the first ones."
+  },
+  {
+    "id": "tryhackme",
+    "name": "TryHackMe",
+    "by": "TryHackMe",
+    "url": "https://tryhackme.com/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Guided, browser-based security rooms. The friendliest start in cybersecurity.",
+    "tip": "Do the free Pre Security and Cyber Security 101 paths before paying."
+  },
+  {
+    "id": "hackthebox",
+    "name": "Hack The Box Academy",
+    "by": "Hack The Box",
+    "url": "https://academy.hackthebox.com/",
+    "type": "practice",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Structured modules and real machines to hack. Respected by employers.",
+    "tip": "Students get discounted access. Write up every retired machine you solve."
+  },
+  {
+    "id": "owasp-top10",
+    "name": "OWASP Top 10",
+    "by": "OWASP",
+    "url": "https://owasp.org/www-project-top-ten/",
+    "type": "docs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security",
+      "backend",
+      "frontend"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "The ten most important web application risks, from the main open security community.",
+    "tip": "Learn each one well enough to explain it with an example in an interview."
+  },
+  {
+    "id": "picoctf",
+    "name": "picoCTF",
+    "by": "Carnegie Mellon University",
+    "url": "https://picoctf.org/",
+    "type": "practice",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Beginner-friendly capture the flag challenges that stay open all year.",
+    "tip": "Use the practice gym to learn each category: web, crypto, forensics, binary."
+  },
+  {
+    "id": "hacker101",
+    "name": "Hacker101",
+    "by": "HackerOne",
+    "url": "https://www.hacker101.com/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Free video lessons and CTF for bug bounty hunting.",
+    "tip": "Finish the CTF to get invites to private bug bounty programmes."
+  },
+  {
+    "id": "professor-messer",
+    "name": "Professor Messer",
+    "by": "Professor Messer",
+    "url": "https://www.professormesser.com/",
+    "type": "course",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security",
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Complete free video courses for CompTIA A+, Network+ and Security+.",
+    "tip": "If you take Security+, his free course plus a practice test is enough for many people."
+  },
+  {
+    "id": "john-hammond",
+    "name": "John Hammond",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@_JohnHammond",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Malware analysis and CTF walkthroughs that show how experts think.",
+    "tip": "Pause and try each step before he does."
+  },
+  {
+    "id": "networkchuck",
+    "name": "NetworkChuck",
+    "by": "YouTube",
+    "url": "https://www.youtube.com/@NetworkChuck",
+    "type": "video",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security",
+      "cloud"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Energetic networking, Linux and security projects you can do at home.",
+    "tip": "Build one of his home lab projects. Great interview story."
+  },
+  {
+    "id": "ctftime",
+    "name": "CTFtime",
+    "by": "CTFtime",
+    "url": "https://ctftime.org/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "The calendar of every CTF competition, with team rankings.",
+    "tip": "Join or form a team and play one online CTF a month."
+  },
+  {
+    "id": "tldr-sec",
+    "name": "tl;dr sec",
+    "by": "Clint Gibler",
+    "url": "https://tldrsec.com/",
+    "type": "newsletter",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "security"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "The best weekly security newsletter: tools, research and talks, summarised.",
+    "tip": "Read it weekly to know what security teams are talking about."
+  },
+  {
+    "id": "gdg",
+    "name": "Google Developer Groups",
+    "by": "Google",
+    "url": "https://gdg.community.dev/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "frontend",
+      "mobile",
+      "ai",
+      "cloud"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Free local meetups and DevFests in most Indian cities.",
+    "tip": "Go to one event a month and talk to two people. Volunteer to get to know organisers."
+  },
+  {
+    "id": "aws-user-groups",
+    "name": "AWS User Groups",
+    "by": "Amazon",
+    "url": "https://aws.amazon.com/developer/community/usergroups/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Local AWS meetups and Community Days run by volunteers, many in India.",
+    "tip": "Speak at a meetup after your first cloud project. It counts as experience."
+  },
+  {
+    "id": "foss-united",
+    "name": "FOSS United",
+    "by": "FOSS United",
+    "url": "https://fossunited.org/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "backend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "India's open source community: city meetups, IndiaFOSS conference and grants.",
+    "tip": "Attend your city's FOSS meetup and show something you built."
+  },
+  {
+    "id": "hasgeek",
+    "name": "Hasgeek",
+    "by": "Hasgeek",
+    "url": "https://hasgeek.com/",
+    "type": "community",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "core",
+      "backend",
+      "ai",
+      "security"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": true,
+    "why": "Indian tech conferences and talks by practitioners, such as Rootconf.",
+    "tip": "Watch past talks for free and attend one event in person when you can."
+  },
+  {
+    "id": "commudle",
+    "name": "Commudle",
+    "by": "Commudle",
+    "url": "https://www.commudle.com/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Indian platform listing developer communities and events.",
+    "tip": "Find active communities in your city or college here."
+  },
+  {
+    "id": "mlh",
+    "name": "Major League Hacking",
+    "by": "MLH",
+    "url": "https://mlh.io/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Student hackathons and a fellowship programme around the world, many online.",
+    "tip": "Do one hackathon a quarter. Finish and present something, even if small."
+  },
+  {
+    "id": "devfolio",
+    "name": "Devfolio",
+    "by": "Devfolio",
+    "url": "https://devfolio.co/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Where most Indian hackathons happen, including ETHIndia and college hackathons.",
+    "tip": "Keep your Devfolio profile filled with your projects. Judges check it."
+  },
+  {
+    "id": "unstop",
+    "name": "Unstop",
+    "by": "Unstop",
+    "url": "https://unstop.com/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "dsa"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Competitions, hackathons, quizzes and internships from Indian companies and colleges.",
+    "tip": "Company coding challenges here often lead directly to interviews."
+  },
+  {
+    "id": "gsoc",
+    "name": "Google Summer of Code",
+    "by": "Google",
+    "url": "https://summerofcode.withgoogle.com/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Paid, mentored open source work over the summer.",
+    "tip": "Start contributing to an organisation two to three months before applications open."
+  },
+  {
+    "id": "lfx",
+    "name": "LFX Mentorship",
+    "by": "Linux Foundation",
+    "url": "https://lfx.linuxfoundation.org/tools/mentorship/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "cloud",
+      "core"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Paid mentorships on Linux Foundation and CNCF projects like Kubernetes.",
+    "tip": "Pick a project you already use and make small contributions before applying."
+  },
+  {
+    "id": "outreachy",
+    "name": "Outreachy",
+    "by": "Outreachy",
+    "url": "https://www.outreachy.org/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Paid open source internships for people underrepresented in tech.",
+    "tip": "Read the eligibility rules early. The contribution period decides selection."
+  },
+  {
+    "id": "gssoc",
+    "name": "GirlScript Summer of Code",
+    "by": "GirlScript Foundation",
+    "url": "https://gssoc.girlscript.tech/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "A beginner-friendly open source programme run in India.",
+    "tip": "A good first step before GSoC: learn how pull requests and reviews work."
+  },
+  {
+    "id": "hacktoberfest",
+    "name": "Hacktoberfest",
+    "by": "DigitalOcean",
+    "url": "https://hacktoberfest.com/",
+    "type": "program",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Every October, contribute to open source with thousands of others.",
+    "tip": "Aim for meaningful pull requests, not typo fixes. Maintainers notice."
+  },
+  {
+    "id": "r-developersindia",
+    "name": "r/developersIndia",
+    "by": "Reddit",
+    "url": "https://www.reddit.com/r/developersIndia/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "India's largest developer forum: jobs, salaries, interviews and advice.",
+    "tip": "Search before you ask. The salary and interview threads are gold."
+  },
+  {
+    "id": "r-learnprogramming",
+    "name": "r/learnprogramming",
+    "by": "Reddit",
+    "url": "https://www.reddit.com/r/learnprogramming/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "A welcoming forum for beginner questions.",
+    "tip": "Post your code and what you tried. Good questions get good answers."
+  },
+  {
+    "id": "dev-to",
+    "name": "DEV Community",
+    "by": "Forem",
+    "url": "https://dev.to/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Write and read developer posts. Writing about what you learn gets you noticed.",
+    "tip": "Post a short write-up of every project you finish."
+  },
+  {
+    "id": "stack-overflow",
+    "name": "Stack Overflow",
+    "by": "Stack Overflow",
+    "url": "https://stackoverflow.com/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Still the biggest archive of answered programming questions.",
+    "tip": "Answering questions in your stack is a great way to learn it deeply."
+  },
+  {
+    "id": "meetup",
+    "name": "Meetup",
+    "by": "Meetup",
+    "url": "https://www.meetup.com/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Find local tech meetups in your city.",
+    "tip": "Search your stack plus your city. Smaller meetups are easier to network at."
+  },
+  {
+    "id": "peerlist",
+    "name": "Peerlist",
+    "by": "Peerlist",
+    "url": "https://peerlist.io/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Developer profiles built from your GitHub and projects, popular in India.",
+    "tip": "Use it as your public proof of work and launch projects there."
+  },
+  {
+    "id": "fcc-forum",
+    "name": "freeCodeCamp Forum",
+    "by": "freeCodeCamp",
+    "url": "https://forum.freecodecamp.org/",
+    "type": "community",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "frontend",
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": false,
+    "why": "Friendly help forum for anyone learning to code.",
+    "tip": "Ask project questions with a link to your code."
+  },
+  {
+    "id": "tldr",
+    "name": "TLDR",
+    "by": "TLDR",
+    "url": "https://tldr.tech/",
+    "type": "newsletter",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "ai",
+      "frontend",
+      "backend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Daily five-minute summaries of tech, AI and web development news.",
+    "tip": "Subscribe to the one edition that matches your path."
+  },
+  {
+    "id": "bytebytego-newsletter",
+    "name": "ByteByteGo Newsletter",
+    "by": "Alex Xu",
+    "url": "https://blog.bytebytego.com/",
+    "type": "newsletter",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "backend",
+      "dsa",
+      "cloud"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "Weekly system design explainers with clear diagrams.",
+    "tip": "Free issues are enough. Save the diagrams for interview revision."
+  },
+  {
+    "id": "pragmatic-engineer",
+    "name": "The Pragmatic Engineer",
+    "by": "Gergely Orosz",
+    "url": "https://newsletter.pragmaticengineer.com/",
+    "type": "newsletter",
+    "cost": "freemium",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "intermediate",
+    "lang": "en",
+    "india": false,
+    "why": "How real tech companies work: careers, salaries, engineering culture.",
+    "tip": "Read the free issues to understand what senior engineers care about."
+  },
+  {
+    "id": "changelog",
+    "name": "The Changelog",
+    "by": "Changelog Media",
+    "url": "https://changelog.com/podcast",
+    "type": "podcast",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core",
+      "backend"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Conversations with the people who build open source software.",
+    "tip": "Pick episodes about tools you use."
+  },
+  {
+    "id": "internshala",
+    "name": "Internshala",
+    "by": "Internshala",
+    "url": "https://internshala.com/",
+    "type": "jobs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "beginner",
+    "lang": "en",
+    "india": true,
+    "why": "India's largest internship board for students and freshers.",
+    "tip": "Apply to small companies with a tailored note and a project link."
+  },
+  {
+    "id": "wellfound",
+    "name": "Wellfound",
+    "by": "Wellfound",
+    "url": "https://wellfound.com/",
+    "type": "jobs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Startup jobs with salary ranges shown upfront.",
+    "tip": "Apply directly to founders with a short note on what you would build."
+  },
+  {
+    "id": "instahyre",
+    "name": "Instahyre",
+    "by": "Instahyre",
+    "url": "https://www.instahyre.com/",
+    "type": "jobs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Indian job platform where companies reach out to you.",
+    "tip": "Complete your profile with projects. Recruiters search by skills."
+  },
+  {
+    "id": "cutshort",
+    "name": "Cutshort",
+    "by": "Cutshort",
+    "url": "https://cutshort.io/",
+    "type": "jobs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": true,
+    "why": "Indian tech hiring platform with skill-based matching.",
+    "tip": "Keep your skills list honest. Matching works best that way."
+  },
+  {
+    "id": "yc-waas",
+    "name": "Work at a Startup",
+    "by": "Y Combinator",
+    "url": "https://www.workatastartup.com/",
+    "type": "jobs",
+    "cost": "free",
+    "price": null,
+    "tracks": [
+      "core"
+    ],
+    "level": "all",
+    "lang": "en",
+    "india": false,
+    "why": "Jobs at Y Combinator startups, including many in India.",
+    "tip": "One profile reaches hundreds of funded startups."
+  }
+]

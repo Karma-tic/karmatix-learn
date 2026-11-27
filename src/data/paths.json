@@ -1,0 +1,826 @@
+[
+  {
+    "id": "frontend",
+    "name": "Frontend developer",
+    "role": "Frontend or UI engineer",
+    "summary": "Build fast, accessible interfaces with HTML, CSS, JavaScript and React.",
+    "outcome": "Ship responsive, accessible web apps from a Figma design and deploy them.",
+    "months": "6 to 9",
+    "start": "HTML basics",
+    "stages": [
+      {
+        "title": "Web basics",
+        "goal": "Make pages that look right on every screen.",
+        "weeks": "4 to 6",
+        "learn": [
+          "mdn",
+          "web-dev-learn",
+          "kevin-powell"
+        ],
+        "practise": [
+          "frontend-mentor"
+        ],
+        "build": "Three Frontend Mentor pages matched closely on mobile and desktop, deployed with live links.",
+        "prove": "Live links in your README plus a Lighthouse accessibility score above 90.",
+        "hint": null
+      },
+      {
+        "title": "JavaScript for real",
+        "goal": "Understand the language, not just copy it.",
+        "weeks": "6 to 8",
+        "learn": [
+          "javascript-info",
+          "namaste-js",
+          "learn-git-branching"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "A to-do or expense app with local storage, filtering and keyboard support, without a framework.",
+        "prove": "A clean Git history with small, well-named commits.",
+        "hint": null
+      },
+      {
+        "title": "React and TypeScript",
+        "goal": "Build component-based apps with typed data.",
+        "weeks": "6 to 8",
+        "learn": [
+          "react-docs",
+          "ts-handbook",
+          "scrimba"
+        ],
+        "practise": [
+          "frontend-mentor",
+          "devchallenges"
+        ],
+        "build": "A real app that calls a public API, with loading, empty and error states and routing.",
+        "prove": "Deployed on Vercel with a short write-up of decisions you made.",
+        "hint": null
+      },
+      {
+        "title": "Production skills",
+        "goal": "Work like a professional frontend engineer.",
+        "weeks": "6 to 8",
+        "learn": [
+          "nextjs-learn",
+          "chrome-devtools",
+          "css-for-js"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A Next.js app with auth, a database and tests, plus a performance pass with before and after numbers.",
+        "prove": "Two portfolio projects, an open source pull request and a blog post on one hard bug.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "vscode",
+      "chrome-devtools",
+      "figma",
+      "vercel"
+    ],
+    "channels": [
+      "kevin-powell",
+      "web-dev-simplified",
+      "fireship",
+      "namaste-js",
+      "chai-aur-code"
+    ],
+    "communities": [
+      "reactiflux",
+      "fcc-forum",
+      "gdg",
+      "r-developersindia"
+    ],
+    "certs": [
+      "fcc-certs"
+    ],
+    "jobs": [
+      "wellfound",
+      "instahyre",
+      "internshala"
+    ],
+    "icon": "layout-template"
+  },
+  {
+    "id": "backend",
+    "name": "Backend developer",
+    "role": "Backend or API engineer",
+    "summary": "Design APIs, model data and run services that stay up.",
+    "outcome": "Build and deploy a tested REST API with a database, auth, caching and CI.",
+    "months": "8 to 12",
+    "start": "One programming language",
+    "stages": [
+      {
+        "title": "Language and tools",
+        "goal": "Get fluent in one backend language and your terminal.",
+        "weeks": "4 to 6",
+        "learn": [
+          "missing-semester",
+          "pro-git"
+        ],
+        "practise": [
+          "exercism",
+          "learn-git-branching"
+        ],
+        "build": "Three small CLI tools in your chosen language, each with tests.",
+        "prove": "A public GitHub with readable READMEs.",
+        "hint": null
+      },
+      {
+        "title": "HTTP, APIs and SQL",
+        "goal": "Serve data correctly and safely.",
+        "weeks": "6 to 8",
+        "learn": [
+          "node-learn",
+          "django-tutorial",
+          "fastapi",
+          "spring-guides",
+          "karmatix-dotnet",
+          "postgres-tutorial"
+        ],
+        "practise": [
+          "sqlbolt"
+        ],
+        "build": "A REST API for a real domain (library, clinic, shop) with Postgres, validation and auth.",
+        "prove": "An OpenAPI page and a Bruno collection committed to the repo.",
+        "hint": "Pick one framework in the language you chose. You do not need all of them."
+      },
+      {
+        "title": "Ship it",
+        "goal": "Package, test and deploy like a team would.",
+        "weeks": "4 to 6",
+        "learn": [
+          "docker",
+          "github-actions",
+          "use-the-index-luke"
+        ],
+        "practise": [
+          "redis-university"
+        ],
+        "build": "Dockerise the API, add CI that runs tests, add caching and deploy it.",
+        "prove": "A green CI badge and a live URL.",
+        "hint": null
+      },
+      {
+        "title": "Systems thinking",
+        "goal": "Reason about scale, failure and trade-offs.",
+        "weeks": "6 to 8",
+        "learn": [
+          "system-design-primer",
+          "bytebytego",
+          "hussein-nasser",
+          "ddia"
+        ],
+        "practise": [
+          "codecrafters"
+        ],
+        "build": "Rebuild a small piece of infrastructure (a Redis clone, a job queue) and write up the design.",
+        "prove": "A design doc and one CodeCrafters challenge completed.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "vscode",
+      "bruno",
+      "docker",
+      "github-actions"
+    ],
+    "channels": [
+      "hussein-nasser",
+      "bytebytego",
+      "gaurav-sen",
+      "piyush-garg",
+      "chai-aur-code"
+    ],
+    "communities": [
+      "foss-united",
+      "hasgeek",
+      "r-developersindia",
+      "stack-overflow"
+    ],
+    "certs": [
+      "aws-saa",
+      "ckad"
+    ],
+    "jobs": [
+      "wellfound",
+      "instahyre",
+      "cutshort",
+      "yc-waas"
+    ],
+    "icon": "server"
+  },
+  {
+    "id": "mobile",
+    "name": "Mobile app developer",
+    "role": "Android, iOS or Flutter developer",
+    "summary": "Build apps people install, from first screen to Play Store release.",
+    "outcome": "Publish a polished app with offline data, notifications and analytics-free privacy.",
+    "months": "6 to 9",
+    "start": "One programming language",
+    "stages": [
+      {
+        "title": "Pick a stack",
+        "goal": "Choose Flutter, native Android, iOS or React Native, and learn its language.",
+        "weeks": "3 to 4",
+        "learn": [
+          "flutter-docs",
+          "kotlin-docs",
+          "hws-100-swiftui",
+          "karmatix-flutter"
+        ],
+        "practise": [
+          "exercism"
+        ],
+        "build": "Three single-screen apps: a counter, a form with validation and a list.",
+        "prove": "Screenshots and code on GitHub.",
+        "hint": "Pick one stack and stay with it until you ship an app."
+      },
+      {
+        "title": "Real apps",
+        "goal": "Navigation, state and data from the network.",
+        "weeks": "6 to 8",
+        "learn": [
+          "android-compose",
+          "flutter-docs",
+          "react-native"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "A news or recipe app with navigation, a public API, caching and pull to refresh.",
+        "prove": "A demo video in the README.",
+        "hint": null
+      },
+      {
+        "title": "Backend and storage",
+        "goal": "Accounts, a database and push notifications.",
+        "weeks": "4 to 6",
+        "learn": [
+          "firebase",
+          "philipp-lackner"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "Add sign-in, cloud data and notifications to your app.",
+        "prove": "A test account reviewers can use.",
+        "hint": null
+      },
+      {
+        "title": "Release",
+        "goal": "Make it reliable and ship it to a store.",
+        "weeks": "4 to 6",
+        "learn": [
+          "flutter-yt",
+          "github-actions"
+        ],
+        "practise": [
+          "devchallenges"
+        ],
+        "build": "Publish on the Play Store or TestFlight with crash reporting and a privacy policy.",
+        "prove": "A store listing link on your resume.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "vscode",
+      "figma",
+      "firebase"
+    ],
+    "channels": [
+      "philipp-lackner",
+      "flutter-yt",
+      "fireship"
+    ],
+    "communities": [
+      "gdg",
+      "r-developersindia",
+      "dev-to"
+    ],
+    "certs": [
+      "fcc-certs"
+    ],
+    "jobs": [
+      "internshala",
+      "wellfound",
+      "instahyre"
+    ],
+    "icon": "smartphone"
+  },
+  {
+    "id": "cloud",
+    "name": "Cloud and DevOps engineer",
+    "role": "Cloud, DevOps or platform engineer",
+    "summary": "Run software reliably on the cloud with Linux, containers, Kubernetes and IaC.",
+    "outcome": "Provision infrastructure with code, deploy with pipelines and keep services observable.",
+    "months": "8 to 12",
+    "start": "Comfort with one language",
+    "stages": [
+      {
+        "title": "Linux and networking",
+        "goal": "Live in the terminal and understand how machines talk.",
+        "weeks": "4 to 6",
+        "learn": [
+          "missing-semester",
+          "linux-upskill",
+          "networkchuck"
+        ],
+        "practise": [
+          "overthewire"
+        ],
+        "build": "A Linux server you set up yourself, hardened, with a website behind Nginx and HTTPS.",
+        "prove": "Bandit level 20 and notes on how you solved each level.",
+        "hint": null
+      },
+      {
+        "title": "One cloud, properly",
+        "goal": "Learn one provider deeply. AWS has the most jobs.",
+        "weeks": "6 to 8",
+        "learn": [
+          "aws-skill-builder",
+          "ms-learn-azure",
+          "gcp-skills-boost"
+        ],
+        "practise": [
+          "aws-free-tier",
+          "cloud-resume"
+        ],
+        "build": "The Cloud Resume Challenge, end to end.",
+        "prove": "AWS Solutions Architect Associate or AZ-104.",
+        "hint": "Pick one provider. AWS has the most job posts in India, Azure is common in service companies."
+      },
+      {
+        "title": "Containers and CI/CD",
+        "goal": "Package everything and automate delivery.",
+        "weeks": "4 to 6",
+        "learn": [
+          "docker",
+          "github-actions",
+          "techworld-nana",
+          "abhishek-veeramalla"
+        ],
+        "practise": [
+          "iximiuz-labs"
+        ],
+        "build": "A pipeline that tests, builds an image and deploys an app on every push.",
+        "prove": "A public repo with the pipeline and a short write-up.",
+        "hint": null
+      },
+      {
+        "title": "Kubernetes and IaC",
+        "goal": "Run workloads at scale and describe infra as code.",
+        "weeks": "8 to 10",
+        "learn": [
+          "k8s-tutorials",
+          "terraform-tutorials",
+          "90-days-devops"
+        ],
+        "practise": [
+          "killercoda",
+          "kodekloud",
+          "devops-exercises"
+        ],
+        "build": "Terraform a cluster, deploy a three-service app with Helm, add monitoring and alerts.",
+        "prove": "CKA and Terraform Associate.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "vscode",
+      "docker",
+      "github-actions",
+      "aws-free-tier"
+    ],
+    "channels": [
+      "techworld-nana",
+      "abhishek-veeramalla",
+      "networkchuck",
+      "bytebytego"
+    ],
+    "communities": [
+      "k8s-slack",
+      "aws-user-groups",
+      "foss-united",
+      "hasgeek"
+    ],
+    "certs": [
+      "aws-saa",
+      "az-104",
+      "cka",
+      "terraform-associate",
+      "gcp-ace"
+    ],
+    "jobs": [
+      "instahyre",
+      "cutshort",
+      "wellfound"
+    ],
+    "icon": "cloud"
+  },
+  {
+    "id": "ai",
+    "name": "AI engineer",
+    "role": "AI or ML engineer",
+    "summary": "Build useful products with machine learning and large language models.",
+    "outcome": "Train, evaluate and ship ML and LLM features behind a real API, with evals.",
+    "months": "9 to 12",
+    "start": "Python basics",
+    "stages": [
+      {
+        "title": "Python and maths you need",
+        "goal": "Python, NumPy, pandas and the intuition behind ML.",
+        "weeks": "4 to 6",
+        "learn": [
+          "3b1b-nn",
+          "pandas",
+          "campusx"
+        ],
+        "practise": [
+          "kaggle"
+        ],
+        "build": "Clean and explore two public datasets in notebooks with clear charts.",
+        "prove": "Notebooks published on Kaggle.",
+        "hint": null
+      },
+      {
+        "title": "Classic ML",
+        "goal": "Train, validate and explain models.",
+        "weeks": "6 to 8",
+        "learn": [
+          "ml-specialization",
+          "google-mlcc",
+          "krish-naik"
+        ],
+        "practise": [
+          "kaggle"
+        ],
+        "build": "One Kaggle Getting Started competition with a written approach.",
+        "prove": "A ranked submission and a public notebook.",
+        "hint": null
+      },
+      {
+        "title": "Deep learning and LLMs",
+        "goal": "How neural networks and transformers really work.",
+        "weeks": "6 to 8",
+        "learn": [
+          "fastai",
+          "karpathy-zero-to-hero",
+          "hf-learn"
+        ],
+        "practise": [
+          "kaggle",
+          "colab"
+        ],
+        "build": "Fine-tune a small open model on your own data and publish it.",
+        "prove": "A model or Space on your Hugging Face profile.",
+        "hint": null
+      },
+      {
+        "title": "AI engineering",
+        "goal": "RAG, tools, agents, evaluation and deployment.",
+        "weeks": "6 to 8",
+        "learn": [
+          "dlai-short",
+          "anthropic-courses",
+          "openai-cookbook",
+          "made-with-ml",
+          "ai-engineering"
+        ],
+        "practise": [
+          "ollama"
+        ],
+        "build": "A RAG app over real documents with an eval set, served with FastAPI and deployed.",
+        "prove": "An eval report showing what you improved and how you measured it.",
+        "hint": "Start with one provider and one open model. The patterns transfer."
+      }
+    ],
+    "tools": [
+      "colab",
+      "ollama",
+      "fastapi",
+      "docker"
+    ],
+    "channels": [
+      "krish-naik",
+      "campusx",
+      "fireship",
+      "3b1b-nn"
+    ],
+    "communities": [
+      "hf-discord",
+      "datatalksclub",
+      "gdg",
+      "hasgeek"
+    ],
+    "certs": [
+      "aws-aip",
+      "nptel"
+    ],
+    "jobs": [
+      "wellfound",
+      "yc-waas",
+      "instahyre"
+    ],
+    "icon": "brain"
+  },
+  {
+    "id": "data",
+    "name": "Data analyst",
+    "role": "Data or business analyst",
+    "summary": "Turn messy data into decisions with SQL, spreadsheets, Python and dashboards.",
+    "outcome": "Answer business questions with SQL and Python and present them in a dashboard.",
+    "months": "4 to 6",
+    "start": "Spreadsheet basics",
+    "stages": [
+      {
+        "title": "Spreadsheets and SQL",
+        "goal": "The two skills every analyst job tests.",
+        "weeks": "4 to 6",
+        "learn": [
+          "alex-the-analyst",
+          "postgres-tutorial"
+        ],
+        "practise": [
+          "sqlbolt",
+          "sqlzoo"
+        ],
+        "build": "Answer ten business questions on a public sales dataset using SQL only.",
+        "prove": "A GitHub repo with your queries and answers.",
+        "hint": null
+      },
+      {
+        "title": "Dashboards",
+        "goal": "Communicate numbers clearly.",
+        "weeks": "3 to 4",
+        "learn": [
+          "ms-learn-powerbi",
+          "alex-the-analyst"
+        ],
+        "practise": [
+          "tableau-public"
+        ],
+        "build": "Two dashboards on public Indian data (for example data.gov.in), each answering one question.",
+        "prove": "Published dashboards and a one-page write-up each.",
+        "hint": null
+      },
+      {
+        "title": "Python for analysis",
+        "goal": "Clean, analyse and automate.",
+        "weeks": "4 to 6",
+        "learn": [
+          "pandas",
+          "luke-barousse",
+          "campusx"
+        ],
+        "practise": [
+          "kaggle"
+        ],
+        "build": "An end-to-end analysis notebook from raw data to recommendations.",
+        "prove": "A Kaggle notebook and a short slide summary.",
+        "hint": null
+      },
+      {
+        "title": "Interview ready",
+        "goal": "Pass SQL and case rounds.",
+        "weeks": "3 to 4",
+        "learn": [
+          "google-data-analytics",
+          "dbt-learn"
+        ],
+        "practise": [
+          "datalemur",
+          "stratascratch"
+        ],
+        "build": "Fifty SQL interview problems and two mock case studies.",
+        "prove": "PL-300 if you target Power BI roles.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "tableau-public",
+      "colab"
+    ],
+    "channels": [
+      "alex-the-analyst",
+      "luke-barousse",
+      "krish-naik",
+      "campusx"
+    ],
+    "communities": [
+      "datatalksclub",
+      "r-developersindia",
+      "meetup"
+    ],
+    "certs": [
+      "pl-300",
+      "google-da",
+      "nptel"
+    ],
+    "jobs": [
+      "internshala",
+      "instahyre"
+    ],
+    "icon": "chart-column"
+  },
+  {
+    "id": "dsa",
+    "name": "Placements and DSA",
+    "role": "Software engineer, campus and lateral hiring",
+    "summary": "Crack online assessments and coding interviews with patterns, not memorising.",
+    "outcome": "Solve medium problems in 30 minutes and explain your approach clearly.",
+    "months": "3 to 6",
+    "start": "One language you can code in",
+    "stages": [
+      {
+        "title": "Basics and one language",
+        "goal": "Arrays, strings, hashing, recursion and complexity.",
+        "weeks": "4 to 6",
+        "learn": [
+          "cs50x",
+          "abdul-bari",
+          "visualgo"
+        ],
+        "practise": [
+          "codechef",
+          "gfg"
+        ],
+        "build": "Solve 60 easy problems across topics in your interview language.",
+        "prove": "A streak on one platform and notes per pattern.",
+        "hint": null
+      },
+      {
+        "title": "Patterns",
+        "goal": "Two pointers, sliding window, stacks, trees, graphs and DP.",
+        "weeks": "8 to 10",
+        "learn": [
+          "neetcode",
+          "striver-a2z",
+          "codehelp"
+        ],
+        "practise": [
+          "leetcode",
+          "cses"
+        ],
+        "build": "Finish NeetCode 150 or Striver A2Z. Not both.",
+        "prove": "A pattern sheet in your own words.",
+        "hint": null
+      },
+      {
+        "title": "Speed",
+        "goal": "Contests and online assessment practice.",
+        "weeks": "4 to 6",
+        "learn": [
+          "tech-interview-handbook"
+        ],
+        "practise": [
+          "codeforces",
+          "codechef",
+          "unstop"
+        ],
+        "build": "One contest every week and upsolve after each.",
+        "prove": "A contest rating you can mention on your resume.",
+        "hint": null
+      },
+      {
+        "title": "Interviews",
+        "goal": "System design basics, projects and behavioural rounds.",
+        "weeks": "3 to 4",
+        "learn": [
+          "system-design-primer",
+          "gaurav-sen",
+          "bytebytego"
+        ],
+        "practise": [
+          "ambitionbox",
+          "gfg"
+        ],
+        "build": "Mock interviews with friends: one coding, one design, one behavioural per week.",
+        "prove": "A one-page resume with numbers and live project links.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "vscode",
+      "visualgo"
+    ],
+    "channels": [
+      "apna-college",
+      "codehelp",
+      "abdul-bari",
+      "gaurav-sen"
+    ],
+    "communities": [
+      "r-developersindia",
+      "gdg"
+    ],
+    "certs": [
+      "nptel"
+    ],
+    "jobs": [
+      "unstop",
+      "ambitionbox",
+      "internshala",
+      "instahyre"
+    ],
+    "icon": "binary"
+  },
+  {
+    "id": "security",
+    "name": "Cybersecurity",
+    "role": "Security analyst or penetration tester",
+    "summary": "Learn how systems are attacked so you can defend them.",
+    "outcome": "Find, exploit and explain common vulnerabilities, and write clear reports.",
+    "months": "9 to 12",
+    "start": "Linux and networking basics",
+    "stages": [
+      {
+        "title": "Foundations",
+        "goal": "Linux, networking and how the web works.",
+        "weeks": "4 to 6",
+        "learn": [
+          "linux-upskill",
+          "networkchuck",
+          "professor-messer"
+        ],
+        "practise": [
+          "overthewire",
+          "tryhackme"
+        ],
+        "build": "Finish Bandit and TryHackMe Pre Security.",
+        "prove": "Write-ups on your own blog.",
+        "hint": null
+      },
+      {
+        "title": "Web security",
+        "goal": "The vulnerabilities behind most real breaches.",
+        "weeks": "6 to 8",
+        "learn": [
+          "owasp-top10",
+          "john-hammond"
+        ],
+        "practise": [
+          "portswigger",
+          "picoctf"
+        ],
+        "build": "All PortSwigger apprentice labs and a deliberately vulnerable app you secure.",
+        "prove": "A write-up for each lab category.",
+        "hint": null
+      },
+      {
+        "title": "Hands-on hacking",
+        "goal": "Real machines and capture the flag.",
+        "weeks": "6 to 8",
+        "learn": [
+          "hacker101",
+          "networkchuck"
+        ],
+        "practise": [
+          "hackthebox",
+          "tryhackme"
+        ],
+        "build": "Ten retired Hack The Box machines with full reports.",
+        "prove": "Security+ for SOC and analyst roles.",
+        "hint": null
+      },
+      {
+        "title": "Specialise",
+        "goal": "Pick SOC, pentesting, AppSec or cloud security.",
+        "weeks": "8 to 12",
+        "learn": [
+          "tldr-sec"
+        ],
+        "practise": [
+          "ctftime",
+          "hacker101"
+        ],
+        "build": "Play a CTF with a team every month and report one real bug on a bounty programme.",
+        "prove": "OSCP only if pentesting is your goal.",
+        "hint": null
+      }
+    ],
+    "tools": [
+      "vscode"
+    ],
+    "channels": [
+      "john-hammond",
+      "networkchuck"
+    ],
+    "communities": [
+      "ctftime",
+      "hasgeek",
+      "r-developersindia"
+    ],
+    "certs": [
+      "security-plus",
+      "oscp"
+    ],
+    "jobs": [
+      "instahyre",
+      "cutshort"
+    ],
+    "icon": "shield-check"
+  }
+]

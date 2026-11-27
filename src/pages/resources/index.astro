@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import { resources, paths, certifications, TYPES, TYPE_ORDER, TRACKS, LAST_CHECKED } from '../../lib/data';
+
+// Order: by type, then by how often the paths rely on a pick, then free first, then name
+const uses = new Map<string, number>();
+const bump = (id: string) => uses.set(id, (uses.get(id) || 0) + 1);
+paths.forEach((p) => { p.stages.forEach((s) => [...s.learn, ...s.practise].forEach(bump)); [...p.tools, ...p.channels, ...p.communities, ...p.jobs].forEach(bump); });
+certifications.forEach((c) => c.prep.forEach(bump));
+const costRank: Record<string, number> = { free: 0, freemium: 1, paid: 2 };
+const sorted = [...resources].sort((a, b) =>
+  TYPE_ORDER.indexOf(a.type) - TYPE_ORDER.indexOf(b.type) || (uses.get(b.id) || 0) - (uses.get(a.id) || 0) || costRank[a.cost] - costRank[b.cost] || a.name.localeCompare(b.name));
+const counts = Object.fromEntries(TYPE_ORDER.map((t) => [t, resources.filter((r) => r.type === t).length]));
+---
+<Layout title="All developer resources: courses, practice, tools, channels | Karmatix Learn" description={`${resources.length} hand-picked developer resources with a reason and a how-to-use tip for each: courses, practice platforms, YouTube channels, tools, communities, programs and job boards.`} canonical="https://learn.karmatix.in/resources/" current="resources">
+  <section class="mx-auto max-w-6xl px-4 pt-14 sm:px-6 sm:pt-20">
+    <h1 class="text-4xl font-semibold tracking-[-0.03em] text-text sm:text-5xl">Every pick, in one place</h1>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted"><span class="num">{resources.length}</span> resources, each with the reason it is here and a tip on how to use it. Checked <span class="num">{LAST_CHECKED}</span>.</p>
+  </section>
+
+  <form id="kx-filters" class="z-30 mt-8 border-y md:sticky md:top-16 border-line bg-ink/90 backdrop-blur-md" role="search" aria-label="Filter resources" onsubmit="return false">
+    <div class="mx-auto max-w-6xl space-y-3 px-4 py-4 sm:px-6">
+      <div class="flex flex-wrap items-center gap-3">
+        <label class="relative min-w-0 flex-1 basis-60">
+          <span class="sr-only">Search</span>
+          <Icon name="search" class="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-dim" />
+          <input id="kx-q" type="search" name="q" placeholder="Search by name, topic or creator" autocomplete="off" class="h-11 w-full rounded-full border border-line bg-surface pl-10 pr-4 text-[0.95rem] text-text placeholder:text-dim focus:border-ember/60 focus:outline-none focus-visible:outline-none focus:ring-2 focus:ring-ember/30" />
+        </label>
+        <label class="relative">
+          <span class="sr-only">Path</span>
+          <select id="kx-track" name="track" class="h-11 appearance-none rounded-full border border-line bg-surface pl-4 pr-10 text-sm text-text focus:border-ember/60 focus:outline-none focus:ring-2 focus:ring-ember/30">
+            <option value="">All paths</option>
+            {Object.entries(TRACKS).map(([k, v]) => <option value={k}>{v}</option>)}
+          </select>
+          <Icon name="chevron-down" class="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-dim" />
+        </label>
+        <label class="relative">
+          <span class="sr-only">Cost</span>
+          <select id="kx-cost" name="cost" class="h-11 appearance-none rounded-full border border-line bg-surface pl-4 pr-10 text-sm text-text focus:border-ember/60 focus:outline-none focus:ring-2 focus:ring-ember/30">
+            <option value="">Any cost</option>
+            <option value="free">Free only</option>
+            <option value="freemium">Free tier</option>
+            <option value="paid">Paid</option>
+          </select>
+          <Icon name="chevron-down" class="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-dim" />
+        </label>
+        <button type="button" id="kx-india" class="kx-chip !min-h-11" aria-pressed="false">India and Hindi</button>
+      </div>
+      <div class="kx-scroll-row" role="group" aria-label="Type">
+        <button type="button" class="kx-chip snap-start" data-type="" aria-pressed="true">All <span class="num text-dim">{resources.length}</span></button>
+        {TYPE_ORDER.map((t) => <button type="button" class="kx-chip snap-start" data-type={t} aria-pressed="false"><Icon name={TYPES[t].icon} class="size-3.5" />{TYPES[t].plural} <span class="num text-dim">{counts[t]}</span></button>)}
+      </div>
+    </div>
+  </form>
+
+  <section class="mx-auto max-w-6xl px-4 pt-6 sm:px-6" aria-label="Results">
+    <div class="flex items-center justify-between gap-3">
+      <p id="kx-count" class="text-sm text-muted" aria-live="polite">Showing <span class="num">{resources.length}</span> of <span class="num">{resources.length}</span></p>
+      <button type="button" id="kx-reset" class="hidden min-h-11 rounded-full px-3 text-sm text-ember-soft hover:underline">Clear filters</button>
+    </div>
+    <div id="kx-grid" class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {sorted.map((r) => <ResourceCard r={r} />)}
+    </div>
+    <div id="kx-empty" class="kx-card mt-4 hidden p-8 text-center">
+      <p class="font-medium text-text">Nothing matches those filters.</p>
+      <p class="mt-1 text-sm text-muted">Try fewer filters, or tell us what is missing.</p>
+      <div class="mt-5 flex flex-wrap justify-center gap-3">
+        <button type="button" id="kx-reset-2" class="kx-btn kx-btn-ghost">Clear filters</button>
+        <a href="https://github.com/Karma-tic/karmatix-learn/issues/new?title=Suggest%20a%20resource" class="kx-btn kx-btn-ghost">Suggest a resource</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const q = $<HTMLInputElement>('kx-q'), track = $<HTMLSelectElement>('kx-track'), cost = $<HTMLSelectElement>('kx-cost');
+  const india = $<HTMLButtonElement>('kx-india'), count = $('kx-count'), empty = $('kx-empty'), reset = $('kx-reset');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-res]'));
+  const typeBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('#kx-filters [data-type]'));
+  let type = '';
+
+  const apply = (push = true) => {
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const tr = track.value, co = cost.value, ind = india.getAttribute('aria-pressed') === 'true';
+    let n = 0;
+    for (const c of cards) {
+      const d = c.dataset;
+      const ok = (!type || d.type === type)
+        && (!tr || (d.tracks || '').split(' ').includes(tr))
+        && (!co || d.cost === co)
+        && (!ind || d.india === '1' || d.lang !== 'en')
+        && words.every((w) => (d.text || '').includes(w));
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    count.innerHTML = `Showing <span class="num">${n}</span> of <span class="num">${cards.length}</span>`;
+    empty.classList.toggle('hidden', n > 0);
+    const active = !!(type || tr || co || ind || words.length);
+    reset.classList.toggle('hidden', !active);
+    typeBtns.forEach((b) => b.setAttribute('aria-pressed', String((b.dataset.type || '') === type)));
+    if (push) {
+      const p = new URLSearchParams();
+      if (q.value.trim()) p.set('q', q.value.trim());
+      if (type) p.set('type', type);
+      if (tr) p.set('track', tr);
+      if (co) p.set('cost', co);
+      if (ind) p.set('india', '1');
+      history.replaceState(null, '', p.toString() ? `?${p}` : location.pathname);
+    }
+  };
+
+  const fromUrl = () => {
+    const p = new URLSearchParams(location.search);
+    q.value = p.get('q') || '';
+    type = p.get('type') || '';
+    track.value = p.get('track') || '';
+    cost.value = p.get('cost') || '';
+    india.setAttribute('aria-pressed', String(p.get('india') === '1'));
+    apply(false);
+  };
+
+  let t: number | undefined;
+  q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(apply, 120); });
+  track.addEventListener('change', () => apply());
+  cost.addEventListener('change', () => apply());
+  india.addEventListener('click', () => { india.setAttribute('aria-pressed', String(india.getAttribute('aria-pressed') !== 'true')); apply(); });
+  typeBtns.forEach((b) => b.addEventListener('click', () => { type = b.dataset.type || ''; apply(); }));
+  const clear = () => { q.value = ''; type = ''; track.value = ''; cost.value = ''; india.setAttribute('aria-pressed', 'false'); apply(); };
+  reset.addEventListener('click', clear);
+  $('kx-reset-2').addEventListener('click', clear);
+  fromUrl();
+</script>
