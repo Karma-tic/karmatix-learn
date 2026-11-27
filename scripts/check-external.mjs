@@ -29,7 +29,7 @@ const results = [];
 const queue = [...urls];
 await Promise.all(Array.from({ length: 8 }, async () => { while (queue.length) results.push(await check(queue.shift())); }));
 
-const blocked = results.filter((r) => !r.ok && [401, 403, 405, 429, 999].includes(r.status));
+const blocked = results.filter((r) => !r.ok && [401, 403, 405, 406, 429, 999].includes(r.status));
 const broken = results.filter((r) => !r.ok && !blocked.includes(r));
 blocked.forEach((r) => console.warn(`[warn] ${r.status} ${r.url} (site may block bots; check by hand)`));
 broken.forEach((r) => console.error(`[broken] ${r.status} ${r.url}`));
