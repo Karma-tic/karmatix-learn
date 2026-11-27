@@ -12,7 +12,9 @@
     "lint:courses": "node scripts/validate-courses.mjs",
     "check": "astro check",
     "test:links": "node scripts/check-links.mjs",
-    "test:a11y": "node scripts/check-a11y.mjs"
+    "test:a11y": "node scripts/check-a11y.mjs",
+    "lint:data": "node scripts/validate-data.mjs",
+    "test:external": "node scripts/check-external.mjs"
   },
   "dependencies": {
     "astro": "^5.4.2",

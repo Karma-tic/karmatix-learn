@@ -1,107 +1,87 @@
-# Karmatix Learning Catalog
+# Karmatix Learn
 
-The public engineering course catalog for **Karmatix Learning** (https://learn.karmatix.in).
+**https://learn.karmatix.in** is a hand-picked map of what to learn, where to practise and who to learn with. It does not re-teach topics. It points developers to the best existing courses, practice platforms, certifications, YouTube channels, tools and communities, in an order that works, and says how to use each one.
 
-Built with Astro, static HTML output, self-hosted typography, and zero third-party trackers.
+Built with Astro as a static site. No accounts, no trackers, no affiliate links.
 
----
-
-## 🚀 Quick Start
+## Quick start
 
 ```bash
-# Install dependencies
 npm install
+npm run dev          # http://localhost:4321
 
-# Run local development server
-npm run dev
-
-# Run quality checks (Dash check, course validation, link checker, accessibility)
-npm run lint:courses
+# The same checks CI runs
 node scripts/check-dashes.mjs
+npm run lint:courses
+npm run lint:data
 npm run build
 npm run test:links
 npm run test:a11y
-
-# Preview built static output
-npm run preview
+npm run test:external   # needs internet; checks every outbound link
 ```
 
----
+## How the site is organised
 
-## 📖 Operational Playbook
+| Page | Source |
+|---|---|
+| Home, with the "I want to become a" picker | `src/pages/index.astro` |
+| 8 paths, each with 4 stages | `src/data/paths.json`, rendered by `src/pages/paths/[id].astro` |
+| Resource directory with filters | `src/data/resources.json`, rendered by `src/pages/resources/index.astro` |
+| Certifications with fees and verdicts | `src/data/certifications.json` |
+| Connect with developers | `src/pages/connect/index.astro` (lists resource ids) |
+| Karmatix's own courses | `src/data/courses.json` |
 
-### 1. How to Add a New Course
-1. Open `src/data/courses.json`.
-2. Add a new course entry following the required schema:
-   ```json
-   {
-     "id": "course-id",
-     "title": "Course Title",
-     "shortTitle": "Short Title",
-     "flagship": false,
-     "status": "planned",
-     "tagline": "One punchy sentence under 15 words.",
-     "summary": "Clear summary under 25 words.",
-     "audience": "Target engineering audience",
-     "level": "Intermediate",
-     "topics": ["Topic 1", "Topic 2"],
-     "url": "",
-     "repoUrl": "https://github.com/Karma-tic/...",
-     "stats": [
-       { "label": "Status", "value": "In planning", "source": "Curriculum roadmap" }
-     ],
-     "versions": {},
-     "lastVerified": "2026-11-07",
-     "badges": ["Planned"],
-     "ciVerified": false,
-     "image": {
-       "desktop": "",
-       "desktopAvif": "",
-       "mobile": "",
-       "mobileAvif": "",
-       "alt": "Course preview"
-     },
-     "codeSnippet": {
-       "title": "Sample Snippet Title",
-       "language": "python",
-       "code": "# Compilable code here"
-     }
-   }
-   ```
-3. Run `npm run lint:courses` to verify no dash violations or broken fields exist.
+Everything a visitor sees about a resource comes from one entry in `resources.json`, so a fix in one place updates every page.
 
-### 2. How to Promote a Course from "Planned" to "Live"
-1. In `src/data/courses.json`, change `"status": "planned"` to `"status": "live"`.
-2. Add the live production URL in `"url"` (e.g. `https://devops.karmatix.in`).
-3. Add verified stats citing their source repository or documentation location.
-4. Capture high-resolution desktop and mobile screenshots (place in `/public/images/courses/`).
-5. Run `npm run build` and `npm run test:links`. When pushed to `main`, GitHub Actions will rebuild the sitemap, JSON-LD Course schema, and static HTML automatically.
+## Playbook
 
-### 3. How to Update Verified Stats
-Every statistic displayed on the page must cite its verifiable source in `courses.json`. Never type numbers from memory. When modules or projects are added:
-1. Verify the exact count in the course repo.
-2. Update the `value` and `source` string in `src/data/courses.json`.
-3. Update `lastVerified` to the current date.
+### Add a resource
 
-### 4. How to Swap the Brand Logo
-- Vector Wordmark: Replace `public/brand/wordmark.svg`.
-- Favicon: Replace `public/favicon.svg`.
-- Social Share Card: Generate a new 1200x630 banner via `node scripts/capture-course-screenshots.mjs` or replace `public/images/og-karmatix-learn.png`.
+Add an entry to `src/data/resources.json`:
 
----
+```json
+{
+  "id": "short-kebab-id",
+  "name": "Display name",
+  "by": "Creator or organisation",
+  "url": "https://...",
+  "type": "course",
+  "cost": "free",
+  "price": null,
+  "tracks": ["backend"],
+  "level": "beginner",
+  "lang": "en",
+  "india": false,
+  "why": "One sentence on why it earns a place. Under 160 characters.",
+  "tip": "One practical instruction on how to use it. Under 170 characters."
+}
+```
 
-## 🛡️ CI / CD Pipeline
+- `type`: course, practice, docs, video, roadmap, tool, community, program, newsletter, podcast, jobs, book
+- `tracks`: core, frontend, backend, mobile, cloud, ai, data, dsa, security
+- `cost`: free, freemium (free tier) or paid. `lang`: en, hi or hi-en.
 
-All pull requests and commits to `main` must pass the continuous integration gate:
-1. **TypeScript & Astro Check:** `astro check`
-2. **Dash Policy:** Fails if any em-dash (`\u2014`) or en-dash (`\u2013`) is found
-3. **Course Schema Validator:** Enforces non-empty URLs, word budgets, and verified sources
-4. **HTML & Internal Link Audit:** Verifies all images, routes, and in-page anchor targets
-5. **Accessibility & JS Budget Audit:** Confirms WCAG AA semantics and checks that gzipped JavaScript is under 30 KB
-6. **Automated Deployment:** On `main`, the official GitHub Pages deployment workflow publishes the static artifact to `learn.karmatix.in`.
+A pick must be current, used by working developers, and practical (you build or solve something with it). No affiliate links.
 
----
+### Put it in a path
 
-## ⚖️ Legal & Trademarks
-.NET, C#, ASP.NET, Azure, and Visual Studio are trademarks of Microsoft Corporation. Flutter and Dart are trademarks of Google LLC. Karmatix Learning is an independent educational publisher and is not affiliated with or endorsed by Microsoft or Google.
+In `src/data/paths.json`, add the id to a stage's `learn` or `practise` list (not both), or to the path's `tools`, `channels`, `communities` or `jobs`. Use `hint` on a stage when it lists alternatives ("pick one framework").
 
+### Update certification fees
+
+Edit `fee`, `feeIndia`, `validity` and `note` in `src/data/certifications.json`, then update `LAST_CHECKED` in `src/lib/data.ts`. Use the official exam page as the source.
+
+### Writing rules
+
+- No em or en dashes anywhere (CI fails on them). Use commas, colons or hyphens.
+- Plain, specific language. Say what to do, not how amazing something is.
+
+## CI
+
+- **CI Quality Gate** (every push and PR): dash check, course and data validation, build and type check, internal link check, accessibility and JS budget. PRs also get a non-blocking report of external links.
+- **Weekly external link check** (Mondays, or run it by hand): flags any resource link that has died.
+- **Deploy**: pushes to `main` deploy to GitHub Pages.
+
+## Legal
+
+Names and logos of courses, platforms and certifications belong to their owners. Karmatix Learn is independent and is not affiliated with, endorsed by or paid by any of them. .NET, C#, Azure and Visual Studio are trademarks of Microsoft Corporation. Flutter and Dart are trademarks of Google LLC.

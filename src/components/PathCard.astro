@@ -1,0 +1,19 @@
+---
+import Icon from './Icon.astro';
+import type { Path } from '../lib/data';
+interface Props { p: Path }
+const { p } = Astro.props;
+const count = new Set(p.stages.flatMap((s) => [...s.learn, ...s.practise]).concat(p.tools, p.channels, p.communities)).size;
+---
+<article class="kx-card kx-card-link group relative flex h-full flex-col p-5 sm:p-6">
+  <div class="flex items-start justify-between">
+    <span class="inline-flex size-11 items-center justify-center rounded-xl border border-line bg-surface-2 text-ember transition-colors group-hover:border-ember/50"><Icon name={p.icon} class="size-5" /></span>
+    <Icon name="arrow-up-right" class="kx-arrow size-5 text-dim" />
+  </div>
+  <h3 class="mt-5 text-lg font-semibold text-text"><a href={`/paths/${p.id}/`} class="kx-stretch rounded-sm">{p.name}</a></h3>
+  <p class="mt-1.5 text-sm leading-relaxed text-muted">{p.summary}</p>
+  <ol class="mt-5 space-y-1.5 border-t border-line pt-4 text-sm text-dim" aria-label={`${p.name} stages`}>
+    {p.stages.map((s, i) => <li class="flex gap-2.5"><span class="num w-4 text-ember/80">{i + 1}</span><span class="text-muted">{s.title}</span></li>)}
+  </ol>
+  <p class="mt-auto pt-5 text-xs text-dim"><span class="num text-muted">{p.months}</span> months part time <span aria-hidden="true">/</span> <span class="num text-muted">{count}</span> picks</p>
+</article>

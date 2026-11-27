@@ -1,17 +1,31 @@
-# Karmatix Learning Catalog
+# Karmatix Learn
 
-> Engineering education the clear way.
+> A hand-picked map of what to learn, where to practise and who to learn with, for software developers, with a focus on India. Free, no sign-up, no affiliate links.
 
-Karmatix Learning is an open engineering catalog publishing practical, rigorous technical courses built on real tested code. All courses are completely free with no account required.
+Karmatix Learn does not teach topics itself. It recommends the best existing courses, practice platforms, certifications, YouTube channels, tools and developer communities, arranged into step-by-step paths, and says how to use each one.
 
-## Live Courses
+## Paths
 
-- Karmatix .NET Academy: Comprehensive .NET 10 LTS and C# 14 engineering course covering clean architecture, ASP.NET Core APIs, Entity Framework Core, Docker containers, automated testing, and interview preparation with 16 tested projects. URL: https://karma-tic.github.io/dotnet-academy/
-- Karmatix Flutter Course: Self-paced cross-platform mobile development with Dart 3 and Flutter 3, featuring Android native Kotlin comparisons, timed mock exams, and practical calculation labs. URL: https://karma-tic.github.io/flutter-course/
+- [Frontend developer](https://learn.karmatix.in/paths/frontend/): Build fast, accessible interfaces with HTML, CSS, JavaScript and React. 4 stages, about 6 to 9 months part time.
+- [Backend developer](https://learn.karmatix.in/paths/backend/): Design APIs, model data and run services that stay up. 4 stages, about 8 to 12 months part time.
+- [Mobile app developer](https://learn.karmatix.in/paths/mobile/): Build apps people install, from first screen to Play Store release. 4 stages, about 6 to 9 months part time.
+- [Cloud and DevOps engineer](https://learn.karmatix.in/paths/cloud/): Run software reliably on the cloud with Linux, containers, Kubernetes and IaC. 4 stages, about 8 to 12 months part time.
+- [AI engineer](https://learn.karmatix.in/paths/ai/): Build useful products with machine learning and large language models. 4 stages, about 9 to 12 months part time.
+- [Data analyst](https://learn.karmatix.in/paths/data/): Turn messy data into decisions with SQL, spreadsheets, Python and dashboards. 4 stages, about 4 to 6 months part time.
+- [Placements and DSA](https://learn.karmatix.in/paths/dsa/): Crack online assessments and coding interviews with patterns, not memorising. 4 stages, about 3 to 6 months part time.
+- [Cybersecurity](https://learn.karmatix.in/paths/security/): Learn how systems are attacked so you can defend them. 4 stages, about 9 to 12 months part time.
 
-## Upcoming Courses
+## Key pages
 
-- Cloud and DevOps Architecture: Production container orchestration, Terraform infrastructure as code, and CI/CD pipelines.
-- AI and Python for Production: Asynchronous Python, LLM orchestration, evaluation pipelines, and vector databases.
-- Distributed Systems and Microservices: Resilient distributed architectures, event-driven messaging, and observability.
+- [All resources](https://learn.karmatix.in/resources/): 168 picks, filterable by type, path, cost and language.
+- [Certifications compared](https://learn.karmatix.in/certifications/): 15 certifications with exam fees, validity and an honest verdict.
+- [Connect with developers](https://learn.karmatix.in/connect/): meetups, online communities, open source programmes, hackathons and a networking playbook.
 
+## Free courses by Karmatix
+
+- [Karmatix .NET Academy](https://karma-tic.github.io/dotnet-academy/): .NET 10 and C# 14 with 16 tested projects.
+- [Karmatix Flutter Course](https://karma-tic.github.io/flutter-course/): Flutter and Dart with Kotlin comparisons and mock tests.
+
+## Data
+
+Last checked: 27 Nov 2026. Source data lives in src/data/*.json in https://github.com/Karma-tic/karmatix-learn

@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
 const supportJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    'name': 'Support Karmatix Learning',
+    'name': 'Support Karmatix Learn',
     'url': 'https://learn.karmatix.in/support',
     'description': 'Support free software engineering education. Donations fund hosting, tools, and continuous curriculum updates.',
     'publisher': {
@@ -20,45 +18,41 @@ const supportJsonLd = [
 ---
 
 <Layout
-  title="Support Karmatix Learning | Help Keep Our Courses Free"
-  description="Karmatix Learning is 100% free with no paywalls or ads. Your Ko-fi donations fund cloud hosting, test runners, and ongoing engineering course development."
+  title="Support Karmatix Learn | Help Keep Our Courses Free"
+  description="Karmatix Learn is 100% free with no paywalls or ads. Your Ko-fi donations fund cloud hosting, test runners, and ongoing engineering course development."
   canonical="https://learn.karmatix.in/support"
   jsonLd={supportJsonLd}
 >
-  <Header slot="header" />
 
   <article class="py-16 md:py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6">
 
       <!-- Breadcrumb / Back link -->
       <div class="mb-8">
-        <a href="/" class="inline-flex items-center gap-1.5 text-xs text-[#94a3b8] hover:text-[#f8fafc] transition-colors">
-          <span>&larr; Back to Course Catalog</span>
+        <a href="/" class="inline-flex min-h-11 items-center gap-1.5 text-sm text-[#b9b2a8] hover:text-[#f4f1ec] transition-colors">
+          <span>Back to home</span>
         </a>
       </div>
 
       <!-- Hero Header -->
       <div class="mb-10 text-center sm:text-left">
-        <div class="inline-flex items-center gap-2 rounded-full border border-[#2563eb]/30 bg-[#2563eb]/10 px-3 py-1 text-xs font-semibold text-[#60a5fa] mb-4">
-          <span>COMMUNITY SUPPORT</span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#f8fafc] tracking-tight mb-4">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#f4f1ec] tracking-tight mb-4">
           Help us keep engineering education free for everyone.
         </h1>
-        <p class="text-base sm:text-lg text-[#94a3b8] leading-relaxed">
-          Karmatix Learning has no paywalls, no sponsored promotions, no mandatory logins, and no hidden upsells. If our courses helped your career, consider buying us a chai.
+        <p class="text-base sm:text-lg text-[#b9b2a8] leading-relaxed">
+          Karmatix Learn has no paywalls, no sponsored promotions, no mandatory logins, and no hidden upsells. If these paths helped your career, consider buying us a chai.
         </p>
       </div>
 
       <!-- Main Donation Card -->
-      <div class="rounded-2xl border border-[#334155] bg-[#111827] p-6 sm:p-8 mb-12 shadow-xl text-center">
-        <div class="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#2563eb]/20 text-3xl mb-4" aria-hidden="true">
+      <div class="rounded-2xl border border-[#3a3733] bg-[#171614] p-6 sm:p-8 mb-12 shadow-xl text-center">
+        <div class="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#ff6433]/20 text-3xl mb-4" aria-hidden="true">
           ☕
         </div>
-        <h2 class="text-xl sm:text-2xl font-bold text-[#f8fafc] mb-2">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#f4f1ec] mb-2">
           Support Karmatix on Ko-fi
         </h2>
-        <p class="text-sm text-[#94a3b8] max-w-lg mx-auto mb-6 leading-relaxed">
+        <p class="text-sm text-[#b9b2a8] max-w-lg mx-auto mb-6 leading-relaxed">
           Every contribution directly supports server hosting, domain renewals, CI test pipelines, and the hours invested in writing clear, battle-tested software engineering guides.
         </p>
 
@@ -70,7 +64,7 @@ const supportJsonLd = [
               href="https://ko-fi.com/karmatix"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-[#2563eb] px-8 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] hover:bg-[#1d4ed8] focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:ring-offset-2 focus:ring-offset-[#111827]"
+              class="inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-[#ff6433] px-8 text-sm font-semibold text-[#1a0f0a] shadow-lg transition-transform hover:scale-[1.02] hover:bg-[#ff7a4d] focus:outline-none focus:ring-2 focus:ring-[#ff6433] focus:ring-offset-2 focus:ring-offset-[#171614]"
               aria-label="Support Karmatix on Ko-fi (opens in new tab)"
             >
               <span class="text-base" aria-hidden="true">☕</span>
@@ -83,7 +77,7 @@ const supportJsonLd = [
             </a>
           </div>
 
-          <p class="text-xs text-[#64748b]">
+          <p class="text-xs text-[#8f887f]">
             Secure checkout via Ko-fi (supports UPI, Card, PayPal, and Apple Pay).
           </p>
         </div>
@@ -91,37 +85,37 @@ const supportJsonLd = [
 
       <!-- Why We Built This Model -->
       <div class="space-y-8 mb-12">
-        <h3 class="text-xl font-bold text-[#f8fafc] border-b border-[#1e293b] pb-3">
+        <h3 class="text-xl font-bold text-[#f4f1ec] border-b border-[#2b2926] pb-3">
           Where your donation goes
         </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-5">
+          <div class="rounded-xl border border-[#2b2926] bg-[#121110] p-5">
             <div class="h-8 w-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold mb-3 text-sm">
               01
             </div>
-            <h4 class="text-sm font-bold text-[#f8fafc] mb-1">Hosting &amp; Domains</h4>
-            <p class="text-xs text-[#94a3b8] leading-relaxed">
+            <h4 class="text-sm font-bold text-[#f4f1ec] mb-1">Hosting &amp; Domains</h4>
+            <p class="text-xs text-[#b9b2a8] leading-relaxed">
               Domain registration fees, CDN traffic, and reliable static infrastructure that stays fast around the world.
             </p>
           </div>
 
-          <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-5">
+          <div class="rounded-xl border border-[#2b2926] bg-[#121110] p-5">
             <div class="h-8 w-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-bold mb-3 text-sm">
               02
             </div>
-            <h4 class="text-sm font-bold text-[#f8fafc] mb-1">CI &amp; Test Runners</h4>
-            <p class="text-xs text-[#94a3b8] leading-relaxed">
+            <h4 class="text-sm font-bold text-[#f4f1ec] mb-1">CI &amp; Test Runners</h4>
+            <p class="text-xs text-[#b9b2a8] leading-relaxed">
               Automated compilation gates and GitHub Actions runners that build and verify all sample solutions on every commit.
             </p>
           </div>
 
-          <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-5">
+          <div class="rounded-xl border border-[#2b2926] bg-[#121110] p-5">
             <div class="h-8 w-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold mb-3 text-sm">
               03
             </div>
-            <h4 class="text-sm font-bold text-[#f8fafc] mb-1">Fresh Curricula</h4>
-            <p class="text-xs text-[#94a3b8] leading-relaxed">
+            <h4 class="text-sm font-bold text-[#f4f1ec] mb-1">Fresh Curricula</h4>
+            <p class="text-xs text-[#b9b2a8] leading-relaxed">
               Researching, authoring, and keeping all code examples up to date with the latest LTS releases (.NET 10, C# 14, Flutter).
             </p>
           </div>
@@ -129,8 +123,8 @@ const supportJsonLd = [
       </div>
 
       <!-- Our Strict Privacy & Payment Guarantee -->
-      <div class="rounded-xl border border-[#1e293b] bg-[#0b0f19] p-6 text-xs text-[#94a3b8] space-y-3">
-        <h4 class="text-sm font-bold text-[#f8fafc] flex items-center gap-2">
+      <div class="rounded-xl border border-[#2b2926] bg-[#121110] p-6 text-xs text-[#b9b2a8] space-y-3">
+        <h4 class="text-sm font-bold text-[#f4f1ec] flex items-center gap-2">
           <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
@@ -146,8 +140,8 @@ const supportJsonLd = [
 
       <!-- Alternative Ways to Support -->
       <div class="mt-12 text-center sm:text-left">
-        <h4 class="text-sm font-bold text-[#f8fafc] mb-2">Can not donate right now?</h4>
-        <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
+        <h4 class="text-sm font-bold text-[#f4f1ec] mb-2">Can not donate right now?</h4>
+        <p class="text-xs text-[#b9b2a8] leading-relaxed mb-4">
           You can also support us for free by starring our repositories on GitHub, submitting corrections to typos or broken links, or sharing our courses with your college peers and colleagues.
         </p>
         <div class="flex flex-wrap items-center gap-3">
@@ -155,7 +149,7 @@ const supportJsonLd = [
             href="https://github.com/Karma-tic"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-lg border border-[#1e293b] bg-[#111827] px-3 py-1.5 text-xs font-medium text-[#f8fafc] hover:bg-[#1e293b] transition-colors"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-[#2b2926] bg-[#171614] px-3 py-1.5 text-xs font-medium text-[#f4f1ec] hover:bg-[#2b2926] transition-colors"
           >
             <span>Star on GitHub</span>
             <svg class="h-3.5 w-3.5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -164,7 +158,7 @@ const supportJsonLd = [
           </a>
           <a
             href="mailto:contact@karmatix.in"
-            class="inline-flex items-center gap-1.5 rounded-lg border border-[#1e293b] bg-[#111827] px-3 py-1.5 text-xs font-medium text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1e293b] transition-colors"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-[#2b2926] bg-[#171614] px-3 py-1.5 text-xs font-medium text-[#b9b2a8] hover:text-[#f4f1ec] hover:bg-[#2b2926] transition-colors"
           >
             <span>Send Feedback</span>
           </a>
@@ -173,8 +167,6 @@ const supportJsonLd = [
 
     </div>
   </article>
-
-  <Footer slot="footer" />
 </Layout>
 
 <!-- Optional Ko-fi widget script for inline enhancements (async load) -->

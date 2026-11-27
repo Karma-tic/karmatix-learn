@@ -1,76 +1,322 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import CourseCatalog from '../components/CourseCatalog.astro';
-import KarmatixStandard from '../components/KarmatixStandard.astro';
-import SharedTools from '../components/SharedTools.astro';
-import Roadmap from '../components/Roadmap.astro';
-import Faq from '../components/Faq.astro';
-import Footer from '../components/Footer.astro';
-import coursesData from '../data/courses.json';
+import Icon from '../components/Icon.astro';
+import PathCard from '../components/PathCard.astro';
+import ResourceCard from '../components/ResourceCard.astro';
+import { paths, resources, certifications, TYPES, TYPE_ORDER, VERDICT, LAST_CHECKED, res, host } from '../lib/data';
+import courses from '../data/courses.json';
 
-const liveCourses = coursesData.filter((c) => c.status === 'live');
+const liveCourses = courses.filter((c) => c.status === 'live');
+const total = resources.length;
+const freeCount = resources.filter((r) => r.cost === 'free').length;
+const indiaCount = resources.filter((r) => r.india).length;
+const typeCounts = Object.fromEntries(TYPE_ORDER.map((t) => [t, resources.filter((r) => r.type === t).length]));
+
+// Data for the hero picker (kept small: titles, weeks and the first step only)
+const picker = paths.map((p) => {
+  const first = res(p.stages[0].learn[0]);
+  return {
+    id: p.id, name: p.name, role: p.role, months: p.months, start: p.start,
+    stages: p.stages.map((s) => ({ t: s.title, w: s.weeks })),
+    first: { name: first.name, url: first.url, tip: first.tip, host: host(first.url) },
+  };
+});
+const def = picker[0];
+
+// Anatomy example: backend stage 2
+const ex = paths.find((p) => p.id === 'backend')!.stages[1];
+
+const worth = certifications.filter((c) => c.verdict === 'worth').slice(0, 4);
+const connectPicks = ['gdg', 'foss-united', 'devfolio', 'gsoc', 'r-developersindia', 'aws-user-groups', 'mlh', 'hasgeek'].map(res);
+const hindiPicks = ['chai-aur-code', 'striver-a2z', 'campusx', 'namaste-js'].map(res);
+
+const faqs = [
+  { q: 'Is this a course?', a: 'No. Karmatix Learn does not teach topics again. It points you to the best existing courses, practice platforms, tools and communities, in the order that works, and tells you exactly how to use each one.' },
+  { q: 'Is it free?', a: `Yes. There is no sign-up and no paywall. ${freeCount} of the ${total} picks are completely free, and paid picks are marked clearly with what you are paying for.` },
+  { q: 'Do you earn money from these links?', a: 'No. There are no affiliate or sponsored links. If that ever changes, the link will be labelled. We are funded by donations on Ko-fi and by Karmatix, the software studio behind this site.' },
+  { q: 'How do you choose resources?', a: 'A pick has to be current, actually used by working developers, and practical, meaning you build or solve something with it. We prefer free and official sources, and we include Hindi creators and Indian programmes where they are the best option.' },
+  { q: 'How often is this updated?', a: `Links and prices are checked regularly. The last full check was on ${LAST_CHECKED}. If a link is broken or a better resource exists, please tell us on GitHub.` },
+  { q: 'Which path should I pick if I am confused?', a: 'If you are a student preparing for placements, start with Placements and DSA alongside one build path. Otherwise pick the role you would enjoy doing every day and finish its first stage before you switch.' },
+];
 
 const jsonLd = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    'name': 'Karmatix',
-    'url': 'https://karmatix.in',
-    'logo': 'https://learn.karmatix.in/favicon.svg',
-    'sameAs': ['https://github.com/Karma-tic']
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    'name': 'Karmatix Learning',
-    'url': 'https://learn.karmatix.in',
-    'description': 'Free software engineering courses built on real tested code.'
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    'itemListElement': liveCourses.map((c, index) => ({
-      '@type': 'ListItem',
-      'position': index + 1,
-      'item': {
-        '@type': 'Course',
-        'name': c.title,
-        'description': c.summary,
-        'provider': {
-          '@type': 'Organization',
-          'name': 'Karmatix',
-          'sameAs': 'https://karmatix.in'
-        },
-        'url': c.url,
-        'isAccessibleForFree': true,
-        'educationalLevel': c.level,
-        'offers': {
-          '@type': 'Offer',
-          'price': '0',
-          'priceCurrency': 'INR'
-        }
-      }
-    }))
-  }
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Karmatix Learn', url: 'https://learn.karmatix.in/', description: 'Hand-picked developer learning paths, resources, certifications and communities.', publisher: { '@type': 'Organization', name: 'Karmatix', url: 'https://karmatix.in' } },
+  { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Learning paths', itemListElement: paths.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: `https://learn.karmatix.in/paths/${p.id}/` })) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
 ];
 ---
 
 <Layout
-  title="Karmatix Learning | Free Software Engineering Courses"
-  description="Free software engineering courses built on real tested code. Learn .NET 10, C# 14, Flutter, and cloud systems with zero ads or accounts."
+  title="Karmatix Learn | What to learn, where to practise, who to learn with"
+  description={`Stop collecting courses. ${total} hand-picked courses, practice platforms, certifications, YouTube channels, tools and communities, arranged into 8 step-by-step developer paths.`}
   jsonLd={jsonLd}
 >
-  <Header slot="header" />
-  
-  <Hero />
-  <CourseCatalog />
-  <KarmatixStandard />
-  <SharedTools />
-  <Roadmap />
-  <Faq />
+  <!-- Hero -->
+  <section class="kx-glow relative overflow-hidden border-b border-line">
+    <div class="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-10 px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14 lg:pb-20 lg:pt-20">
+      <div>
+        <h1 class="text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] text-text sm:text-6xl lg:text-[4.1rem]">
+          Stop collecting courses. <span class="kx-serif text-ember">Start building.</span>
+        </h1>
+        <p class="mt-6 max-w-[34rem] text-lg leading-relaxed text-muted">
+          The best courses, practice sites, certifications, channels, tools and communities, arranged into step-by-step paths. Every pick says why it is here and how to use it.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#paths" class="kx-btn kx-btn-primary">Choose your path</a>
+          <a href="/resources/" class="kx-btn kx-btn-ghost"><span>Browse <span class="num">{total}</span> picks</span></a>
+        </div>
+        <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-dim">
+          <li class="inline-flex items-center gap-2"><Icon name="check" class="size-4 text-good" />No sign-up</li>
+          <li class="inline-flex items-center gap-2"><Icon name="check" class="size-4 text-good" />No affiliate links</li>
+          <li class="inline-flex items-center gap-2"><Icon name="check" class="size-4 text-good" /><span>Checked <span class="num">{LAST_CHECKED}</span></span></li>
+        </ul>
+      </div>
 
-  <Footer slot="footer" />
+      <!-- Goal picker -->
+      <div class="kx-card relative p-5 shadow-[0_30px_80px_-40px_rgba(255,100,51,.35)] sm:p-6" id="kx-picker">
+        <p id="kx-picker-label" class="text-sm font-medium text-muted">I want to become a</p>
+        <div class="kx-scroll-row mt-3" role="group" aria-labelledby="kx-picker-label">
+          {picker.map((p, i) => (
+            <button type="button" class="kx-chip snap-start" aria-pressed={i === 0 ? 'true' : 'false'} data-pick={p.id}>{p.name}</button>
+          ))}
+        </div>
+        <div id="kx-picker-panel" class="mt-5 border-t border-line pt-5" aria-live="polite">
+          <div class="flex items-baseline justify-between gap-3">
+            <p class="text-sm text-dim"><span data-f="role">{def.role}</span></p>
+            <p class="text-sm text-dim"><span class="num text-muted" data-f="months">{def.months}</span> months</p>
+          </div>
+          <ol class="relative mt-4 space-y-3" data-f="stages">
+            {def.stages.map((s, i) => (
+              <li class="flex items-center gap-3">
+                <span class="num inline-flex size-7 shrink-0 items-center justify-center rounded-full border border-line-strong text-xs text-ember">{i + 1}</span>
+                <span class="flex-1 text-[0.95rem] text-text">{s.t}</span>
+                <span class="num text-xs text-dim">{s.w} wk</span>
+              </li>
+            ))}
+          </ol>
+          <div class="mt-5 rounded-xl border border-line bg-surface-2 p-4">
+            <p class="text-sm font-medium text-ember-soft">Do this today</p>
+            <p class="mt-1.5 font-semibold text-text"><a data-f="first" href={def.first.url} class="inline-flex min-h-11 items-center underline decoration-line-strong underline-offset-4 hover:decoration-ember">{def.first.name}</a></p>
+            <p class="mt-1 text-sm leading-relaxed text-muted" data-f="tip">{def.first.tip}</p>
+          </div>
+          <a data-f="open" href={`/paths/${def.id}/`} class="kx-btn kx-btn-primary mt-5 w-full">See the full path<span class="sr-only">: <span data-f="name">{def.name}</span></span></a>
+        </div>
+        <script type="application/json" id="kx-picker-data" set:html={JSON.stringify(picker)} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Paths -->
+  <section id="paths" class="mx-auto max-w-6xl px-4 pt-20 sm:px-6">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Eight paths you can actually finish</h2>
+      <p class="mt-3 text-muted">Each path is four stages. Every stage tells you what to learn from, where to practise, what to build and how to prove it.</p>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {paths.map((p) => <PathCard p={p} />)}
+    </div>
+  </section>
+
+  <!-- Anatomy of a stage -->
+  <section class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="anatomy-h">
+    <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <h2 id="anatomy-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Practical by design</h2>
+        <p class="mt-4 leading-relaxed text-muted">Watching tutorials feels like progress. Building is progress. So every stage ends with something you make and something you can show.</p>
+        <p class="mt-4 text-sm text-dim">Example: Backend developer, stage 2.</p>
+        <a href="/paths/backend/" class="kx-btn kx-btn-ghost mt-6">See the full backend path</a>
+      </div>
+      <div class="kx-card divide-y divide-line">
+        <div class="p-5 sm:p-6">
+          <p class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="book-open" class="size-4 text-ember" />Learn from</p>
+          <ul class="mt-3 flex flex-wrap gap-2">
+            {ex.learn.map((id) => { const r = res(id); return <li><a href={r.url} class="kx-chip">{r.name}</a></li>; })}
+          </ul>
+          {ex.hint && <p class="mt-3 text-sm text-dim">{ex.hint}</p>}
+        </div>
+        <div class="p-5 sm:p-6">
+          <p class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="dumbbell" class="size-4 text-ember" />Practise on</p>
+          <ul class="mt-3 flex flex-wrap gap-2">
+            {ex.practise.map((id) => { const r = res(id); return <li><a href={r.url} class="kx-chip">{r.name}</a></li>; })}
+          </ul>
+        </div>
+        <div class="p-5 sm:p-6">
+          <p class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="wrench" class="size-4 text-ember" />Build this</p>
+          <p class="mt-2 leading-relaxed text-muted">{ex.build}</p>
+        </div>
+        <div class="p-5 sm:p-6">
+          <p class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="flag" class="size-4 text-ember" />Prove it</p>
+          <p class="mt-2 leading-relaxed text-muted">{ex.prove}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse by kind -->
+  <section class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="kinds-h">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <h2 id="kinds-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Or browse everything</h2>
+        <p class="mt-3 text-muted">Filter <span class="num">{total}</span> picks by type, path, cost and language.</p>
+      </div>
+      <a href="/resources/" class="kx-btn kx-btn-ghost">Open the directory</a>
+    </div>
+    <ul class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      {TYPE_ORDER.map((t) => (
+        <li>
+          <a href={`/resources/?type=${t}`} class="kx-card kx-card-link flex min-h-full items-start gap-3 p-4">
+            <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-surface-3 text-ember"><Icon name={TYPES[t].icon} class="size-[18px]" /></span>
+            <span class="min-w-0">
+              <span class="block text-sm font-semibold text-text">{TYPES[t].plural}</span>
+              <span class="num block text-xs text-dim">{typeCounts[t]}</span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Certifications -->
+  <section class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="cert-h">
+    <div class="kx-card grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
+      <div>
+        <Icon name="award" class="size-7 text-ember" />
+        <h2 id="cert-h" class="mt-4 text-3xl font-semibold tracking-tight text-text">Which certifications are worth paying for?</h2>
+        <p class="mt-3 leading-relaxed text-muted">An honest verdict on {certifications.length} popular certifications, with the real exam fee, how long it lasts and what to study.</p>
+        <a href="/certifications/" class="kx-btn kx-btn-primary mt-6">Compare certifications</a>
+      </div>
+      <ul class="divide-y divide-line">
+        {worth.map((c) => (
+          <li class="flex items-center justify-between gap-4 py-3.5 first:pt-0 last:pb-0">
+            <div class="min-w-0">
+              <p class="font-medium text-text">{c.name}</p>
+              <p class="text-xs text-dim">{c.provider}</p>
+            </div>
+            <div class="shrink-0 text-right">
+              <p class="num text-sm text-text">{c.fee}</p>
+              <span class="kx-tag kx-tag-free mt-1">{VERDICT[c.verdict].label}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <section class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="connect-h">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 id="connect-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Learn with people, not alone</h2>
+        <p class="mt-3 max-w-lg leading-relaxed text-muted">Most jobs come through people. Find meetups in your city, open source programmes that pay, hackathons and the forums where Indian developers talk shop.</p>
+        <a href="/connect/" class="kx-btn kx-btn-ghost mt-6">Find your people</a>
+      </div>
+      <ul class="flex flex-wrap gap-2">
+        {connectPicks.map((r) => <li><a href={r.url} class="kx-chip !min-h-11 !px-4 !text-[0.95rem]">{r.name}<Icon name="arrow-up-right" class="size-3.5 text-dim" /></a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Made for India -->
+  <section class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="india-h">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <h2 id="india-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Hindi creators and Indian programmes included</h2>
+        <p class="mt-3 text-muted"><span class="num">{indiaCount}</span> picks are made in India or matter most here: placement sheets, Hindi channels, NPTEL, Indian hackathons and job boards.</p>
+      </div>
+      <a href="/resources/?india=1" class="kx-btn kx-btn-ghost">See India picks</a>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {hindiPicks.map((r) => <ResourceCard r={r} showTip={false} />)}
+    </div>
+  </section>
+
+  <!-- Karmatix courses (keeps the old #courses anchor working) -->
+  <section id="courses" class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="courses-h">
+    <h2 id="courses-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Free courses by Karmatix</h2>
+    <p class="mt-3 max-w-2xl text-muted">Where we could not find a free course good enough, we built one. Both are in the paths above.</p>
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      {liveCourses.map((c) => (
+        <article class="kx-card kx-card-link group relative overflow-hidden">
+          <picture>
+            <source srcset={c.image.desktopAvif} type="image/avif" />
+            <img src={c.image.desktop} alt={c.image.alt} width="1200" height="750" loading="lazy" decoding="async" class="aspect-[16/9] w-full border-b border-line object-cover object-top opacity-90 transition-opacity group-hover:opacity-100" />
+          </picture>
+          <div class="p-5 sm:p-6">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="text-lg font-semibold text-text"><a href={c.url} class="kx-stretch rounded-sm">{c.title}</a></h3>
+              <Icon name="arrow-up-right" class="kx-arrow size-5 shrink-0 text-dim" />
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-muted">{c.summary}</p>
+            <p class="mt-4 flex flex-wrap gap-1.5"><span class="kx-tag kx-tag-free">Free</span><span class="kx-tag">{c.level}</span>{c.ciVerified && <span class="kx-tag">Code tested in CI</span>}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- How we pick + suggest -->
+  <section class="mx-auto max-w-6xl px-4 pt-24 sm:px-6" aria-labelledby="pick-h">
+    <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
+      <div>
+        <h2 id="pick-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">How a resource gets in</h2>
+        <p class="mt-3 leading-relaxed text-muted">Short lists beat long ones. A pick has to pass all four checks, and we remove things that go stale.</p>
+        <a href="https://github.com/Karma-tic/karmatix-learn/issues/new?title=Suggest%20a%20resource" class="kx-btn kx-btn-ghost mt-6">Suggest a resource <Icon name="arrow-up-right" class="size-4" /></a>
+      </div>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {[
+          { i: 'dumbbell', t: 'You do something', d: 'You build, solve or hack with it. Watching alone does not count.' },
+          { i: 'clock', t: 'It is current', d: 'Maintained and accurate for today. Links and prices are rechecked.' },
+          { i: 'users', t: 'Working developers use it', d: 'Recommended by people who do the job, not by marketing.' },
+          { i: 'heart', t: 'Free first, honest always', d: 'Free and official sources come first. Paid picks say what you pay for.' },
+        ].map((c) => (
+          <li class="kx-card p-5">
+            <Icon name={c.i} class="size-5 text-ember" />
+            <h3 class="mt-3 font-semibold text-text">{c.t}</h3>
+            <p class="mt-1 text-sm leading-relaxed text-muted">{c.d}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto max-w-3xl px-4 pt-24 sm:px-6" aria-labelledby="faq-h">
+    <h2 id="faq-h" class="text-3xl font-semibold tracking-tight text-text sm:text-4xl">Questions</h2>
+    <div class="mt-8 divide-y divide-line border-y border-line">
+      {faqs.map((f) => (
+        <details class="group">
+          <summary class="flex min-h-14 items-center justify-between gap-4 py-4 text-left font-medium text-text transition-colors hover:text-ember-soft">
+            {f.q}
+            <Icon name="chevron-down" class="kx-chevron size-5 shrink-0 text-dim" />
+          </summary>
+          <p class="pb-5 pr-8 leading-relaxed text-muted">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
 </Layout>
 
+<script>
+  const root = document.getElementById('kx-picker');
+  const data = JSON.parse(document.getElementById('kx-picker-data')?.textContent || '[]');
+  if (root && data.length) {
+    const panel = root.querySelector('#kx-picker-panel') as HTMLElement;
+    const f = (k: string) => panel.querySelector(`[data-f="${k}"]`) as HTMLElement;
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
+    const show = (id: string) => {
+      const p = data.find((x: any) => x.id === id);
+      if (!p) return;
+      root.querySelectorAll<HTMLButtonElement>('[data-pick]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.pick === id)));
+      f('role').textContent = p.role;
+      f('months').textContent = p.months;
+      f('stages').innerHTML = p.stages.map((s: any, i: number) => `<li class="flex items-center gap-3"><span class="num inline-flex size-7 shrink-0 items-center justify-center rounded-full border border-line-strong text-xs text-ember">${i + 1}</span><span class="flex-1 text-[0.95rem] text-text">${esc(s.t)}</span><span class="num text-xs text-dim">${esc(s.w)} wk</span></li>`).join('');
+      const first = f('first') as HTMLAnchorElement;
+      first.textContent = p.first.name; first.href = p.first.url;
+      f('tip').textContent = p.first.tip;
+      (f('open') as HTMLAnchorElement).href = `/paths/${p.id}/`;
+      f('name').textContent = p.name;
+      panel.classList.remove('kx-swap'); void panel.offsetWidth; panel.classList.add('kx-swap');
+    };
+    root.querySelectorAll<HTMLButtonElement>('[data-pick]').forEach((b) => b.addEventListener('click', () => show(b.dataset.pick!)));
+  }
+</script>

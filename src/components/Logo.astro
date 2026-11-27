@@ -1,0 +1,13 @@
+---
+interface Props { class?: string }
+const { class: cls = '' } = Astro.props;
+---
+<a href="/" class={`group inline-flex min-h-11 items-center gap-2 rounded-md ${cls}`} aria-label="Karmatix Learn, home">
+  <svg viewBox="0 0 24 24" class="size-[18px] text-ember transition-[rotate] duration-500 group-hover:rotate-90" aria-hidden="true">
+    <g stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <path d="M12 3v18" /><path d="M4.2 7.5l15.6 9" /><path d="M4.2 16.5l15.6-9" />
+    </g>
+  </svg>
+  <span class="font-mono text-[15px] font-medium tracking-tight text-text">karmatix</span>
+  <span class="font-mono text-[15px] text-dim">/learn</span>
+</a>

@@ -41,6 +41,9 @@ jobs:
       - name: Validate Courses Source of Truth
         run: npm run lint:courses
 
+      - name: Validate Resources, Paths and Certifications
+        run: npm run lint:data
+
       - name: Build Static Catalog & Type Check
         run: npm run build
 
@@ -49,6 +52,11 @@ jobs:
 
       - name: Run Accessibility & Bundle Budget Checker
         run: npm run test:a11y
+
+      - name: External link report (does not block the build)
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: npm run test:external
 
   deploy-to-pages:
     name: Deploy to GitHub Pages

@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PathCard from '../../components/PathCard.astro';
+import { paths } from '../../lib/data';
+---
+<Layout title="Developer learning paths | Karmatix Learn" description="Eight practical developer paths: frontend, backend, mobile, cloud and DevOps, AI, data, placements and DSA, and cybersecurity. Each stage says what to learn, practise, build and prove." canonical="https://learn.karmatix.in/paths/" current="paths">
+  <section class="mx-auto max-w-6xl px-4 pt-14 sm:px-6 sm:pt-20">
+    <h1 class="text-4xl font-semibold tracking-[-0.03em] text-text sm:text-5xl">Pick one path and finish it</h1>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">Switching paths is the most common reason people stall. Choose the work you would enjoy every day, then finish stage one before you reconsider.</p>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {paths.map((p) => <PathCard p={p} />)}
+    </div>
+    <p class="mt-10 max-w-2xl text-sm text-dim">Preparing for campus placements? Do Placements and DSA alongside one build path. Interviews test both.</p>
+  </section>
+</Layout>
